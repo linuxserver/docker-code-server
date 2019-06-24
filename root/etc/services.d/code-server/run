@@ -2,5 +2,19 @@
 
 cd /opt/code-server || exit
 
+if [ -n "${PASSWORD}" ]; then
+  PASSARG="-P ${PASSWORD}"
+else
+  PASSARG="-N"
+  echo "starting with no password"
+fi
+
 exec \
-	s6-setuidgid abc /opt/code-server/code-server -H -P ${PASSWORD} -d /config/data -e /config/extensions --disable-telemetry /config/workspace
+	s6-setuidgid abc \
+		/opt/code-server/code-server \
+			-H \
+			${PASSARG} \
+			-d /config/data \
+			-e /config/extensions \
+			--disable-telemetry \
+			/config/workspace

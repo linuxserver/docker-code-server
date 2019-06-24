@@ -43,12 +43,11 @@ param_ports:
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
-  - { env_var: "PASSWORD", env_value: "password", desc: "Specify a web gui password"}
 
 # optional container parameters
-opt_param_usage_include_env: false
+opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "", env_value: "", desc: "" }
+  - { env_var: "PASSWORD", env_value: "password", desc: "Optional web gui password, if not provided, there will be no auth"}
 
 optional_block_1: false
 optional_block_1_items: ""
