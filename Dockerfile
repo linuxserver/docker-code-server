@@ -13,9 +13,7 @@ ENV HOME="/config"
 RUN \
  apt-get update && \
  apt-get install -y \
-	git \
-	libicu60 \
-	libssl1.0 && \
+	git && \
  echo "**** install code-server ****" && \
  mkdir -p \
 	/opt/code-server && \
