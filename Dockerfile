@@ -13,7 +13,8 @@ ENV HOME="/config"
 RUN \
  apt-get update && \
  apt-get install -y \
-	git && \
+	git \
+	net-tools && \
  echo "**** install code-server ****" && \
  mkdir -p \
 	/opt/code-server && \
