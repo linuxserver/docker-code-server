@@ -1,0 +1,63 @@
+---
+
+# project information
+project_name: code-server
+project_url: "https://coder.com"
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/.png"
+project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is VS Code running on a remote server, accessible through the browser.
+ 
+- Code on your Chromebook, tablet, and laptop with a consistent dev environment.
+
+- If you have a Windows or Mac workstation, more easily develop for Linux.
+
+- Take advantage of large cloud servers to speed up tests, compilations, downloads, and more.
+
+- Preserve battery life when you're on the go.
+
+- All intensive computation runs on your server.
+
+- You're no longer running excess instances of Chrome."
+project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+
+# supported architectures
+available_architectures:
+  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
+  - { arch: "{{ arch_armhf }}", tag: "arm32v7-latest"}
+
+# development version
+development_versions: false
+development_versions_items:
+  - { tag: "latest", desc: "Stable releases" }
+  - { tag: "development", desc: "Releases from the `develop` branch" }
+
+# container parameters
+common_param_env_vars_enabled: true
+param_container_name: "{{ project_name }}"
+param_usage_include_vols: true
+param_volumes:
+  - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Contains all relevant configuration files." }
+param_usage_include_ports: true
+param_ports:
+  - { external_port: "8443", internal_port: "8443", port_desc: "web gui" }
+param_usage_include_env: true
+param_env_vars:
+  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
+  - { env_var: "PASSWORD", env_value: "password", desc: "Specify a web gui password"}
+
+# optional container parameters
+opt_param_usage_include_env: false
+opt_param_env_vars:
+  - { env_var: "", env_value: "", desc: "" }
+
+optional_block_1: false
+optional_block_1_items: ""
+
+# application setup block
+app_setup_block_enabled: true
+app_setup_block: |
+  Access the webui at `http://<your-ip>:8443`. For github integration, drop your ssh key in to `/config/.ssh`.
+
+# changelog
+changelogs:
+  - { date: "24.06.19:", desc: "Initial Release." }

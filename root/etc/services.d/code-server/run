@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+cd /opt/code-server || exit
+
+exec \
+	s6-setuidgid abc /opt/code-server/code-server -H -P ${PASSWORD} -d /config/data -e /config/extensions --disable-telemetry /config/workplace
