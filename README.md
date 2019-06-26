@@ -30,7 +30,7 @@ Find us at:
 - All intensive computation runs on your server.
 - You're no longer running excess instances of Chrome.
 
-[![code-server](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/.png)](https://coder.com)
+[![code-server](https://github.com/cdr/code-server/raw/master/doc/assets/cli.png)](https://coder.com)
 
 ## Supported Architectures
 
@@ -43,8 +43,6 @@ The architectures supported by this image are:
 | Architecture | Tag |
 | :----: | --- |
 | x86-64 | amd64-latest |
-| arm64 | arm64v8-latest |
-| armhf | arm32v7-latest |
 
 
 ## Usage
