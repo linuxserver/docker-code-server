@@ -11,7 +11,7 @@ fi
 
 exec \
 	s6-setuidgid abc \
-		/opt/code-server/code-server \
+		/usr/bin/code-server \
 			-H \
 			${PASSARG} \
 			-d /config/data \
