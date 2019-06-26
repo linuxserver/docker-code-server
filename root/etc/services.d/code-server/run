@@ -1,7 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-cd /opt/code-server || exit
-
 if [ -n "${PASSWORD}" ]; then
   PASSARG="-P ${PASSWORD}"
 else
