@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+mkdir -p /config/{extensions,data,workspace,.ssh}
+
+# permissions
+chown -R abc:abc \
+	/opt/code-server \
+	/config
