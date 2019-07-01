@@ -189,4 +189,5 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **01.07.19:** - Add nano.
 * **24.06.19:** - Initial Release.

@@ -64,4 +64,5 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "01.07.19:", desc: "Add nano." }
   - { date: "24.06.19:", desc: "Initial Release." }

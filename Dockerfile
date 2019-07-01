@@ -14,6 +14,7 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	git \
+	nano \
 	net-tools && \
  echo "**** install code-server ****" && \
  if [ -z ${CODE_RELEASE+x} ]; then \
