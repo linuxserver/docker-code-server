@@ -126,6 +126,7 @@ lsb-base9.20170808ubuntu1
 mawk1.3.3-17ubuntu3
 mount2.31.1-0.4ubuntu3.3
 multiarch-support2.27-3ubuntu1
+nano2.9.3-2
 ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
 netbase5.4
