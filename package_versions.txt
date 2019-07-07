@@ -5,7 +5,7 @@ base-files10.1ubuntu2.4
 base-passwd3.5.44
 bash4.4.18-2ubuntu1.1
 bsdutils1:2.31.1-0.4ubuntu3.3
-bzip21.0.6-8.1
+bzip21.0.6-8.1ubuntu0.1
 ca-certificates20180409
 coreutils8.28-1ubuntu1
 curl7.58.0-2ubuntu3.7
@@ -36,7 +36,7 @@ libaudit11:2.8.2-1ubuntu1
 libaudit-common1:2.8.2-1ubuntu1
 libblkid12.31.1-0.4ubuntu3.3
 libbsd00.8.7-1
-libbz2-1.01.0.6-8.1
+libbz2-1.01.0.6-8.1ubuntu0.1
 libc62.27-3ubuntu1
 libcap-ng00.7.7-3.1
 libc-bin2.27-3ubuntu1
