@@ -166,6 +166,9 @@ Below are the instructions for updating containers:
   containrrr/watchtower \
   --run-once code-server
   ```
+
+**Note:** We do not endorse the use of Watchtower as a solution to automated updates of existing Docker containers. In fact we generally discourage automated updates. However, this is a useful tool for one-time manual updates of containers where you have forgotten the original parameters. In the long term, we highly recommend using Docker Compose.
+
 * You can also remove the old dangling images: `docker image prune`
 
 ## Building locally
