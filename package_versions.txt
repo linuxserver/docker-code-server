@@ -142,6 +142,7 @@ procps2:3.3.12-3ubuntu1.1
 publicsuffix20180223.1310-1
 sed4.4-2
 sensible-utils0.0.12
+sudo1.8.21p2-3ubuntu1
 sysvinit-utils2.88dsf-59.10ubuntu1
 tar1.29b-2ubuntu0.1
 tzdata2019a-0ubuntu0.18.04
