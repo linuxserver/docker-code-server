@@ -15,7 +15,8 @@ RUN \
  apt-get install -y \
 	git \
 	nano \
-	net-tools && \
+	net-tools \
+	sudo && \
  echo "**** install code-server ****" && \
  if [ -z ${CODE_RELEASE+x} ]; then \
 	CODE_RELEASE=$(curl -sX GET "https://api.github.com/repos/cdr/code-server/releases/latest" \

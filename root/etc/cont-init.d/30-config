@@ -2,7 +2,16 @@
 
 mkdir -p /config/{extensions,data,workspace,.ssh}
 
+if [ -n ${SUDO_PASSWORD} ]; then
+  echo "setting up sudo access"
+  if [ ! $(cat /etc/sudoers | grep abc) ]; then
+    echo "adding abc to sudoers"
+    echo "abc ALL=(ALL:ALL) ALL" >> /etc/sudoers
+  fi
+  echo "setting sudo password"
+  echo -e "${SUDO_PASSWORD}\n${SUDO_PASSWORD}" | passwd abc
+fi
+
 # permissions
 chown -R abc:abc \
-	/opt/code-server \
 	/config

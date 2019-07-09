@@ -58,6 +58,7 @@ docker create \
   -e PGID=1000 \
   -e TZ=Europe/London \
   -e PASSWORD=password `#optional` \
+  -e SUDO_PASSWORD=password `#optional` \
   -p 8443:8443 \
   -v /path/to/appdata/config:/config \
   --restart unless-stopped \
@@ -81,6 +82,7 @@ services:
       - PGID=1000
       - TZ=Europe/London
       - PASSWORD=password #optional
+      - SUDO_PASSWORD=password #optional
     volumes:
       - /path/to/appdata/config:/config
     ports:
@@ -98,7 +100,8 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
-| `-e PASSWORD=password` | Optional web gui password, if not provided, there will be no auth |
+| `-e PASSWORD=password` | Optional web gui password, if not provided, there will be no auth. |
+| `-e SUDO_PASSWORD=password` | If this optional variable is set, user will have sudo access in the code-server terminal with the specified password. |
 | `-v /config` | Contains all relevant configuration files. |
 
 ## User / Group Identifiers
@@ -192,5 +195,6 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **09.07.19:** - Add optional sudo access.
 * **01.07.19:** - Add nano.
 * **24.06.19:** - Initial Release.

@@ -45,7 +45,8 @@ param_env_vars:
 # optional container parameters
 opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "PASSWORD", env_value: "password", desc: "Optional web gui password, if not provided, there will be no auth"}
+  - { env_var: "PASSWORD", env_value: "password", desc: "Optional web gui password, if not provided, there will be no auth."}
+  - { env_var: "SUDO_PASSWORD", env_value: "password", desc: "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password."}
 
 optional_block_1: false
 optional_block_1_items: ""
@@ -64,5 +65,6 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "09.07.19:", desc: "Add optional sudo access." }
   - { date: "01.07.19:", desc: "Add nano." }
   - { date: "24.06.19:", desc: "Initial Release." }
