@@ -2,7 +2,7 @@
 
 mkdir -p /config/{extensions,data,workspace,.ssh}
 
-if [ -n ${SUDO_PASSWORD} ]; then
+if [ -n "${SUDO_PASSWORD}" ]; then
   echo "setting up sudo access"
   if [ ! $(cat /etc/sudoers | grep abc) ]; then
     echo "adding abc to sudoers"
