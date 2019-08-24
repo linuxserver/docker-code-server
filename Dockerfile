@@ -7,7 +7,7 @@ ARG CODE_RELEASE
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="aptalca"
 
-# environment settings
+# environment settings
 ENV HOME="/config"
 
 RUN \
@@ -22,9 +22,11 @@ RUN \
 	CODE_RELEASE=$(curl -sX GET "https://api.github.com/repos/cdr/code-server/releases/latest" \
 	| awk '/tag_name/{print $4;exit}' FS='[""]'); \
  fi && \
+ RELEASE_URL=$(curl -sX GET "https://api.github.com/repos/cdr/code-server/releases" \
+	| awk '/browser_download_url.*'"${CODE_RELEASE}"'.*linux/{print $4}' FS='[""]') && \
  curl -o \
  /tmp/code.tar.gz -L \
-	"https://github.com/cdr/code-server/releases/download/${CODE_RELEASE}/code-server${CODE_RELEASE}-linux-x64.tar.gz" && \
+	"${RELEASE_URL}" && \
  tar xzf /tmp/code.tar.gz -C \
 	/usr/bin/ --strip-components=1 \
   --wildcards code-server*/code-server && \
