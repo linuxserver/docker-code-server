@@ -1,5 +1,12 @@
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)](https://linuxserver.io)
 
+[![Blog](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=Blog)](https://blog.linuxserver.io "all the things you can do with our containers including How-To guides, opinions and much more!")
+[![Discord](https://img.shields.io/discord/354974912613449730.svg?style=flat-square&color=E68523&label=Discord&logo=discord&logoColor=FFFFFF)](https://discord.gg/YWrKVTn "realtime support / chat with the community and the team.")
+[![Discourse](https://img.shields.io/discourse/https/discourse.linuxserver.io/topics.svg?style=flat-square&color=E68523&logo=discourse&logoColor=FFFFFF)](https://discourse.linuxserver.io "post on our community forum.")
+[![Fleet](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=Fleet)](https://fleet.linuxserver.io "an online web interface which displays all of our maintained images.")
+[![Podcast](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=Podcast)](https://anchor.fm/linuxserverio "on hiatus. Coming back soon (late 2018).")
+[![Open Collective](https://img.shields.io/opencollective/all/linuxserver.svg?style=flat-square&color=E68523&label=Open%20Collective%20Supporters)](https://opencollective.com/linuxserver "please consider helping us by either donating or contributing to our budget")
+
 The [LinuxServer.io](https://linuxserver.io) team brings you another container release featuring :-
 
  * regular and timely application updates
@@ -9,17 +16,20 @@ The [LinuxServer.io](https://linuxserver.io) team brings you another container r
  * regular security updates
 
 Find us at:
-* [Discord](https://discord.gg/YWrKVTn) - realtime support / chat with the community and the team.
-* [IRC](https://irc.linuxserver.io) - on freenode at `#linuxserver.io`. Our primary support channel is Discord.
 * [Blog](https://blog.linuxserver.io) - all the things you can do with our containers including How-To guides, opinions and much more!
+* [Discord](https://discord.gg/YWrKVTn) - realtime support / chat with the community and the team.
+* [Discourse](https://discourse.linuxserver.io) - post on our community forum.
+* [Fleet](https://fleet.linuxserver.io) - an online web interface which displays all of our maintained images.
+* [Podcast](https://anchor.fm/linuxserverio) - on hiatus. Coming back soon (late 2018).
+* [Open Collective](https://opencollective.com/linuxserver) - please consider helping us by either donating or contributing to our budget
 
 # [linuxserver/code-server](https://github.com/linuxserver/docker-code-server)
-[![](https://img.shields.io/discord/354974912613449730.svg?logo=discord&label=LSIO%20Discord&style=flat-square)](https://discord.gg/YWrKVTn)
-[![](https://images.microbadger.com/badges/version/linuxserver/code-server.svg)](https://microbadger.com/images/linuxserver/code-server "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/linuxserver/code-server.svg)](https://microbadger.com/images/linuxserver/code-server "Get your own version badge on microbadger.com")
-![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/code-server.svg)
-![Docker Stars](https://img.shields.io/docker/stars/linuxserver/code-server.svg)
-[![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Pipeline-Builders/docker-code-server/master)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-code-server/job/master/)
+[![GitHub Release](https://img.shields.io/github/release/linuxserver/docker-code-server.svg?style=flat-square&color=E68523)](https://github.com/linuxserver/docker-code-server/releases)
+[![MicroBadger Layers](https://img.shields.io/microbadger/layers/linuxserver/code-server.svg?style=flat-square&color=E68523)](https://microbadger.com/images/linuxserver/code-server "Get your own version badge on microbadger.com")
+[![MicroBadger Size](https://img.shields.io/microbadger/image-size/linuxserver/code-server.svg?style=flat-square&color=E68523)](https://microbadger.com/images/linuxserver/code-server "Get your own version badge on microbadger.com")
+[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/code-server.svg?style=flat-square&color=E68523)](https://hub.docker.com/r/linuxserver/code-server)
+[![Docker Stars](https://img.shields.io/docker/stars/linuxserver/code-server.svg?style=flat-square&color=E68523)](https://hub.docker.com/r/linuxserver/code-server)
+[![Build Status](https://ci.linuxserver.io/view/all/job/Docker-Pipeline-Builders/job/docker-code-server/job/master/badge/icon?style=flat-square)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-code-server/job/master/)
 [![](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/code-server/latest/badge.svg)](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/code-server/latest/index.html)
 
 [Code-server](https://coder.com) is VS Code running on a remote server, accessible through the browser.
@@ -34,7 +44,7 @@ Find us at:
 
 ## Supported Architectures
 
-Our images support multiple architectures such as `x86-64`, `arm64` and `armhf`. We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) and our announcement [here](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/). 
+Our images support multiple architectures such as `x86-64`, `arm64` and `armhf`. We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) and our announcement [here](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/).
 
 Simply pulling `linuxserver/code-server` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
 
@@ -135,17 +145,17 @@ git config --global user.email "email address"
 
 * Shell access whilst the container is running: `docker exec -it code-server /bin/bash`
 * To monitor the logs of the container in realtime: `docker logs -f code-server`
-* container version number 
+* container version number
   * `docker inspect -f '{{ index .Config.Labels "build_version" }}' code-server`
 * image version number
   * `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/code-server`
 
 ## Updating Info
 
-Most of our images are static, versioned, and require an image update and container recreation to update the app inside. With some exceptions (ie. nextcloud, plex), we do not recommend or support updating apps inside the container. Please consult the [Application Setup](#application-setup) section above to see if it is recommended for the image.  
-  
-Below are the instructions for updating containers:  
-  
+Most of our images are static, versioned, and require an image update and container recreation to update the app inside. With some exceptions (ie. nextcloud, plex), we do not recommend or support updating apps inside the container. Please consult the [Application Setup](#application-setup) section above to see if it is recommended for the image.
+
+Below are the instructions for updating containers:
+
 ### Via Docker Run/Create
 * Update the image: `docker pull linuxserver/code-server`
 * Stop the running container: `docker stop code-server`
@@ -176,7 +186,7 @@ Below are the instructions for updating containers:
 
 ## Building locally
 
-If you want to make local modifications to these images for development purposes or just to customize the logic: 
+If you want to make local modifications to these images for development purposes or just to customize the logic:
 ```
 git clone https://github.com/linuxserver/docker-code-server.git
 cd docker-code-server
