@@ -13,7 +13,7 @@ dash0.5.8-2.10
 debconf1.5.66ubuntu1
 debianutils4.8.4
 diffutils1:3.6-1
-dpkg1.19.0.5ubuntu2.1
+dpkg1.19.0.5ubuntu2.2
 e2fsprogs1.44.1-1ubuntu1.1
 fdisk2.31.1-0.4ubuntu3.3
 findutils4.6.0+git+20170828-2
@@ -71,8 +71,8 @@ libkeyutils11.5.9-9.2ubuntu2
 libkrb5-26-heimdal7.5.0+dfsg-1
 libkrb5-31.16-2ubuntu0.1
 libkrb5support01.16-2ubuntu0.1
-libldap-2.4-22.4.45+dfsg-1ubuntu1.3
-libldap-common2.4.45+dfsg-1ubuntu1.3
+libldap-2.4-22.4.45+dfsg-1ubuntu1.4
+libldap-common2.4.45+dfsg-1ubuntu1.4
 liblz4-10.0~r131-2ubuntu3
 liblzma55.2.2-1.3
 libmount12.31.1-0.4ubuntu3.3
@@ -87,7 +87,7 @@ libpam-modules-bin1.1.8-3.6ubuntu2.18.04.1
 libpam-runtime1.1.8-3.6ubuntu2.18.04.1
 libpcre32:8.39-9
 libperl5.265.26.1-6ubuntu0.3
-libprocps62:3.3.12-3ubuntu1.1
+libprocps62:3.3.12-3ubuntu1.2
 libpsl50.19.1-5build1
 libroken18-heimdal7.5.0+dfsg-1
 librtmp12.4+20151223.gitfa8646d.1-1
@@ -119,7 +119,7 @@ libxcb11.13-2~ubuntu18.04
 libxdmcp61:1.1.2-3
 libxext62:1.3.3-1
 libxmuu12:1.1.2-2
-libzstd11.3.3+dfsg-2ubuntu1
+libzstd11.3.3+dfsg-2ubuntu1.1
 locales2.27-3ubuntu1
 login1:4.5-1ubuntu2
 lsb-base9.20170808ubuntu1
@@ -138,7 +138,7 @@ patch2.7.6-2ubuntu1.1
 perl5.26.1-6ubuntu0.3
 perl-base5.26.1-6ubuntu0.3
 perl-modules-5.265.26.1-6ubuntu0.3
-procps2:3.3.12-3ubuntu1.1
+procps2:3.3.12-3ubuntu1.2
 publicsuffix20180223.1310-1
 sed4.4-2
 sensible-utils0.0.12
