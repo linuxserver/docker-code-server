@@ -8,7 +8,7 @@ bsdutils1:2.31.1-0.4ubuntu3.4
 bzip21.0.6-8.1ubuntu0.2
 ca-certificates20180409
 coreutils8.28-1ubuntu1
-curl7.58.0-2ubuntu3.7
+curl7.58.0-2ubuntu3.8
 dash0.5.8-2.10
 debconf1.5.66ubuntu1
 debianutils4.8.4
@@ -41,13 +41,13 @@ libc62.27-3ubuntu1
 libcap-ng00.7.7-3.1
 libc-bin2.27-3ubuntu1
 libcom-err21.44.1-1ubuntu1.1
-libcurl3-gnutls7.58.0-2ubuntu3.7
-libcurl47.58.0-2ubuntu3.7
+libcurl3-gnutls7.58.0-2ubuntu3.8
+libcurl47.58.0-2ubuntu3.8
 libdb5.35.3.28-13.1ubuntu1.1
 libdebconfclient00.213ubuntu1
 libedit23.1-20170329-1
 liberror-perl0.17025-1
-libexpat12.2.5-3ubuntu0.1
+libexpat12.2.5-3ubuntu0.2
 libext2fs21.44.1-1ubuntu1.1
 libfdisk12.31.1-0.4ubuntu3.4
 libffi63.2.1-8
