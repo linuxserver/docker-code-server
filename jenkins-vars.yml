@@ -2,14 +2,13 @@
 
 # jenkins variables
 project_name: docker-code-server
-external_type: github_stable
-release_type: stable
-release_tag: latest
-ls_branch: master
+external_type: custom_json
+release_type: prerelease
+release_tag: development
+ls_branch: development
 repo_vars:
-  - EXT_GIT_BRANCH = 'master'
-  - EXT_USER = 'cdr'
-  - EXT_REPO = 'code-server'
+  - JSON_URL = 'https://api.github.com/repos/cdr/code-server/releases'
+  - JSON_PATH = 'first(.[] | select(.prerelease == true)) | .tag_name'
   - CONTAINER_NAME = 'code-server'
   - BUILD_VERSION_ARG = 'CODE_RELEASE'
   - LS_USER = 'linuxserver'
