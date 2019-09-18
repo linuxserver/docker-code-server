@@ -24,10 +24,10 @@ available_architectures:
   - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
 
 # development version
-development_versions: false
+development_versions: true
 development_versions_items:
   - { tag: "latest", desc: "Stable releases" }
-  - { tag: "development", desc: "Releases from the `develop` branch" }
+  - { tag: "development", desc: "Prereleases from their GitHub" }
 
 # container parameters
 common_param_env_vars_enabled: true
