@@ -1,6 +1,6 @@
 adduser3.116ubuntu1
-apt1.6.11
-apt-utils1.6.11
+apt1.6.12
+apt-utils1.6.12
 base-files10.1ubuntu2.6
 base-passwd3.5.44
 bash4.4.18-2ubuntu1.2
@@ -28,8 +28,8 @@ init-system-helpers1.51
 krb5-locales1.16-2ubuntu0.1
 less487-0.1
 libacl12.2.52-3build1
-libapt-inst2.01.6.11
-libapt-pkg5.01.6.11
+libapt-inst2.01.6.12
+libapt-pkg5.01.6.12
 libasn1-8-heimdal7.5.0+dfsg-1
 libattr11:2.4.47-2build1
 libaudit11:2.8.2-1ubuntu1
@@ -105,10 +105,10 @@ libss21.44.1-1ubuntu1.1
 libssl1.0.01.0.2n-1ubuntu5.3
 libssl1.11.1.1-1ubuntu2.1~18.04.4
 libstdc++68.3.0-6ubuntu1~18.04.1
-libsystemd0237-3ubuntu10.28
+libsystemd0237-3ubuntu10.29
 libtasn1-64.13-2
 libtinfo56.1-1ubuntu1.18.04
-libudev1237-3ubuntu10.28
+libudev1237-3ubuntu10.29
 libunistring20.9.9-0ubuntu2
 libuuid12.31.1-0.4ubuntu3.4
 libwind0-heimdal7.5.0+dfsg-1
