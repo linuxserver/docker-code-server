@@ -54,6 +54,14 @@ The architectures supported by this image are:
 | :----: | --- |
 | x86-64 | amd64-latest |
 
+## Version Tags
+
+This image provides various versions that are available via tags. `latest` tag usually provides the latest stable version. Others are considered under development and caution must be exercised when using them.
+
+| Tag | Description |
+| :----: | --- |
+| latest | Stable releases |
+| development | Prereleases from their GitHub |
 
 ## Usage
 
@@ -205,6 +213,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **21.09.19:** - Add development builds/tag.
 * **09.07.19:** - Add optional sudo access.
 * **01.07.19:** - Add nano.
 * **24.06.19:** - Initial Release.

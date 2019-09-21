@@ -24,10 +24,10 @@ available_architectures:
   - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
 
 # development version
-development_versions: false
+development_versions: true
 development_versions_items:
   - { tag: "latest", desc: "Stable releases" }
-  - { tag: "development", desc: "Releases from the `develop` branch" }
+  - { tag: "development", desc: "Prereleases from their GitHub" }
 
 # container parameters
 common_param_env_vars_enabled: true
@@ -65,6 +65,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "21.09.19:", desc: "Add development builds/tag." }
   - { date: "09.07.19:", desc: "Add optional sudo access." }
   - { date: "01.07.19:", desc: "Add nano." }
   - { date: "24.06.19:", desc: "Initial Release." }
