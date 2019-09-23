@@ -1,18 +1,16 @@
 #!/usr/bin/with-contenv bash
 
 if [ -n "${PASSWORD}" ]; then
-  PASSARG="-P ${PASSWORD}"
+  AUTH="--auth password"
 else
-  PASSARG="-N"
   echo "starting with no password"
 fi
 
 exec \
 	s6-setuidgid abc \
 		/usr/bin/code-server \
-			-H \
-			${PASSARG} \
-			-d /config/data \
-			-e /config/extensions \
-			--disable-telemetry \
+			--port 8443 \
+			--user-data-dir /config/data \
+			--extensions-dir /config/extensions \
+			${AUTH} \
 			/config/workspace
