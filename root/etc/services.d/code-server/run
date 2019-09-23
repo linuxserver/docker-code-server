@@ -12,5 +12,6 @@ exec \
 			--port 8443 \
 			--user-data-dir /config/data \
 			--extensions-dir /config/extensions \
+			--disable-telemetry \
 			${AUTH} \
 			/config/workspace
