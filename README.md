@@ -40,7 +40,7 @@ Find us at:
 - All intensive computation runs on your server.
 - You're no longer running excess instances of Chrome.
 
-[![code-server](https://github.com/cdr/code-server/raw/master/doc/assets/cli.png)](https://coder.com)
+[![code-server](https://github.com/cdr/code-server/raw/master/doc/assets/ide.gif)](https://coder.com)
 
 ## Supported Architectures
 
@@ -213,6 +213,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **28.09.19:** - Update project logo.
 * **21.09.19:** - Add development builds/tag.
 * **09.07.19:** - Add optional sudo access.
 * **01.07.19:** - Add nano.
