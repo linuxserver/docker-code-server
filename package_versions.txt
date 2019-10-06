@@ -13,15 +13,15 @@ dash0.5.8-2.10
 debconf1.5.66ubuntu1
 debianutils4.8.4
 diffutils1:3.6-1
-dpkg1.19.0.5ubuntu2.2
-e2fsprogs1.44.1-1ubuntu1.1
+dpkg1.19.0.5ubuntu2.3
+e2fsprogs1.44.1-1ubuntu1.2
 fdisk2.31.1-0.4ubuntu3.4
 findutils4.6.0+git+20170828-2
 gcc-8-base8.3.0-6ubuntu1~18.04.1
 git1:2.17.1-1ubuntu0.4
 git-man1:2.17.1-1ubuntu0.4
 gpgv2.2.4-1ubuntu1.2
-grep3.1-2
+grep3.1-2build1
 gzip1.6-5ubuntu1
 hostname3.20
 init-system-helpers1.51
@@ -40,7 +40,7 @@ libbz2-1.01.0.6-8.1ubuntu0.2
 libc62.27-3ubuntu1
 libcap-ng00.7.7-3.1
 libc-bin2.27-3ubuntu1
-libcom-err21.44.1-1ubuntu1.1
+libcom-err21.44.1-1ubuntu1.2
 libcurl3-gnutls7.58.0-2ubuntu3.8
 libcurl47.58.0-2ubuntu3.8
 libdb5.35.3.28-13.1ubuntu1.1
@@ -48,7 +48,7 @@ libdebconfclient00.213ubuntu1
 libedit23.1-20170329-1
 liberror-perl0.17025-1
 libexpat12.2.5-3ubuntu0.2
-libext2fs21.44.1-1ubuntu1.1
+libext2fs21.44.1-1ubuntu1.2
 libfdisk12.31.1-0.4ubuntu3.4
 libffi63.2.1-8
 libgcc11:8.3.0-6ubuntu1~18.04.1
@@ -101,7 +101,7 @@ libsemanage-common2.7-2build2
 libsepol12.7-1
 libsmartcols12.31.1-0.4ubuntu3.4
 libsqlite3-03.22.0-1ubuntu0.1
-libss21.44.1-1ubuntu1.1
+libss21.44.1-1ubuntu1.2
 libssl1.0.01.0.2n-1ubuntu5.3
 libssl1.11.1.1-1ubuntu2.1~18.04.4
 libstdc++68.3.0-6ubuntu1~18.04.1
