@@ -13,5 +13,6 @@ exec \
 			--user-data-dir /config/data \
 			--extensions-dir /config/extensions \
 			--disable-telemetry \
+			--disable-updates \
 			${AUTH} \
 			/config/workspace
