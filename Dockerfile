@@ -28,7 +28,7 @@ RUN \
 	"https://github.com/cdr/code-server/releases/download/${CODE_RELEASE}/code-server${CODE_RELEASE}-linux-x86_64.tar.gz" && \
  tar xzf /tmp/code.tar.gz -C \
 	/usr/bin/ --strip-components=1 \
-  --wildcards code-server*/code-server && \
+	--wildcards code-server*/code-server && \
  echo "**** clean up ****" && \
  rm -rf \
 	/tmp/* \
