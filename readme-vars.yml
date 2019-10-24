@@ -65,6 +65,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "24.10.19:", desc: "Upgrade to v2 builds." }
   - { date: "28.09.19:", desc: "Update project logo." }
   - { date: "21.09.19:", desc: "Add development builds/tag." }
   - { date: "09.07.19:", desc: "Add optional sudo access." }
