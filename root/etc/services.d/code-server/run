@@ -1,8 +1,9 @@
 #!/usr/bin/with-contenv bash
 
 if [ -n "${PASSWORD}" ]; then
-  AUTH="--auth password"
+  AUTH="password"
 else
+  AUTH="none"
   echo "starting with no password"
 fi
 
@@ -14,5 +15,5 @@ exec \
 			--extensions-dir /config/extensions \
 			--disable-telemetry \
 			--disable-updates \
-			${AUTH} \
+			--auth "${AUTH}" \
 			/config/workspace
