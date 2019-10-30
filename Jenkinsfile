@@ -557,7 +557,7 @@ pipeline {
                 echo $GITLAB_TOKEN | docker login registry.gitlab.com -u LinuxServer.io --password-stdin
                 for PUSHIMAGE in "${QUAYIMAGE}" "${GITHUBIMAGE}" "${GITLABIMAGE}" "${IMAGE}"; do
                   docker tag ${IMAGE}:${META_TAG} ${PUSHIMAGE}:${META_TAG}
-                  docker tag ${PUSHIMAGE}:${META_TAG} ${IMAGE}:latest
+                  docker tag ${PUSHIMAGE}:${META_TAG} ${PUSHIMAGE}:latest
                   docker push ${PUSHIMAGE}:latest
                   docker push ${PUSHIMAGE}:${META_TAG}
                 done
