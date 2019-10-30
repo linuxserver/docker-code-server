@@ -65,7 +65,7 @@ libheimbase1-heimdal7.5.0+dfsg-1
 libheimntlm0-heimdal7.5.0+dfsg-1
 libhogweed43.4-1
 libhx509-5-heimdal7.5.0+dfsg-1
-libidn2-02.0.4-1.1build2
+libidn2-02.0.4-1.1ubuntu0.2
 libk5crypto31.16-2ubuntu0.1
 libkeyutils11.5.9-9.2ubuntu2
 libkrb5-26-heimdal7.5.0+dfsg-1
