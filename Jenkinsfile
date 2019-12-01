@@ -627,7 +627,7 @@ pipeline {
                   docker manifest push --purge ${MANIFESTIMAGE}:latest
                   docker manifest push --purge ${MANIFESTIMAGE}:${META_TAG} 
                 done
-                for LEGACYIMAGE in "${QUAYIMAGE}" "${GITHUBIMAGE}"; do
+                for LEGACYIMAGE in "${GITHUBIMAGE}" "${QUAYIMAGE}"; do
                   docker tag ${IMAGE}:amd64-${META_TAG} ${LEGACYIMAGE}:amd64-${META_TAG}
                   docker tag ${IMAGE}:arm32v7-${META_TAG} ${LEGACYIMAGE}:arm32v7-${META_TAG}
                   docker tag ${IMAGE}:arm64v8-${META_TAG} ${LEGACYIMAGE}:arm64v8-${META_TAG}
@@ -741,12 +741,12 @@ pipeline {
           sh 'echo "build aborted"'
         }
         else if (currentBuild.currentResult == "SUCCESS"){
-          sh ''' curl -X POST --data '{"avatar_url": "https://wiki.jenkins-ci.org/download/attachments/2916393/headshot.png","embeds": [{"color": 1681177,\
+          sh ''' curl -X POST -H "Content-Type: application/json" --data '{"avatar_url": "https://wiki.jenkins-ci.org/download/attachments/2916393/headshot.png","embeds": [{"color": 1681177,\
                  "description": "**Build:**  '${BUILD_NUMBER}'\\n**CI Results:**  '${CI_URL}'\\n**ShellCheck Results:**  '${SHELLCHECK_URL}'\\n**Status:**  Success\\n**Job:** '${RUN_DISPLAY_URL}'\\n**Change:** '${CODE_URL}'\\n**External Release:**: '${RELEASE_LINK}'\\n**DockerHub:** '${DOCKERHUB_LINK}'\\n"}],\
                  "username": "Jenkins"}' ${BUILDS_DISCORD} '''
         }
         else {
-          sh ''' curl -X POST --data '{"avatar_url": "https://wiki.jenkins-ci.org/download/attachments/2916393/headshot.png","embeds": [{"color": 16711680,\
+          sh ''' curl -X POST -H "Content-Type: application/json" --data '{"avatar_url": "https://wiki.jenkins-ci.org/download/attachments/2916393/headshot.png","embeds": [{"color": 16711680,\
                  "description": "**Build:**  '${BUILD_NUMBER}'\\n**CI Results:**  '${CI_URL}'\\n**ShellCheck Results:**  '${SHELLCHECK_URL}'\\n**Status:**  failure\\n**Job:** '${RUN_DISPLAY_URL}'\\n**Change:** '${CODE_URL}'\\n**External Release:**: '${RELEASE_LINK}'\\n**DockerHub:** '${DOCKERHUB_LINK}'\\n"}],\
                  "username": "Jenkins"}' ${BUILDS_DISCORD} '''
         }
