@@ -25,6 +25,7 @@ grep3.1-2build1
 gzip1.6-5ubuntu1
 hostname3.20
 init-system-helpers1.51
+jq1.5+dfsg-2
 krb5-locales1.16-2ubuntu0.1
 less487-0.1
 libacl12.2.52-3build1
@@ -56,7 +57,7 @@ libgcrypt201.8.1-4ubuntu1.1
 libgdbm51.14.1-6
 libgdbm-compat41.14.1-6
 libgmp102:6.1.2+dfsg-2
-libgnutls303.5.18-1ubuntu1.1
+libgnutls303.5.18-1ubuntu1.2
 libgpg-error01.27-6
 libgssapi3-heimdal7.5.0+dfsg-1
 libgssapi-krb5-21.16-2ubuntu0.1
@@ -66,6 +67,7 @@ libheimntlm0-heimdal7.5.0+dfsg-1
 libhogweed43.4-1
 libhx509-5-heimdal7.5.0+dfsg-1
 libidn2-02.0.4-1.1ubuntu0.2
+libjq11.5+dfsg-2
 libk5crypto31.16-2ubuntu0.1
 libkeyutils11.5.9-9.2ubuntu2
 libkrb5-26-heimdal7.5.0+dfsg-1
@@ -80,6 +82,7 @@ libncurses56.1-1ubuntu1.18.04
 libncursesw56.1-1ubuntu1.18.04
 libnettle63.4-1
 libnghttp2-141.30.0-1ubuntu1
+libonig46.7.0-1
 libp11-kit00.23.9-2
 libpam0g1.1.8-3.6ubuntu2.18.04.1
 libpam-modules1.1.8-3.6ubuntu2.18.04.1
