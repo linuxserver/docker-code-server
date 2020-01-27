@@ -53,7 +53,7 @@ libext2fs21.44.1-1ubuntu1.2
 libfdisk12.31.1-0.4ubuntu3.4
 libffi63.2.1-8
 libgcc11:8.3.0-6ubuntu1~18.04.1
-libgcrypt201.8.1-4ubuntu1.1
+libgcrypt201.8.1-4ubuntu1.2
 libgdbm51.14.1-6
 libgdbm-compat41.14.1-6
 libgmp102:6.1.2+dfsg-2
