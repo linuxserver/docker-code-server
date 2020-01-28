@@ -1,5 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-apt update && apt install -y \
+apt-get update && apt-get install -y \
   python \
   python-pip
