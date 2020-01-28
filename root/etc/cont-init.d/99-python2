@@ -1,5 +1,6 @@
 #!/usr/bin/with-contenv bash
 
+echo "**** installing python2 and pip ****"
 apt-get update && apt-get install -y \
   python \
   python-pip
