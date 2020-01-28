@@ -65,6 +65,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "28.01.20:", desc: "Release python2-mod." }
   - { date: "17.01.20:", desc: "Fix artifact url retrieval from github." }
   - { date: "24.10.19:", desc: "Upgrade to v2 builds." }
   - { date: "28.09.19:", desc: "Update project logo." }
