@@ -2,14 +2,12 @@
 
 # jenkins variables
 project_name: docker-code-server
-external_type: github_stable
-release_type: stable
-release_tag: latest
-ls_branch: master
+external_type: os
+release_type: prerelease
+release_tag: mod-python2
+ls_branch: mod-python2
+skip_package_check: true
 repo_vars:
-  - EXT_GIT_BRANCH = 'master'
-  - EXT_USER = 'cdr'
-  - EXT_REPO = 'code-server'
   - CONTAINER_NAME = 'code-server'
   - BUILD_VERSION_ARG = 'CODE_RELEASE'
   - LS_USER = 'linuxserver'
@@ -19,11 +17,4 @@ repo_vars:
   - PR_DOCKERHUB_IMAGE = 'lspipepr/code-server'
   - DIST_IMAGE = 'ubuntu'
   - MULTIARCH='false'
-  - CI='true'
-  - CI_WEB='true'
-  - CI_PORT='8443'
-  - CI_SSL='false'
-  - CI_DELAY='120'
-  - CI_DOCKERENV='TZ=US/Pacific'
-  - CI_AUTH='user:password'
-  - CI_WEBPATH=''
+  - CI='false'

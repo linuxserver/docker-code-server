@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+
+apt update && apt install -y \
+  python \
+  python-pip
