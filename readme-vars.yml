@@ -2,74 +2,26 @@
 
 # project information
 project_name: code-server
-project_url: "https://coder.com"
-project_logo: "https://github.com/cdr/code-server/raw/master/doc/assets/ide.gif"
-project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is VS Code running on a remote server, accessible through the browser.
- 
-- Code on your Chromebook, tablet, and laptop with a consistent dev environment.
+full_custom_readme: |
+  {% raw -%}
+  [linuxserverurl]: https://linuxserver.io
+  [forumurl]: https://forum.linuxserver.io
 
-- If you have a Windows or Mac workstation, more easily develop for Linux.
+  [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png?v=4&s=4000)][linuxserverurl]
 
-- Take advantage of large cloud servers to speed up tests, compilations, downloads, and more.
+  ## Contact information:-
 
-- Preserve battery life when you're on the go.
+  | Type | Address/Details |
+  | :---: | --- |
+  | Discord | [Discord](https://discord.gg/YWrKVTn) |
+  | Forum | [Linuserver.io forum][forumurl] |
 
-- All intensive computation runs on your server.
+  &nbsp;
+  &nbsp;
 
-- You're no longer running excess instances of Chrome."
-project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+  The code in this branch is not meant for direct consumption. It is a modification layer to add python2 into `linuxserver/code-server`
 
-# supported architectures
-available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  The following line is only in this repo for release messaging:
 
-# development version
-development_versions: true
-development_versions_items:
-  - { tag: "latest", desc: "Stable releases" }
-  - { tag: "development", desc: "Prereleases from their GitHub" }
-
-# container parameters
-common_param_env_vars_enabled: true
-param_container_name: "{{ project_name }}"
-param_usage_include_vols: true
-param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Contains all relevant configuration files." }
-param_usage_include_ports: true
-param_ports:
-  - { external_port: "8443", internal_port: "8443", port_desc: "web gui" }
-param_usage_include_env: true
-param_env_vars:
-  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
-
-# optional container parameters
-opt_param_usage_include_env: true
-opt_param_env_vars:
-  - { env_var: "PASSWORD", env_value: "password", desc: "Optional web gui password, if not provided, there will be no auth."}
-  - { env_var: "SUDO_PASSWORD", env_value: "password", desc: "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password."}
-
-optional_block_1: false
-optional_block_1_items: ""
-
-# application setup block
-app_setup_block_enabled: true
-app_setup_block: |
-  Access the webui at `http://<your-ip>:8443`.  
-  For github integration, drop your ssh key in to `/config/.ssh`.  
-  Then open a terminal from the top menu and set your github username and email via the following commands  
-  ```
-  git config --global user.name "username"
-  git config --global user.email "email address"
-  ```
-
-
-# changelog
-changelogs:
-  - { date: "28.01.20:", desc: "Release python2-mod." }
-  - { date: "17.01.20:", desc: "Fix artifact url retrieval from github." }
-  - { date: "24.10.19:", desc: "Upgrade to v2 builds." }
-  - { date: "28.09.19:", desc: "Update project logo." }
-  - { date: "21.09.19:", desc: "Add development builds/tag." }
-  - { date: "09.07.19:", desc: "Add optional sudo access." }
-  - { date: "01.07.19:", desc: "Add nano." }
-  - { date: "24.06.19:", desc: "Initial Release." }
+  - { date: "01.01.50:", desc: "I am the release message for this custom branch" }
+  {%- endraw %}
