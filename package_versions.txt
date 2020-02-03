@@ -14,7 +14,7 @@ debconf1.5.66ubuntu1
 debianutils4.8.4
 diffutils1:3.6-1
 dpkg1.19.0.5ubuntu2.3
-e2fsprogs1.44.1-1ubuntu1.2
+e2fsprogs1.44.1-1ubuntu1.3
 fdisk2.31.1-0.4ubuntu3.4
 findutils4.6.0+git+20170828-2
 gcc-8-base8.3.0-6ubuntu1~18.04.1
@@ -41,7 +41,7 @@ libbz2-1.01.0.6-8.1ubuntu0.2
 libc62.27-3ubuntu1
 libcap-ng00.7.7-3.1
 libc-bin2.27-3ubuntu1
-libcom-err21.44.1-1ubuntu1.2
+libcom-err21.44.1-1ubuntu1.3
 libcurl3-gnutls7.58.0-2ubuntu3.8
 libcurl47.58.0-2ubuntu3.8
 libdb5.35.3.28-13.1ubuntu1.1
@@ -49,7 +49,7 @@ libdebconfclient00.213ubuntu1
 libedit23.1-20170329-1
 liberror-perl0.17025-1
 libexpat12.2.5-3ubuntu0.2
-libext2fs21.44.1-1ubuntu1.2
+libext2fs21.44.1-1ubuntu1.3
 libfdisk12.31.1-0.4ubuntu3.4
 libffi63.2.1-8
 libgcc11:8.3.0-6ubuntu1~18.04.1
@@ -57,7 +57,7 @@ libgcrypt201.8.1-4ubuntu1.2
 libgdbm51.14.1-6
 libgdbm-compat41.14.1-6
 libgmp102:6.1.2+dfsg-2
-libgnutls303.5.18-1ubuntu1.2
+libgnutls303.5.18-1ubuntu1.3
 libgpg-error01.27-6
 libgssapi3-heimdal7.5.0+dfsg-1
 libgssapi-krb5-21.16-2ubuntu0.1
@@ -94,9 +94,9 @@ libprocps62:3.3.12-3ubuntu1.2
 libpsl50.19.1-5build1
 libroken18-heimdal7.5.0+dfsg-1
 librtmp12.4+20151223.gitfa8646d.1-1
-libsasl2-22.1.27~101-g0780600+dfsg-3ubuntu2
-libsasl2-modules2.1.27~101-g0780600+dfsg-3ubuntu2
-libsasl2-modules-db2.1.27~101-g0780600+dfsg-3ubuntu2
+libsasl2-22.1.27~101-g0780600+dfsg-3ubuntu2.1
+libsasl2-modules2.1.27~101-g0780600+dfsg-3ubuntu2.1
+libsasl2-modules-db2.1.27~101-g0780600+dfsg-3ubuntu2.1
 libseccomp22.4.1-0ubuntu0.18.04.2
 libselinux12.7-2build2
 libsemanage12.7-2build2
@@ -104,7 +104,7 @@ libsemanage-common2.7-2build2
 libsepol12.7-1
 libsmartcols12.31.1-0.4ubuntu3.4
 libsqlite3-03.22.0-1ubuntu0.2
-libss21.44.1-1ubuntu1.2
+libss21.44.1-1ubuntu1.3
 libssl1.0.01.0.2n-1ubuntu5.3
 libssl1.11.1.1-1ubuntu2.1~18.04.5
 libstdc++68.3.0-6ubuntu1~18.04.1
@@ -145,7 +145,7 @@ procps2:3.3.12-3ubuntu1.2
 publicsuffix20180223.1310-1
 sed4.4-2
 sensible-utils0.0.12
-sudo1.8.21p2-3ubuntu1.1
+sudo1.8.21p2-3ubuntu1.2
 sysvinit-utils2.88dsf-59.10ubuntu1
 tar1.29b-2ubuntu0.1
 tzdata2019c-0ubuntu0.18.04
