@@ -22,5 +22,5 @@ exec \
 			--disable-telemetry \
 			--disable-updates \
 			--auth "${AUTH}" \
-			"${BASEPATH}" \
+			${BASEPATH} \
 			/config/workspace
