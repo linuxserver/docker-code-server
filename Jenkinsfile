@@ -27,7 +27,7 @@ pipeline {
     DEV_DOCKERHUB_IMAGE = 'lsiodev/code-server'
     PR_DOCKERHUB_IMAGE = 'lspipepr/code-server'
     DIST_IMAGE = 'ubuntu'
-    MULTIARCH='false'
+    MULTIARCH='true'
     CI='true'
     CI_WEB='true'
     CI_PORT='8443'
@@ -337,33 +337,6 @@ pipeline {
             --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${META_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
           }
         }
-        stage('Build ARMHF') {
-          agent {
-            label 'ARMHF'
-          }
-          steps {
-            withCredentials([
-              [
-                $class: 'UsernamePasswordMultiBinding',
-                credentialsId: '3f9ba4d5-100d-45b0-a3c4-633fd6061207',
-                usernameVariable: 'DOCKERUSER',
-                passwordVariable: 'DOCKERPASS'
-              ]
-            ]) {
-              echo 'Logging into DockerHub'
-              sh '''#! /bin/bash
-                 echo $DOCKERPASS | docker login -u $DOCKERUSER --password-stdin
-                 '''
-              sh "docker build --no-cache --pull -f Dockerfile.armhf -t ${IMAGE}:arm32v7-${META_TAG} \
-                           --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${META_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
-              sh "docker tag ${IMAGE}:arm32v7-${META_TAG} lsiodev/buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER}"
-              sh "docker push lsiodev/buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER}"
-              sh '''docker rmi \
-                    ${IMAGE}:arm32v7-${META_TAG} \
-                    lsiodev/buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} || :'''
-            }
-          }
-        }
         stage('Build ARM64') {
           agent {
             label 'ARM64'
@@ -497,9 +470,7 @@ pipeline {
                 set -e
                 docker pull lsiodev/ci:latest
                 if [ "${MULTIARCH}" == "true" ]; then
-                  docker pull lsiodev/buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER}
                   docker pull lsiodev/buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER}
-                  docker tag lsiodev/buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm32v7-${META_TAG}
                   docker tag lsiodev/buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm64v8-${META_TAG}
                 fi
                 docker run --rm \
@@ -598,49 +569,37 @@ pipeline {
                 echo $GITHUB_TOKEN | docker login docker.pkg.github.com -u LinuxServer-CI --password-stdin
                 echo $GITLAB_TOKEN | docker login registry.gitlab.com -u LinuxServer.io --password-stdin
                 if [ "${CI}" == "false" ]; then
-                  docker pull lsiodev/buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER}
                   docker pull lsiodev/buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER}
-                  docker tag lsiodev/buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm32v7-${META_TAG}
                   docker tag lsiodev/buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm64v8-${META_TAG}
                 fi
                 for MANIFESTIMAGE in "${IMAGE}" "${GITLABIMAGE}"; do
                   docker tag ${IMAGE}:amd64-${META_TAG} ${MANIFESTIMAGE}:amd64-${META_TAG}
-                  docker tag ${IMAGE}:arm32v7-${META_TAG} ${MANIFESTIMAGE}:arm32v7-${META_TAG}
                   docker tag ${IMAGE}:arm64v8-${META_TAG} ${MANIFESTIMAGE}:arm64v8-${META_TAG}
                   docker tag ${MANIFESTIMAGE}:amd64-${META_TAG} ${MANIFESTIMAGE}:amd64-latest
-                  docker tag ${MANIFESTIMAGE}:arm32v7-${META_TAG} ${MANIFESTIMAGE}:arm32v7-latest
                   docker tag ${MANIFESTIMAGE}:arm64v8-${META_TAG} ${MANIFESTIMAGE}:arm64v8-latest
                   docker push ${MANIFESTIMAGE}:amd64-${META_TAG}
-                  docker push ${MANIFESTIMAGE}:arm32v7-${META_TAG}
                   docker push ${MANIFESTIMAGE}:arm64v8-${META_TAG}
                   docker push ${MANIFESTIMAGE}:amd64-latest
-                  docker push ${MANIFESTIMAGE}:arm32v7-latest
                   docker push ${MANIFESTIMAGE}:arm64v8-latest
                   docker manifest push --purge ${MANIFESTIMAGE}:latest || :
                   docker manifest create ${MANIFESTIMAGE}:latest ${MANIFESTIMAGE}:amd64-latest ${MANIFESTIMAGE}:arm32v7-latest ${MANIFESTIMAGE}:arm64v8-latest
-                  docker manifest annotate ${MANIFESTIMAGE}:latest ${MANIFESTIMAGE}:arm32v7-latest --os linux --arch arm
                   docker manifest annotate ${MANIFESTIMAGE}:latest ${MANIFESTIMAGE}:arm64v8-latest --os linux --arch arm64 --variant v8
                   docker manifest push --purge ${MANIFESTIMAGE}:${META_TAG} || :
                   docker manifest create ${MANIFESTIMAGE}:${META_TAG} ${MANIFESTIMAGE}:amd64-${META_TAG} ${MANIFESTIMAGE}:arm32v7-${META_TAG} ${MANIFESTIMAGE}:arm64v8-${META_TAG}
-                  docker manifest annotate ${MANIFESTIMAGE}:${META_TAG} ${MANIFESTIMAGE}:arm32v7-${META_TAG} --os linux --arch arm
                   docker manifest annotate ${MANIFESTIMAGE}:${META_TAG} ${MANIFESTIMAGE}:arm64v8-${META_TAG} --os linux --arch arm64 --variant v8
                   docker manifest push --purge ${MANIFESTIMAGE}:latest
                   docker manifest push --purge ${MANIFESTIMAGE}:${META_TAG} 
                 done
                 for LEGACYIMAGE in "${GITHUBIMAGE}" "${QUAYIMAGE}"; do
                   docker tag ${IMAGE}:amd64-${META_TAG} ${LEGACYIMAGE}:amd64-${META_TAG}
-                  docker tag ${IMAGE}:arm32v7-${META_TAG} ${LEGACYIMAGE}:arm32v7-${META_TAG}
                   docker tag ${IMAGE}:arm64v8-${META_TAG} ${LEGACYIMAGE}:arm64v8-${META_TAG}
                   docker tag ${LEGACYIMAGE}:amd64-${META_TAG} ${LEGACYIMAGE}:latest
                   docker tag ${LEGACYIMAGE}:amd64-${META_TAG} ${LEGACYIMAGE}:${META_TAG}
-                  docker tag ${LEGACYIMAGE}:arm32v7-${META_TAG} ${LEGACYIMAGE}:arm32v7-latest
                   docker tag ${LEGACYIMAGE}:arm64v8-${META_TAG} ${LEGACYIMAGE}:arm64v8-latest
                   docker push ${LEGACYIMAGE}:amd64-${META_TAG}
-                  docker push ${LEGACYIMAGE}:arm32v7-${META_TAG}
                   docker push ${LEGACYIMAGE}:arm64v8-${META_TAG}
                   docker push ${LEGACYIMAGE}:latest
                   docker push ${LEGACYIMAGE}:${META_TAG}
-                  docker push ${LEGACYIMAGE}:arm32v7-latest
                   docker push ${LEGACYIMAGE}:arm64v8-latest
                 done
              '''
@@ -649,13 +608,10 @@ pipeline {
                   docker rmi \
                   ${DELETEIMAGE}:amd64-${META_TAG} \
                   ${DELETEIMAGE}:amd64-latest \
-                  ${DELETEIMAGE}:arm32v7-${META_TAG} \
-                  ${DELETEIMAGE}:arm32v7-latest \
                   ${DELETEIMAGE}:arm64v8-${META_TAG} \
                   ${DELETEIMAGE}:arm64v8-latest || :
                 done
                 docker rmi \
-                lsiodev/buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} \
                 lsiodev/buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} || :
              '''
         }
