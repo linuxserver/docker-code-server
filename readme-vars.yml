@@ -22,6 +22,7 @@ project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_
 # supported architectures
 available_architectures:
   - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 
 # development version
 development_versions: true
@@ -65,6 +66,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "27.02.20:", desc: "Add ARM64 support" }
   - { date: "17.01.20:", desc: "Fix artifact url retrieval from github." }
   - { date: "24.10.19:", desc: "Upgrade to v2 builds." }
   - { date: "28.09.19:", desc: "Update project logo." }
