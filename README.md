@@ -57,6 +57,7 @@ The architectures supported by this image are:
 | Architecture | Tag |
 | :----: | --- |
 | x86-64 | amd64-latest |
+| arm64 | arm64v8-latest |
 
 ## Version Tags
 
@@ -229,6 +230,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **27.02.20:** - Add ARM64 builds
 * **17.01.20:** - Fix artifact url retrieval from github.
 * **24.10.19:** - Upgrade to v2 builds.
 * **28.09.19:** - Update project logo.
