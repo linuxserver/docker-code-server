@@ -65,6 +65,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "05.03.20:", desc: "Updates for v3.0.0 (structural changes)." }
   - { date: "09.07.19:", desc: "Add optional sudo access." }
   - { date: "01.07.19:", desc: "Add nano." }
   - { date: "24.06.19:", desc: "Initial Release." }

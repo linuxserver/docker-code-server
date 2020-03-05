@@ -1,18 +1,20 @@
 #!/usr/bin/with-contenv bash
 
 if [ -n "${PASSWORD}" ]; then
-  AUTH="--auth password"
+	AUTH="password"
 else
-  echo "starting with no password"
+	AUTH="none"
+	echo "starting with no password"
 fi
 
 exec \
 	s6-setuidgid abc \
-		/usr/bin/code-server \
+		/app/code-server/code-server \
+			--host 0.0.0.0 \
 			--port 8443 \
 			--user-data-dir /config/data \
 			--extensions-dir /config/extensions \
 			--disable-telemetry \
 			--disable-updates \
-			${AUTH} \
+			--auth ${AUTH} \
 			/config/workspace
