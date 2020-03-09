@@ -35,6 +35,7 @@ param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Contains all relevant configuration files." }
+  - { vol_path: "/certificates", vol_host_path: "/path/to/appdata/certificates", desc: "Contains the certificate as well as the key file for SSL encryption" }
 param_usage_include_ports: true
 param_ports:
   - { external_port: "8443", internal_port: "8443", port_desc: "web gui" }
@@ -45,7 +46,11 @@ param_env_vars:
 # optional container parameters
 opt_param_usage_include_env: true
 opt_param_env_vars:
+  - { env_var: "HTTPS_CERT", env_value: "/certificates/cert_name.crt", "Full path to certificate file that should be used. PEM encoded." }
+  - { env_var: "HTTPS_KEY", env_value: "/certificates/key_name.key", "Full path to the key file that is to be used. PEM encoded, unencrypted." }
   - { env_var: "PASSWORD", env_value: "password", desc: "Optional web gui password, if not provided, there will be no auth."}
+  - { env_var: "SERVER_PORT", env_value: "8443", desc: "Optional port of the web server that should be used. Cannot be less than 1024."}
+  - { env_var: "SSL_ENABLED", env_value: "true", desc: "Enable SSL encryption for the connection. If no cert/key is provided, it is auto generated."}
   - { env_var: "SUDO_PASSWORD", env_value: "password", desc: "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password."}
 
 optional_block_1: false
@@ -65,6 +70,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "09.03.20:", desc: "Added SSL support and option to set server port." }
   - { date: "17.01.20:", desc: "Fix artifact url retrieval from github." }
   - { date: "24.10.19:", desc: "Upgrade to v2 builds." }
   - { date: "28.09.19:", desc: "Update project logo." }
