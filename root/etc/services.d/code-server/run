@@ -1,5 +1,25 @@
 #!/usr/bin/with-contenv bash
 
+CODE_SERVER_PORT="${SERVER_PORT:-8443}"
+CODE_SERVER_SSL="${SSL_ENABLED:-false}"
+
+SSL_CERT_COMMAND=
+SSL_CERT_FILE=
+SSL_KEY_COMMAND=
+SSL_KEY_FILE=
+
+if [ "${CODE_SERVER_SSL}x" != "falsex" ]; then
+	SSL_CERT_COMMAND="--cert"
+  
+  if [ -f "${HTTPS_CERT}" ] && [ -f "${HTTPS_KEY}" ]; then
+
+	SSL_CERT_COMMAND="--cert"
+	SSL_CERT_FILE="${HTTPS_CERT}"
+	SSL_KEY_COMMAND="--cert-key"
+	SSL_KEY_FILE="${HTTPS_KEY}"
+  fi
+fi
+
 if [ -n "${PASSWORD}" ]; then
   AUTH="password"
 else
@@ -10,7 +30,9 @@ fi
 exec \
 	s6-setuidgid abc \
 		/usr/bin/code-server \
-			--port 8443 \
+			${SSL_CERT_COMMAND} ${SSL_CERT_FILE} \
+			${SSL_KEY_COMMAND} ${SSL_KEY_FILE} \
+			--port "${CODE_SERVER_PORT}" \
 			--user-data-dir /config/data \
 			--extensions-dir /config/extensions \
 			--disable-telemetry \
