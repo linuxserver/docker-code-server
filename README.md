@@ -44,7 +44,7 @@ Find us at:
 - All intensive computation runs on your server.
 - You're no longer running excess instances of Chrome.
 
-[![code-server](https://github.com/cdr/code-server/raw/master/doc/assets/ide.gif)](https://coder.com)
+[![code-server](https://raw.githubusercontent.com/cdr/code-server/master/doc/assets/code-server.gif)](https://coder.com)
 
 ## Supported Architectures
 
