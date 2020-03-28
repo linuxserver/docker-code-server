@@ -8,23 +8,12 @@ else
 fi
 
 if [ -n "${SSL_KEY}" ] && [ -n "${SSL_CERT}" ]; then
-	SSL_CERT="--cert ${SSL_CERT}"
-	SSL_KEY="--cert-key ${SSL_KEY}"
+	SSL_CONFIG=" --cert ${SSL_CERT} --cert-key ${SSL_KEY}"
 else
 	echo "Running insecurely on HTTP."
-	SSL_CERT=""
-	SSL_KEY=""
+	SSL_CONFIG=""
 fi
 
 exec \
 	s6-setuidgid abc \
-		/usr/bin/code-server \
-			--port 8443 \
-			--user-data-dir /config/data \
-			--extensions-dir /config/extensions \
-			--disable-telemetry \
-			--disable-updates \
-			--auth "${AUTH}" \
-			"${SSL_CERT}" \
-			"${SSL_KEY}" \
-			/config/workspace
+		/usr/bin/code-server --port 8443 --user-data-dir /config/data --extensions-dir /config/extensions --disable-telemetry --disable-updates --auth "${AUTH}" "${SSL_CONFIG}" /config/workspace
