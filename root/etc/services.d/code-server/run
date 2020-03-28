@@ -8,7 +8,7 @@ else
 fi
 
 if [ -n "${SSL_KEY}" ] && [ -n "${SSL_CERT}" ]; then
-	SSL_CONFIG="--cert \'${SSL_CERT}\' --cert-key \'${SSL_KEY}\'"
+	SSL_CONFIG="--cert ${SSL_CERT} --cert-key ${SSL_KEY}"
 else
 	echo "Running insecurely on HTTP."
 	SSL_CONFIG=""
