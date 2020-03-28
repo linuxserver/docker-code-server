@@ -7,10 +7,11 @@ else
   echo "starting with no password"
 fi
 
-if [ -n "${CERT_KEY}" ]; then
-	KEY="--cert-key ${CERT_KEY}"
+if [ -n "${SSL_KEY}" ] && [ -n "${SSL_CERT}" ]; then
+	SSL_CONFIG="--cert ${SSL_CERT} --cert-key ${SSL_KEY}"
 else
-	KEY=""
+	echo "Running insecurely on HTTP."
+	SSL_CONFIG=""
 fi
 
 exec \
@@ -22,6 +23,5 @@ exec \
 			--disable-telemetry \
 			--disable-updates \
 			--auth "${AUTH}" \
-			--cert "${CERT}" \
-			"${KEY}" \
+			"${SSL_CONFIG}" \
 			/config/workspace
