@@ -7,6 +7,12 @@ else
   echo "starting with no password"
 fi
 
+if [ -n "${WORKSPACE_PATH}" ]; then
+	WORKSPACE="/config/workspace"
+else
+	WORKSPACE="${WORKSPACE_PATH}"
+fi
+
 exec \
 	s6-setuidgid abc \
 		/usr/bin/code-server \
@@ -18,4 +24,4 @@ exec \
 			--auth "${AUTH}" \
 			--cert "${CERT}" \
 			--cert-key "${CERT_KEY}" \
-			/config/workspace
+			"${WORKSPACE}"
