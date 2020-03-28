@@ -124,11 +124,13 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
 | `-e PASSWORD=password` | Optional web gui password, if not provided, there will be no auth. |
 | `-e SUDO_PASSWORD=password` | If this optional variable is set, user will have sudo access in the code-server terminal with the specified password. |
+| `-e SSL_CERT=/ssl/cert_file.crt` | If this optional variable is provided in conjunction with a key file the code-server run be served via HTTPS. |
+| `-e SSL_KEY=/ssl/key_file.key` | If this optional variable is provided in conjunction with a cert file the code-server run be served via HTTPS. |
 | `-v /config` | Contains all relevant configuration files. |
 
 ## Environment variables from files (Docker secrets)
 
-You can set any environment variable from a file by using a special prepend `FILE__`. 
+You can set any environment variable from a file by using a special prepend `FILE__`.
 
 As an example:
 
@@ -155,9 +157,9 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 &nbsp;
 ## Application Setup
 
-Access the webui at `http://<your-ip>:8443`.  
-For github integration, drop your ssh key in to `/config/.ssh`.  
-Then open a terminal from the top menu and set your github username and email via the following commands  
+Access the webui at `http://<your-ip>:8443`.
+For github integration, drop your ssh key in to `/config/.ssh`.
+Then open a terminal from the top menu and set your github username and email via the following commands
 ```
 git config --global user.name "username"
 git config --global user.email "email address"
