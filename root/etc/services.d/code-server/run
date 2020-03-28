@@ -8,10 +8,12 @@ else
 fi
 
 if [ -n "${SSL_KEY}" ] && [ -n "${SSL_CERT}" ]; then
-	SSL_CONFIG="--cert ${SSL_CERT} --cert-key ${SSL_KEY}"
+	SSL_CERT="--cert ${SSL_CERT}"
+	SSL_KEY="--cert-key ${SSL_KEY}"
 else
 	echo "Running insecurely on HTTP."
-	SSL_CONFIG=""
+	SSL_CERT=""
+	SSL_KEY=""
 fi
 
 exec \
@@ -23,5 +25,6 @@ exec \
 			--disable-telemetry \
 			--disable-updates \
 			--auth "${AUTH}" \
-			"${SSL_CONFIG}" \
+			"${SSL_CERT}" \
+			"${SSL_KEY}" \
 			/config/workspace
