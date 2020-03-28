@@ -16,4 +16,6 @@ exec \
 			--disable-telemetry \
 			--disable-updates \
 			--auth "${AUTH}" \
+			--cert "${CERT}" \
+			--cert-key "${CERT_KEY}" \
 			/config/workspace
