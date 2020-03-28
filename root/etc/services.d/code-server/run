@@ -7,6 +7,12 @@ else
   echo "starting with no password"
 fi
 
+if [ -n "${CERT_KEY}" ]; then
+	KEY="--cert-key ${CERT_KEY}"
+else
+	KEY=""
+fi
+
 exec \
 	s6-setuidgid abc \
 		/usr/bin/code-server \
@@ -17,5 +23,5 @@ exec \
 			--disable-updates \
 			--auth "${AUTH}" \
 			--cert "${CERT}" \
-			--cert-key "${CERT_KEY}" \
+			"${KEY}" \
 			/config/workspace
