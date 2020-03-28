@@ -16,4 +16,12 @@ fi
 
 exec \
 	s6-setuidgid abc \
-		/usr/bin/code-server --port 8443 --user-data-dir /config/data --extensions-dir /config/extensions --disable-telemetry --disable-updates --auth "${AUTH}" "${SSL_CONFIG}" /config/workspace
+		/usr/bin/code-server \
+			--port 8443 \
+			--user-data-dir /config/data \
+			--extensions-dir /config/extensions \
+			--disable-telemetry \
+			--disable-updates \
+			--auth "${AUTH}" \
+			"${SSL_CONFIG}" \
+			/config/workspace
