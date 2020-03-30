@@ -11,8 +11,9 @@ LABEL maintainer="aptalca"
 ENV HOME="/config"
 
 RUN \
+ DEBIAN_FRONTEND="noninteractive" \
  apt-get update && \
- apt-get install -y \
+ DEBIAN_FRONTEND="noninteractive" apt-get install -y \
 	git \
 	jq \
 	nano \
