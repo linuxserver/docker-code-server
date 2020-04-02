@@ -9,7 +9,8 @@ fi
 
 exec \
 	s6-setuidgid abc \
-		/usr/bin/code-server \
+		/app/code-server/code-server \
+			--host 0.0.0.0 \
 			--port 8443 \
 			--user-data-dir /config/data \
 			--extensions-dir /config/extensions \

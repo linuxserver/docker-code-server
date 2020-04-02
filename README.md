@@ -229,6 +229,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **01.04.20:** - Structural changes required for v3.
 * **17.01.20:** - Fix artifact url retrieval from github.
 * **24.10.19:** - Upgrade to v2 builds.
 * **28.09.19:** - Update project logo.

@@ -11,6 +11,7 @@ LABEL maintainer="aptalca"
 ENV HOME="/config"
 
 RUN \
+ echo "**** install dependencies ****" && \
  apt-get update && \
  apt-get install -y \
 	git \
@@ -25,12 +26,12 @@ RUN \
  fi && \
  CODE_URL=$(curl -sX GET "https://api.github.com/repos/cdr/code-server/releases/tags/${CODE_RELEASE}" \
 	| jq -r '.assets[] | select(.browser_download_url | contains("linux-x86_64")) | .browser_download_url') && \
+ mkdir -p /app/code-server && \
  curl -o \
 	/tmp/code.tar.gz -L \
 	"${CODE_URL}" && \
  tar xzf /tmp/code.tar.gz -C \
-	/usr/bin/ --strip-components=1 \
-	--wildcards code-server*/code-server && \
+	/app/code-server --strip-components=1 && \
  echo "**** clean up ****" && \
  rm -rf \
 	/tmp/* \
