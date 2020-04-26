@@ -18,8 +18,8 @@ e2fsprogs1.44.1-1ubuntu1.3
 fdisk2.31.1-0.4ubuntu3.6
 findutils4.6.0+git+20170828-2
 gcc-8-base8.4.0-1ubuntu1~18.04
-git1:2.17.1-1ubuntu0.6
-git-man1:2.17.1-1ubuntu0.6
+git1:2.17.1-1ubuntu0.7
+git-man1:2.17.1-1ubuntu0.7
 gpgv2.2.4-1ubuntu1.2
 grep3.1-2build1
 gzip1.6-5ubuntu1
