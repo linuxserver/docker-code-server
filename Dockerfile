@@ -17,6 +17,7 @@ RUN \
 	git \
 	jq \
 	nano \
+ npm \
 	net-tools \
 	sudo && \
  echo "**** install code-server ****" && \
@@ -32,6 +33,8 @@ RUN \
 	"${CODE_URL}" && \
  tar xzf /tmp/code.tar.gz -C \
 	/app/code-server --strip-components=1 && \
+ cd /app/code-server && \
+ npm rebuild spdlog && \
  echo "**** clean up ****" && \
  rm -rf \
 	/tmp/* \
