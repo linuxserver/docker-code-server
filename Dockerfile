@@ -25,7 +25,7 @@ RUN \
 	| awk '/tag_name/{print $4;exit}' FS='[""]'); \
  fi && \
  CODE_URL=$(curl -sX GET "https://api.github.com/repos/cdr/code-server/releases/tags/${CODE_RELEASE}" \
-	| jq -r '.assets[] | select(.browser_download_url | contains("linux-x86_64")) | .browser_download_url') && \
+	| jq -r '.assets[] | select(.browser_download_url | contains("linux-amd64")) | .browser_download_url') && \
  mkdir -p /app/code-server && \
  curl -o \
 	/tmp/code.tar.gz -L \
