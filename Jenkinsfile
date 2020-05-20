@@ -27,7 +27,7 @@ pipeline {
     DEV_DOCKERHUB_IMAGE = 'lsiodev/code-server'
     PR_DOCKERHUB_IMAGE = 'lspipepr/code-server'
     DIST_IMAGE = 'ubuntu'
-    MULTIARCH='false'
+    MULTIARCH='true'
     CI='true'
     CI_WEB='true'
     CI_PORT='8443'

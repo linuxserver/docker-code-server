@@ -9,11 +9,10 @@ fi
 
 exec \
 	s6-setuidgid abc \
-		/app/code-server/code-server \
+		/usr/bin/code-server \
 			--bind-addr 0.0.0.0:8443 \
 			--user-data-dir /config/data \
 			--extensions-dir /config/extensions \
 			--disable-telemetry \
-			--disable-updates \
 			--auth "${AUTH}" \
 			/config/workspace
