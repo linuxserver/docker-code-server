@@ -81,6 +81,7 @@ docker create \
   -e TZ=Europe/London \
   -e PASSWORD=password `#optional` \
   -e SUDO_PASSWORD=password `#optional` \
+  -e PROXY_DOMAIN=code-server.my.domain `#optional` \
   -p 8443:8443 \
   -v /path/to/appdata/config:/config \
   --restart unless-stopped \
@@ -105,6 +106,7 @@ services:
       - TZ=Europe/London
       - PASSWORD=password #optional
       - SUDO_PASSWORD=password #optional
+      - PROXY_DOMAIN=code-server.my.domain #optional
     volumes:
       - /path/to/appdata/config:/config
     ports:
@@ -124,6 +126,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
 | `-e PASSWORD=password` | Optional web gui password, if not provided, there will be no auth. |
 | `-e SUDO_PASSWORD=password` | If this optional variable is set, user will have sudo access in the code-server terminal with the specified password. |
+| `-e PROXY_DOMAIN=code-server.my.domain` | If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/doc/FAQ.md#sub-domains) |
 | `-v /config` | Contains all relevant configuration files. |
 
 ## Environment variables from files (Docker secrets)
