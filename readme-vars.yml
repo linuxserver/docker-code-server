@@ -67,6 +67,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "21.05.20:", desc: "Shrink images, install via yarn, fix arm32v7 build." }
   - { date: "18.05.20:", desc: "Switch to multi-arch images, install via npm." }
   - { date: "29.04.20:", desc: "Update start arguments." }
   - { date: "01.04.20:", desc: "Structural changes required for v3." }
