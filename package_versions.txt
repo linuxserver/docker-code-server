@@ -1,6 +1,6 @@
 adduser3.116ubuntu1
-apt1.6.12
-apt-utils1.6.12
+apt1.6.12ubuntu0.1
+apt-utils1.6.12ubuntu0.1
 base-files10.1ubuntu2.8
 base-passwd3.5.44
 bash4.4.18-2ubuntu1.2
@@ -29,8 +29,8 @@ jq1.5+dfsg-2
 krb5-locales1.16-2ubuntu0.1
 less487-0.1
 libacl12.2.52-3build1
-libapt-inst2.01.6.12
-libapt-pkg5.01.6.12
+libapt-inst2.01.6.12ubuntu0.1
+libapt-pkg5.01.6.12ubuntu0.1
 libasn1-8-heimdal7.5.0+dfsg-1
 libattr11:2.4.47-2build1
 libaudit11:2.8.2-1ubuntu1
@@ -148,7 +148,7 @@ sensible-utils0.0.12
 sudo1.8.21p2-3ubuntu1.2
 sysvinit-utils2.88dsf-59.10ubuntu1
 tar1.29b-2ubuntu0.1
-tzdata2019c-0ubuntu0.18.04
+tzdata2020a-0ubuntu0.18.04
 ubuntu-keyring2018.09.18.1~18.04.0
 util-linux2.31.1-0.4ubuntu3.6
 xauth1:1.0.10-1
