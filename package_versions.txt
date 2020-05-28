@@ -128,10 +128,10 @@ libss21.44.1-1ubuntu1.3
 libssl1.0.01.0.2n-1ubuntu5.3
 libssl1.11.1.1-1ubuntu2.1~18.04.5
 libstdc++68.4.0-1ubuntu1~18.04
-libsystemd0237-3ubuntu10.40
+libsystemd0237-3ubuntu10.41
 libtasn1-64.13-2
 libtinfo56.1-1ubuntu1.18.04
-libudev1237-3ubuntu10.40
+libudev1237-3ubuntu10.41
 libunistring20.9.9-0ubuntu2
 libuuid12.31.1-0.4ubuntu3.6
 libwind0-heimdal7.5.0+dfsg-1
@@ -155,7 +155,7 @@ ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
 netbase5.4
 net-tools1.60+git20161116.90da8a0-1ubuntu1
-nodejs12.16.3-1nodesource1
+nodejs12.17.0-1nodesource1
 openssh-client1:7.6p1-4ubuntu0.3
 openssl1.1.1-1ubuntu2.1~18.04.5
 passwd1:4.5-1ubuntu2
