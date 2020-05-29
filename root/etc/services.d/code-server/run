@@ -6,7 +6,6 @@ else
   AUTH="none"
   echo "starting with no password"
 fi
-  code-server:
 
 if [ -z ${PROXY_DOMAIN+x} ]; then
   PROXY_DOMAIN_ARG=""
