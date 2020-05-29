@@ -22,5 +22,5 @@ exec \
 			--extensions-dir /config/extensions \
 			--disable-telemetry \
 			--auth "${AUTH}" \
-      "${PROXY_DOMAIN_ARG}" \
+			"${PROXY_DOMAIN_ARG}" \
 			/config/workspace
