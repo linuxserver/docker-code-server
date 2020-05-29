@@ -18,13 +18,12 @@ else
 fi
 
 exec \
-        s6-setuidgid abc \
-                /app/code-server/code-server \
-                        --bind-addr 0.0.0.0:8443 \
-                        --user-data-dir /config/data \
-                        --extensions-dir /config/extensions \
-                        --disable-telemetry \
-                        --disable-updates \
-                        --auth "${AUTH}" \
-                        "${PROXY_DOMAIN_ARG}" \
-                        /config/workspace
+	s6-setuidgid abc \
+		/usr/bin/code-server \
+			--bind-addr 0.0.0.0:8443 \
+			--user-data-dir /config/data \
+			--extensions-dir /config/extensions \
+			--disable-telemetry \
+			--auth "${AUTH}" \
+      "${PROXY_DOMAIN_ARG}" \
+			/config/workspace
