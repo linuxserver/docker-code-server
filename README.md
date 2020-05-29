@@ -82,7 +82,6 @@ docker create \
   -e TZ=Europe/London \
   -e PASSWORD=password `#optional` \
   -e SUDO_PASSWORD=password `#optional` \
-  -e PROXY_DOMAIN=code-server.my.domain `#optional` \
   -p 8443:8443 \
   -v /path/to/appdata/config:/config \
   --restart unless-stopped \
@@ -107,7 +106,6 @@ services:
       - TZ=Europe/London
       - PASSWORD=password #optional
       - SUDO_PASSWORD=password #optional
-      - PROXY_DOMAIN=code-server.my.domain #optional
     volumes:
       - /path/to/appdata/config:/config
     ports:
