@@ -1,8 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-# Added by codeserver-golang
-export PATH=$PATH:/usr/local/go/bin
-
 if [ -n "${PASSWORD}" ]; then
   AUTH="password"
 else
