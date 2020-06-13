@@ -3,7 +3,7 @@
 # project information
 project_name: code-server
 project_url: "https://coder.com"
-project_logo: "https://raw.githubusercontent.com/cdr/code-server/master/doc/assets/code-server.gif"
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/code-server-banner.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is VS Code running on a remote server, accessible through the browser.
  
 - Code on your Chromebook, tablet, and laptop with a consistent dev environment.
