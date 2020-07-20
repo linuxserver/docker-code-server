@@ -38,9 +38,9 @@ libaudit-common1:2.8.2-1ubuntu1
 libblkid12.31.1-0.4ubuntu3.6
 libbsd00.8.7-1ubuntu0.1
 libbz2-1.01.0.6-8.1ubuntu0.2
-libc62.27-3ubuntu1
+libc62.27-3ubuntu1.2
 libcap-ng00.7.7-3.1
-libc-bin2.27-3ubuntu1
+libc-bin2.27-3ubuntu1.2
 libcom-err21.44.1-1ubuntu1.3
 libcurl3-gnutls7.58.0-2ubuntu3.9
 libcurl47.58.0-2ubuntu3.9
@@ -57,7 +57,7 @@ libgcrypt201.8.1-4ubuntu1.2
 libgdbm51.14.1-6
 libgdbm-compat41.14.1-6
 libgmp102:6.1.2+dfsg-2
-libgnutls303.5.18-1ubuntu1.3
+libgnutls303.5.18-1ubuntu1.4
 libgpg-error01.27-6
 libgssapi3-heimdal7.5.0+dfsg-1
 libgssapi-krb5-21.16-2ubuntu0.1
