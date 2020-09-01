@@ -58,7 +58,7 @@ pipeline {
           env.CODE_URL = 'https://github.com/' + env.LS_USER + '/' + env.LS_REPO + '/commit/' + env.GIT_COMMIT
           env.DOCKERHUB_LINK = 'https://hub.docker.com/r/' + env.DOCKERHUB_IMAGE + '/tags/'
           env.PULL_REQUEST = env.CHANGE_ID
-          env.TEMPLATED_FILES = 'Jenkinsfile README.md LICENSE ./.github/FUNDING.yml ./.github/ISSUE_TEMPLATE.md ./.github/PULL_REQUEST_TEMPLATE.md'
+          env.TEMPLATED_FILES = 'Jenkinsfile README.md LICENSE ./.github/FUNDING.yml ./.github/ISSUE_TEMPLATE.md ./.github/PULL_REQUEST_TEMPLATE.md ./.github/workflows/greetings.yml ./.github/workflows/stale.yml'
         }
         script{
           env.LS_RELEASE_NUMBER = sh(
@@ -244,7 +244,7 @@ pipeline {
                 cd ${TEMPDIR}/repo/${LS_REPO}
                 git checkout -f master
                 cd ${TEMPDIR}/docker-${CONTAINER_NAME}
-                mkdir -p ${TEMPDIR}/repo/${LS_REPO}/.github
+                mkdir -p ${TEMPDIR}/repo/${LS_REPO}/.github/workflows
                 cp --parents ${TEMPLATED_FILES} ${TEMPDIR}/repo/${LS_REPO}/
                 cd ${TEMPDIR}/repo/${LS_REPO}/
                 git add ${TEMPLATED_FILES}
@@ -698,6 +698,10 @@ pipeline {
           ]
         ]) {
           sh '''#! /bin/bash
+                set -e
+                TEMPDIR=$(mktemp -d)
+                docker pull linuxserver/jenkins-builder:latest
+                docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -e GITHUB_BRANCH=master -v ${TEMPDIR}:/ansible/jenkins linuxserver/jenkins-builder:latest 
                 docker pull lsiodev/readme-sync
                 docker run --rm=true \
                   -e DOCKERHUB_USERNAME=$DOCKERUSER \
@@ -705,7 +709,9 @@ pipeline {
                   -e GIT_REPOSITORY=${LS_USER}/${LS_REPO} \
                   -e DOCKER_REPOSITORY=${IMAGE} \
                   -e GIT_BRANCH=master \
-                  lsiodev/readme-sync bash -c 'node sync' '''
+                  -v ${TEMPDIR}/docker-${CONTAINER_NAME}:/mnt \
+                  lsiodev/readme-sync bash -c 'node sync' 
+                rm -Rf ${TEMPDIR} '''
         }
       }
     }
