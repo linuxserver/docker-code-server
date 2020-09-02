@@ -44,9 +44,8 @@ RUN \
 	| awk '/tag_name/{print $4;exit}' FS='[""]'); \
  fi && \
  CODE_VERSION=$(echo "$CODE_RELEASE" | awk '{print substr($1,2); }') && \
- yarn --production global add code-server@"$CODE_VERSION" && \
+ yarn --production --frozen-lockfile global add code-server@"$CODE_VERSION" && \
  yarn cache clean && \
- ln -s /node_modules/.bin/code-server /usr/bin/code-server && \
  echo "**** clean up ****" && \
  apt-get purge --auto-remove -y \
 	build-essential \
