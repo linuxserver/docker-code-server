@@ -121,7 +121,7 @@ Container images are configured using parameters passed at runtime (such as thos
 
 | Parameter | Function |
 | :----: | --- |
-| `-p 8443` | web gui |
+| `-p 8080` | web gui |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
@@ -164,7 +164,7 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 &nbsp;
 ## Application Setup
 
-Access the webui at `http://<your-ip>:8443`.  
+Access the webui at `http://<your-ip>:8080`.  
 For github integration, drop your ssh key in to `/config/.ssh`.  
 Then open a terminal from the top menu and set your github username and email via the following commands  
 ```
