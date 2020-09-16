@@ -83,7 +83,7 @@ docker create \
   -e PASSWORD=password `#optional` \
   -e SUDO_PASSWORD=password `#optional` \
   -e PROXY_DOMAIN=code-server.my.domain `#optional` \
-  -p 8443:8443 \
+  -p 8080:8080 \
   -v /path/to/appdata/config:/config \
   --restart unless-stopped \
   linuxserver/code-server
@@ -111,7 +111,7 @@ services:
     volumes:
       - /path/to/appdata/config:/config
     ports:
-      - 8443:8443
+      - 8080:8080
     restart: unless-stopped
 ```
 
