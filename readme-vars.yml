@@ -39,7 +39,7 @@ param_volumes:
   - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Contains all relevant configuration files." }
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "8443", internal_port: "8443", port_desc: "web gui" }
+  - { external_port: "8080", internal_port: "8080", port_desc: "web gui" }
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
