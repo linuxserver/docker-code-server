@@ -57,7 +57,7 @@ optional_block_1_items: ""
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
-  Access the webui at `http://<your-ip>:8443`.  
+  Access the webui at `http://<your-ip>:8080`.  
   For github integration, drop your ssh key in to `/config/.ssh`.  
   Then open a terminal from the top menu and set your github username and email via the following commands  
   ```
