@@ -50,6 +50,7 @@ opt_param_env_vars:
   - { env_var: "PASSWORD", env_value: "password", desc: "Optional web gui password, if not provided, there will be no auth."}
   - { env_var: "SUDO_PASSWORD", env_value: "password", desc: "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password."}
   - { env_var: "PROXY_DOMAIN", env_value: "code-server.my.domain", desc: "If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/doc/FAQ.md#sub-domains)" }
+  - { env_var: "LOCALE", env_value: "en", desc: "If this optional variable is set, will set Display Language, default is English. See [Available locales](https://code.visualstudio.com/docs/getstarted/locales#_available-locales)" }
 
 optional_block_1: false
 optional_block_1_items: ""
