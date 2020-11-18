@@ -29,7 +29,7 @@ available_architectures:
 development_versions: true
 development_versions_items:
   - { tag: "latest", desc: "Stable releases" }
-  - { tag: "development", desc: "Prereleases from their GitHub" }
+  - { tag: "development", desc: "DEPRECATED (no longer updated) - Prereleases from their GitHub" }
 
 # container parameters
 common_param_env_vars_enabled: true
