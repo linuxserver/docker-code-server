@@ -69,7 +69,7 @@ This image provides various versions that are available via tags. `latest` tag u
 | Tag | Description |
 | :----: | --- |
 | latest | Stable releases |
-| development | Prereleases from their GitHub |
+| development | DEPRECATED (no longer updated) - Prereleases from their GitHub |
 
 ## Usage
 
