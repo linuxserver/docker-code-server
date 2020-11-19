@@ -13,15 +13,19 @@ jobs:
         if: github.ref == 'refs/heads/master'
         run: |
           if [ -n "${{ secrets.PAUSE_PACKAGE_TRIGGER_CODE_SERVER_MASTER }}" ]; then
-            echo "Github secret PAUSE_PACKAGE_TRIGGER_CODE_SERVER_MASTER is set; skipping trigger."
+            echo "**** Github secret PAUSE_PACKAGE_TRIGGER_CODE_SERVER_MASTER is set; skipping trigger. ****"
             exit 0
           fi
-          echo "Package trigger running off of master branch. To disable, set a Github secret named \"PAUSE_PACKAGE_TRIGGER_CODE_SERVER_MASTER\"."
+          echo "**** Package trigger running off of master branch. To disable, set a Github secret named \"PAUSE_PACKAGE_TRIGGER_CODE_SERVER_MASTER\". ****"
           response=$(curl -iX POST \
             https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-code-server/job/master/buildWithParameters?PACKAGE_CHECK=true \
             --user ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_TOKEN }} | grep -i location | sed "s|^[L|l]ocation: \(.*\)|\1|")
+          echo "**** Jenkins job queue url: ${response} ****"
+          echo "**** Sleeping 10 seconds until job starts ****"
+          sleep 10
           buildurl=$(curl -s "${response%$'\r'}api/json" | jq -r '.executable.url')
           buildurl="${buildurl%$'\r'}"
+          echo "**** Jenkins job build url: ${buildurl}; attempting to change the job description ****"
           curl -iX POST \
             "${buildurl}submitDescription" \
             --user ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_TOKEN }} \
