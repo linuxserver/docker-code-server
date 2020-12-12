@@ -1,6 +1,6 @@
 adduser3.116ubuntu1
-apt1.6.12ubuntu0.1
-apt-utils1.6.12ubuntu0.1
+apt1.6.12ubuntu0.2
+apt-utils1.6.12ubuntu0.2
 base-files10.1ubuntu2.10
 base-passwd3.5.44
 bash4.4.18-2ubuntu1.2
@@ -8,7 +8,7 @@ bsdutils1:2.31.1-0.4ubuntu3.7
 bzip21.0.6-8.1ubuntu0.2
 ca-certificates20201027ubuntu0.18.04.1
 coreutils8.28-1ubuntu1
-curl7.58.0-2ubuntu3.10
+curl7.58.0-2ubuntu3.12
 dash0.5.8-2.10
 debconf1.5.66ubuntu1
 debianutils4.8.4
@@ -40,8 +40,8 @@ jq1.5+dfsg-2
 krb5-locales1.16-2ubuntu0.2
 less487-0.1
 libacl12.2.52-3build1
-libapt-inst2.01.6.12ubuntu0.1
-libapt-pkg5.01.6.12ubuntu0.1
+libapt-inst2.01.6.12ubuntu0.2
+libapt-pkg5.01.6.12ubuntu0.2
 libasn1-8-heimdal7.5.0+dfsg-1
 libassuan02.5.1-2
 libattr11:2.4.47-2build1
@@ -54,8 +54,8 @@ libc62.27-3ubuntu1.3
 libcap-ng00.7.7-3.1
 libc-bin2.27-3ubuntu1.2
 libcom-err21.44.1-1ubuntu1.3
-libcurl3-gnutls7.58.0-2ubuntu3.10
-libcurl47.58.0-2ubuntu3.10
+libcurl3-gnutls7.58.0-2ubuntu3.12
+libcurl47.58.0-2ubuntu3.12
 libdb5.35.3.28-13.1ubuntu1.1
 libdebconfclient00.213ubuntu1
 libedit23.1-20170329-1
@@ -125,8 +125,8 @@ libsepol12.7-1
 libsmartcols12.31.1-0.4ubuntu3.7
 libsqlite3-03.22.0-1ubuntu0.4
 libss21.44.1-1ubuntu1.3
-libssl1.0.01.0.2n-1ubuntu5.4
-libssl1.11.1.1-1ubuntu2.1~18.04.6
+libssl1.0.01.0.2n-1ubuntu5.5
+libssl1.11.1.1-1ubuntu2.1~18.04.7
 libstdc++68.4.0-1ubuntu1~18.04
 libsystemd0237-3ubuntu10.42
 libtasn1-64.13-2
@@ -157,7 +157,7 @@ netbase5.4
 net-tools1.60+git20161116.90da8a0-1ubuntu1
 nodejs12.20.0-1nodesource1
 openssh-client1:7.6p1-4ubuntu0.3
-openssl1.1.1-1ubuntu2.1~18.04.6
+openssl1.1.1-1ubuntu2.1~18.04.7
 passwd1:4.5-1ubuntu2
 patch2.7.6-2ubuntu1.1
 perl5.26.1-6ubuntu0.5
