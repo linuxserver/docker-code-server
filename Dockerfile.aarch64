@@ -10,7 +10,10 @@ LABEL maintainer="aptalca"
 # environment settings
 ENV HOME="/config"
 
+ENV SHELL=/bin/bash
+
 RUN \
+ chsh -s /bin/bash && \
  echo "**** install node repo ****" && \
  apt-get update && \
  apt-get install -y \
