@@ -52,7 +52,7 @@ libbsd00.8.7-1ubuntu0.1
 libbz2-1.01.0.6-8.1ubuntu0.2
 libc62.27-3ubuntu1.4
 libcap-ng00.7.7-3.1
-libc-bin2.27-3ubuntu1.2
+libc-bin2.27-3ubuntu1.4
 libcom-err21.44.1-1ubuntu1.3
 libcurl3-gnutls7.58.0-2ubuntu3.12
 libcurl47.58.0-2ubuntu3.12
@@ -99,7 +99,7 @@ libnettle63.4-1
 libnghttp2-141.30.0-1ubuntu1
 libnpth01.5-3
 libonig46.7.0-1
-libp11-kit00.23.9-2
+libp11-kit00.23.9-2ubuntu0.1
 libpam0g1.1.8-3.6ubuntu2.18.04.2
 libpam-modules1.1.8-3.6ubuntu2.18.04.2
 libpam-modules-bin1.1.8-3.6ubuntu2.18.04.2
@@ -114,9 +114,9 @@ libpython-stdlib2.7.15~rc1-1
 libreadline77.0-3
 libroken18-heimdal7.5.0+dfsg-1
 librtmp12.4+20151223.gitfa8646d.1-1
-libsasl2-22.1.27~101-g0780600+dfsg-3ubuntu2.1
-libsasl2-modules2.1.27~101-g0780600+dfsg-3ubuntu2.1
-libsasl2-modules-db2.1.27~101-g0780600+dfsg-3ubuntu2.1
+libsasl2-22.1.27~101-g0780600+dfsg-3ubuntu2.3
+libsasl2-modules2.1.27~101-g0780600+dfsg-3ubuntu2.3
+libsasl2-modules-db2.1.27~101-g0780600+dfsg-3ubuntu2.3
 libseccomp22.4.3-1ubuntu3.18.04.3
 libselinux12.7-2build2
 libsemanage12.7-2build2
@@ -128,10 +128,10 @@ libss21.44.1-1ubuntu1.3
 libssl1.0.01.0.2n-1ubuntu5.5
 libssl1.11.1.1-1ubuntu2.1~18.04.7
 libstdc++68.4.0-1ubuntu1~18.04
-libsystemd0237-3ubuntu10.42
+libsystemd0237-3ubuntu10.43
 libtasn1-64.13-2
 libtinfo56.1-1ubuntu1.18.04
-libudev1237-3ubuntu10.42
+libudev1237-3ubuntu10.43
 libunistring20.9.9-0ubuntu2
 libuuid12.31.1-0.4ubuntu3.7
 libwind0-heimdal7.5.0+dfsg-1
@@ -155,7 +155,7 @@ ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
 netbase5.4
 net-tools1.60+git20161116.90da8a0-1ubuntu1
-nodejs12.20.0-1nodesource1
+nodejs12.20.1-1nodesource1
 openssh-client1:7.6p1-4ubuntu0.3
 openssl1.1.1-1ubuntu2.1~18.04.7
 passwd1:4.5-1ubuntu2
