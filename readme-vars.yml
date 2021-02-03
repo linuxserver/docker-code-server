@@ -5,7 +5,7 @@ project_name: code-server
 project_url: "https://coder.com"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/code-server-banner.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is VS Code running on a remote server, accessible through the browser.
- 
+
 - Code on your Chromebook, tablet, and laptop with a consistent dev environment.
 
 - If you have a Windows or Mac workstation, more easily develop for Linux.
@@ -58,13 +58,17 @@ optional_block_1_items: ""
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
-  Access the webui at `http://<your-ip>:8443`.  
-  For github integration, drop your ssh key in to `/config/.ssh`.  
-  Then open a terminal from the top menu and set your github username and email via the following commands  
+  Access the webui at `http://<your-ip>:8443`.
+  For github integration, drop your ssh key in to `/config/.ssh`.
+  Then open a terminal from the top menu and set your github username and email via the following commands
   ```
   git config --global user.name "username"
   git config --global user.email "email address"
   ```
+
+  ### Hashed code-server password
+  If you wish to use the [hashed password](https://github.com/cdr/code-server/blob/v3.8.0/doc/FAQ.md#can-i-store-my-password-hashed) funtion in code-server, you need to pass the `HASHED_PASSWORD` environment variable, as well as the `PASSWORD` variable.
+  Note: Use printf instead of echo as echo introduces newlines in the hash
 
 
 # changelog
