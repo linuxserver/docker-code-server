@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-if [ -n "${PASSWORD}" ]; then
+if [ -n "${PASSWORD}" ] || [ -n "${HASHED_PASSWORD}" ]; then
   AUTH="password"
 else
   AUTH="none"
@@ -9,7 +9,7 @@ fi
 
 if [ -z ${PROXY_DOMAIN+x} ]; then
   PROXY_DOMAIN_ARG=""
-else 
+else
   PROXY_DOMAIN_ARG="--proxy-domain=${PROXY_DOMAIN}"
 fi
 
