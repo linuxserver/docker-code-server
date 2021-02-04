@@ -47,7 +47,8 @@ param_env_vars:
 # optional container parameters
 opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "PASSWORD", env_value: "password", desc: "Optional web gui password, if not provided, there will be no auth." }
+  - { env_var: "PASSWORD", env_value: "password", desc: "Optional web gui password, if `PASSWORD` or `HASHED_PASSWORD` is not provided, there will be no auth." }
+  - { env_var: "HASHED_PASSWORD", env_value: "", desc: "Optional web gui password, overrides `PASSWORD`, instructions on how to create it is below." }
   - { env_var: "SUDO_PASSWORD", env_value: "password", desc: "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password." }
   - { env_var: "SUDO_PASSWORD_HASH", env_value: "", desc: "Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`." }
   - { env_var: "PROXY_DOMAIN", env_value: "code-server.my.domain", desc: "If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/doc/FAQ.md#sub-domains)" }
@@ -61,18 +62,19 @@ app_setup_block: |
   Access the webui at `http://<your-ip>:8443`.
   For github integration, drop your ssh key in to `/config/.ssh`.
   Then open a terminal from the top menu and set your github username and email via the following commands
-  ```
+
+  ```bash
   git config --global user.name "username"
   git config --global user.email "email address"
   ```
 
   ### Hashed code-server password
-  If you wish to use the [hashed password](https://github.com/cdr/code-server/blob/v3.8.0/doc/FAQ.md#can-i-store-my-password-hashed) funtion in code-server, you need to pass the `HASHED_PASSWORD` environment variable, as well as the `PASSWORD` variable.
-  Note: Use printf instead of echo as echo introduces newlines in the hash
+  To create the [hashed password](https://github.com/cdr/code-server/blob/master/doc/FAQ.md#can-i-store-my-password-hashed), use printf instead of echo as echo introduces newlines in the hash.
 
 
 # changelog
 changelogs:
+  - { date: "04.02.20:", desc: "Allow setting gui password via hash using env var `HASHED_PASSWORD`." }
   - { date: "23.12.20:", desc: "Allow setting sudo password via hash using env var `SUDO_PASSWORD_HASH`." }
   - { date: "29.05.20:", desc: "Add --domain-proxy support." }
   - { date: "21.05.20:", desc: "Shrink images, install via yarn, fix arm32v7 build." }
