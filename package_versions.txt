@@ -6,7 +6,7 @@ base-passwd3.5.44
 bash4.4.18-2ubuntu1.2
 bsdutils1:2.31.1-0.4ubuntu3.7
 bzip21.0.6-8.1ubuntu0.2
-ca-certificates20201027ubuntu0.18.04.1
+ca-certificates20210119~18.04.1
 coreutils8.28-1ubuntu1
 curl7.58.0-2ubuntu3.12
 dash0.5.8-2.10
@@ -86,8 +86,8 @@ libkrb5-26-heimdal7.5.0+dfsg-1
 libkrb5-31.16-2ubuntu0.2
 libkrb5support01.16-2ubuntu0.2
 libksba81.3.5-2
-libldap-2.4-22.4.45+dfsg-1ubuntu1.8
-libldap-common2.4.45+dfsg-1ubuntu1.8
+libldap-2.4-22.4.45+dfsg-1ubuntu1.9
+libldap-common2.4.45+dfsg-1ubuntu1.9
 liblz4-10.0~r131-2ubuntu3
 liblzma55.2.2-1.3
 libmagic11:5.32-2ubuntu0.4
@@ -155,7 +155,7 @@ ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
 netbase5.4
 net-tools1.60+git20161116.90da8a0-1ubuntu1
-nodejs12.20.1-1nodesource1
+nodejs12.20.2-1nodesource1
 openssh-client1:7.6p1-4ubuntu0.3
 openssl1.1.1-1ubuntu2.1~18.04.7
 passwd1:4.5-1ubuntu2
