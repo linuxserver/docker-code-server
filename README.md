@@ -183,7 +183,8 @@ git config --global user.email "email address"
 ```
 
 ### Hashed code-server password
-To create the [hashed password](https://github.com/cdr/code-server/blob/master/doc/FAQ.md#can-i-store-my-password-hashed), use printf instead of echo as echo introduces newlines in the hash.
+
+How to create the [hashed password](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#can-i-store-my-password-hashed).
 
 
 ## Docker Mods
