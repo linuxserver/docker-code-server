@@ -2,14 +2,12 @@
 
 # jenkins variables
 project_name: docker-code-server
-external_type: github_stable
+external_type: na
+custom_version_command: "curl -sX GET https://registry.yarnpkg.com/code-server | jq -r '.\"dist-tags\".latest' | sed 's|^|v|'"
 release_type: stable
 release_tag: latest
 ls_branch: master
 repo_vars:
-  - EXT_GIT_BRANCH = 'master'
-  - EXT_USER = 'cdr'
-  - EXT_REPO = 'code-server'
   - CONTAINER_NAME = 'code-server'
   - BUILD_VERSION_ARG = 'CODE_RELEASE'
   - LS_USER = 'linuxserver'
