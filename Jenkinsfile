@@ -16,9 +16,6 @@ pipeline {
     GITHUB_TOKEN=credentials('498b4638-2d02-4ce5-832d-8a57d01d97ab')
     GITLAB_TOKEN=credentials('b6f0f1dd-6952-4cf6-95d1-9c06380283f0')
     GITLAB_NAMESPACE=credentials('gitlab-namespace-id')
-    EXT_GIT_BRANCH = 'master'
-    EXT_USER = 'cdr'
-    EXT_REPO = 'code-server'
     CONTAINER_NAME = 'code-server'
     BUILD_VERSION_ARG = 'CODE_RELEASE'
     LS_USER = 'linuxserver'
@@ -101,23 +98,16 @@ pipeline {
     /* ########################
        External Release Tagging
        ######################## */
-    // If this is a stable github release use the latest endpoint from github to determine the ext tag
-    stage("Set ENV github_stable"){
-     steps{
-       script{
-         env.EXT_RELEASE = sh(
-           script: '''curl -s https://api.github.com/repos/${EXT_USER}/${EXT_REPO}/releases/latest | jq -r '. | .tag_name' ''',
-           returnStdout: true).trim()
-       }
-     }
-    }
-    // If this is a stable or devel github release generate the link for the build message
-    stage("Set ENV github_link"){
-     steps{
-       script{
-         env.RELEASE_LINK = 'https://github.com/' + env.EXT_USER + '/' + env.EXT_REPO + '/releases/tag/' + env.EXT_RELEASE
-       }
-     }
+    // If this is a custom command to determine version use that command
+    stage("Set tag custom bash"){
+      steps{
+        script{
+          env.EXT_RELEASE = sh(
+            script: ''' curl -sX GET https://registry.yarnpkg.com/code-server | jq -r '."dist-tags".latest' | sed 's|^|v|' ''',
+            returnStdout: true).trim()
+            env.RELEASE_LINK = 'custom_command'
+        }
+      }
     }
     // Sanitize the release tag and strip illegal docker or github characters
     stage("Sanitize tag"){
@@ -746,11 +736,11 @@ pipeline {
              "tagger": {"name": "LinuxServer Jenkins","email": "jenkins@linuxserver.io","date": "'${GITHUB_DATE}'"}}' '''
         echo "Pushing New release for Tag"
         sh '''#! /bin/bash
-              curl -s https://api.github.com/repos/${EXT_USER}/${EXT_REPO}/releases/latest | jq '. |.body' | sed 's:^.\\(.*\\).$:\\1:' > releasebody.json
+              echo "Updating to ${EXT_RELEASE_CLEAN}" > releasebody.json
               echo '{"tag_name":"'${META_TAG}'",\
                      "target_commitish": "master",\
                      "name": "'${META_TAG}'",\
-                     "body": "**LinuxServer Changes:**\\n\\n'${LS_RELEASE_NOTES}'\\n**'${EXT_REPO}' Changes:**\\n\\n' > start
+                     "body": "**LinuxServer Changes:**\\n\\n'${LS_RELEASE_NOTES}'\\n**Remote Changes:**\\n\\n' > start
               printf '","draft": false,"prerelease": false}' >> releasebody.json
               paste -d'\\0' start releasebody.json > releasebody.json.done
               curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST https://api.github.com/repos/${LS_USER}/${LS_REPO}/releases -d @releasebody.json.done'''

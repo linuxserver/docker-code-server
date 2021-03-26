@@ -40,8 +40,8 @@ RUN \
 	yarn && \
  echo "**** install code-server ****" && \
  if [ -z ${CODE_RELEASE+x} ]; then \
-	CODE_RELEASE=$(curl -sX GET "https://api.github.com/repos/cdr/code-server/releases/latest" \
-	| awk '/tag_name/{print $4;exit}' FS='[""]'); \
+	CODE_RELEASE=$(curl -sX GET https://registry.yarnpkg.com/code-server \
+	| jq -r '."dist-tags".latest' | sed 's|^|v|'); \
  fi && \
  CODE_VERSION=$(echo "$CODE_RELEASE" | awk '{print substr($1,2); }') && \
  yarn config set network-timeout 600000 -g && \
