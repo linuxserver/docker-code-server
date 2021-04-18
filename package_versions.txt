@@ -1,6 +1,6 @@
 adduser3.116ubuntu1
-apt1.6.12ubuntu0.2
-apt-utils1.6.12ubuntu0.2
+apt1.6.13
+apt-utils1.6.13
 base-files10.1ubuntu2.10
 base-passwd3.5.44
 bash4.4.18-2ubuntu1.2
@@ -40,8 +40,8 @@ jq1.5+dfsg-2
 krb5-locales1.16-2ubuntu0.2
 less487-0.1
 libacl12.2.52-3build1
-libapt-inst2.01.6.12ubuntu0.2
-libapt-pkg5.01.6.12ubuntu0.2
+libapt-inst2.01.6.13
+libapt-pkg5.01.6.13
 libasn1-8-heimdal7.5.0+dfsg-1
 libassuan02.5.1-2
 libattr11:2.4.47-2build1
