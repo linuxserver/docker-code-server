@@ -151,7 +151,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e HASHED_PASSWORD=` | Optional web gui password, overrides `PASSWORD`, instructions on how to create it is below. |
 | `-e SUDO_PASSWORD=password` | If this optional variable is set, user will have sudo access in the code-server terminal with the specified password. |
 | `-e SUDO_PASSWORD_HASH=` | Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`. |
-| `-e PROXY_DOMAIN=code-server.my.domain` | If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/doc/FAQ.md#sub-domains) |
+| `-e PROXY_DOMAIN=code-server.my.domain` | If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#sub-domains) |
 | `-v /config` | Contains all relevant configuration files. |
 
 ## Environment variables from files (Docker secrets)
@@ -263,6 +263,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **08.05.21:** - Fix doc link
 * **04.02.20:** - Allow setting gui password via hash using env var `HASHED_PASSWORD`.
 * **23.12.20:** - Allow setting sudo password via hash using env var `SUDO_PASSWORD_HASH`.
 * **29.05.20:** - Add --domain-proxy support.
