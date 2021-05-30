@@ -135,8 +135,8 @@ libudev1237-3ubuntu10.47
 libunistring20.9.9-0ubuntu2
 libuuid12.31.1-0.4ubuntu3.7
 libwind0-heimdal7.5.0+dfsg-1
-libx11-62:1.6.4-3ubuntu0.3
-libx11-data2:1.6.4-3ubuntu0.3
+libx11-62:1.6.4-3ubuntu0.4
+libx11-data2:1.6.4-3ubuntu0.4
 libxau61:1.0.8-1ubuntu1
 libxcb11.13-2~ubuntu18.04
 libxdmcp61:1.1.2-3
