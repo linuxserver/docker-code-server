@@ -23,13 +23,13 @@ if [ -f "/usr/bin/find" ] && [ -f "/usr/bin/xargs" ]; then
     echo "setting permissions::configuration"
     CORES=$(nproc --all)
     find /config -maxdepth 4 -mindepth 1 -path /config/workspace -prune -false -o -type d -print0 | \
-        xargs --max-args=1 --max-procs=$((CORES*2*8)) \
+        xargs -r --max-args=1 --max-procs=$((CORES*2*8)) \
         chown -R abc:abc
 
     echo "setting permissions::workspace"
     chown abc:abc /config/workspace
     find /config/workspace -maxdepth 4 -mindepth 1 -type d -print0 | \
-        xargs --max-args=1 --max-procs=$((CORES*2*16)) \
+        xargs -r --max-args=1 --max-procs=$((CORES*2*16)) \
         chown -R abc:abc
 else
     chown -R abc:abc \
