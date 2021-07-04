@@ -76,7 +76,7 @@ libgssapi-krb5-21.16-2ubuntu0.2
 libhcrypto4-heimdal7.5.0+dfsg-1
 libheimbase1-heimdal7.5.0+dfsg-1
 libheimntlm0-heimdal7.5.0+dfsg-1
-libhogweed43.4-1ubuntu0.1
+libhogweed43.4.1-0ubuntu0.18.04.1
 libhx509-5-heimdal7.5.0+dfsg-1
 libidn2-02.0.4-1.1ubuntu0.2
 libjq11.5+dfsg-2
@@ -95,7 +95,7 @@ libmagic-mgc1:5.32-2ubuntu0.4
 libmount12.31.1-0.4ubuntu3.7
 libncurses56.1-1ubuntu1.18.04
 libncursesw56.1-1ubuntu1.18.04
-libnettle63.4-1ubuntu0.1
+libnettle63.4.1-0ubuntu0.18.04.1
 libnghttp2-141.30.0-1ubuntu1
 libnpth01.5-3
 libonig46.7.0-1
@@ -128,10 +128,10 @@ libss21.44.1-1ubuntu1.3
 libssl1.0.01.0.2n-1ubuntu5.6
 libssl1.11.1.1-1ubuntu2.1~18.04.9
 libstdc++68.4.0-1ubuntu1~18.04
-libsystemd0237-3ubuntu10.47
+libsystemd0237-3ubuntu10.48
 libtasn1-64.13-2
 libtinfo56.1-1ubuntu1.18.04
-libudev1237-3ubuntu10.47
+libudev1237-3ubuntu10.48
 libunistring20.9.9-0ubuntu2
 libuuid12.31.1-0.4ubuntu3.7
 libwind0-heimdal7.5.0+dfsg-1
@@ -155,7 +155,7 @@ ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
 netbase5.4
 net-tools1.60+git20161116.90da8a0-1ubuntu1
-nodejs12.22.1-1nodesource1
+nodejs12.22.2-1nodesource1
 openssh-client1:7.6p1-4ubuntu0.3
 openssl1.1.1-1ubuntu2.1~18.04.9
 passwd1:4.5-1ubuntu2
