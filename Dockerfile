@@ -16,7 +16,7 @@ RUN \
   apt-get install -y \
     gnupg && \
   curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
-  echo 'deb https://deb.nodesource.com/node_12.x bionic main' \
+  echo 'deb https://deb.nodesource.com/node_14.x bionic main' \
     > /etc/apt/sources.list.d/nodesource.list && \
   curl -s https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   echo 'deb https://dl.yarnpkg.com/debian/ stable main' \
