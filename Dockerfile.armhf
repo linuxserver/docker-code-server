@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-ubuntu:arm32v7-bionic
+FROM ghcr.io/linuxserver/baseimage-ubuntu:arm32v7-focal
 
 # set version label
 ARG BUILD_DATE
@@ -16,7 +16,7 @@ RUN \
   apt-get install -y \
     gnupg && \
   curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
-  echo 'deb https://deb.nodesource.com/node_14.x bionic main' \
+  echo 'deb https://deb.nodesource.com/node_14.x focal main' \
     > /etc/apt/sources.list.d/nodesource.list && \
   curl -s https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   echo 'deb https://dl.yarnpkg.com/debian/ stable main' \
@@ -25,10 +25,11 @@ RUN \
   apt-get update && \
   apt-get install -y \
     build-essential \
+    libsecret-1-dev \
     libx11-dev \
     libxkbfile-dev \
-    libsecret-1-dev \
-    pkg-config && \
+    pkg-config \
+    python3 && \
   echo "**** install runtime dependencies ****" && \
   apt-get install -y \
     git \
@@ -44,6 +45,7 @@ RUN \
     | jq -r '."dist-tags".latest' | sed 's|^|v|'); \
   fi && \
   CODE_VERSION=$(echo "$CODE_RELEASE" | awk '{print substr($1,2); }') && \
+  npm config set python python3 \
   yarn config set network-timeout 600000 -g && \
   yarn --production --verbose --frozen-lockfile global add code-server@"$CODE_VERSION" && \
   yarn cache clean && \
@@ -56,6 +58,7 @@ RUN \
     pkg-config && \
   apt-get clean && \
   rm -rf \
+    /config/* \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*

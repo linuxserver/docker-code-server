@@ -29,7 +29,7 @@ available_architectures:
 development_versions: true
 development_versions_items:
   - { tag: "latest", desc: "Stable releases" }
-  - { tag: "development", desc: "DEPRECATED (no longer updated) - Prereleases from their GitHub" }
+  - { tag: "focal", desc: "Stable releases, on a focal baseiamge" }
 
 # container parameters
 common_param_env_vars_enabled: true
@@ -75,6 +75,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "12.07.21:", desc: "Rebase to focal" }
   - { date: "11.07.21:", desc: "Bump node to 14 to fix builds" }
   - { date: "08.05.21:", desc: "Fix doc link" }
   - { date: "04.02.20:", desc: "Allow setting gui password via hash using env var `HASHED_PASSWORD`." }
