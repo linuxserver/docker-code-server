@@ -33,7 +33,7 @@ gpgv2.2.4-1ubuntu1.4
 gpg-wks-client2.2.4-1ubuntu1.4
 gpg-wks-server2.2.4-1ubuntu1.4
 grep3.1-2build1
-gzip1.6-5ubuntu1
+gzip1.6-5ubuntu1.1
 hostname3.20
 init-system-helpers1.51
 jq1.5+dfsg-2
@@ -54,7 +54,7 @@ libc62.27-3ubuntu1.4
 libcap-ng00.7.7-3.1
 libc-bin2.27-3ubuntu1.4
 libcom-err21.44.1-1ubuntu1.3
-libcurl3-gnutls7.58.0-2ubuntu3.13
+libcurl3-gnutls7.58.0-2ubuntu3.14
 libcurl47.58.0-2ubuntu3.13
 libdb5.35.3.28-13.1ubuntu1.1
 libdebconfclient00.213ubuntu1
