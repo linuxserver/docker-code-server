@@ -155,7 +155,7 @@ ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
 netbase5.4
 net-tools1.60+git20161116.90da8a0-1ubuntu1
-nodejs14.17.4-1nodesource1
+nodejs14.17.5-1nodesource1
 openssh-client1:7.6p1-4ubuntu0.3
 openssl1.1.1-1ubuntu2.1~18.04.9
 passwd1:4.5-1ubuntu2
