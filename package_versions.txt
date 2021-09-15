@@ -1,7 +1,7 @@
 adduser3.116ubuntu1
 apt1.6.14
 apt-utils1.6.14
-base-files10.1ubuntu2.10
+base-files10.1ubuntu2.11
 base-passwd3.5.44
 bash4.4.18-2ubuntu1.2
 bsdutils1:2.31.1-0.4ubuntu3.7
@@ -20,8 +20,8 @@ fdisk2.31.1-0.4ubuntu3.7
 file1:5.32-2ubuntu0.4
 findutils4.6.0+git+20170828-2
 gcc-8-base8.4.0-1ubuntu1~18.04
-git1:2.17.1-1ubuntu0.8
-git-man1:2.17.1-1ubuntu0.8
+git1:2.17.1-1ubuntu0.9
+git-man1:2.17.1-1ubuntu0.9
 gnupg2.2.4-1ubuntu1.4
 gnupg-l10n2.2.4-1ubuntu1.4
 gnupg-utils2.2.4-1ubuntu1.4
@@ -54,7 +54,7 @@ libc62.27-3ubuntu1.4
 libcap-ng00.7.7-3.1
 libc-bin2.27-3ubuntu1.4
 libcom-err21.44.1-1ubuntu1.3
-libcurl3-gnutls7.58.0-2ubuntu3.14
+libcurl3-gnutls7.58.0-2ubuntu3.15
 libcurl47.58.0-2ubuntu3.14
 libdb5.35.3.28-13.1ubuntu1.1
 libdebconfclient00.213ubuntu1
