@@ -75,8 +75,8 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "16.09.21:", desc: "Fix slow `chown` on large workspace (contents of workspace folder no longer chowned)." }
   - { date: "11.07.21:", desc: "Bump node to 14 to fix builds" }
-  - { date: "05.07.21:", desc: "Fix slow `chown` on large workspace" }
   - { date: "08.05.21:", desc: "Fix doc link" }
   - { date: "04.02.20:", desc: "Allow setting gui password via hash using env var `HASHED_PASSWORD`." }
   - { date: "23.12.20:", desc: "Allow setting sudo password via hash using env var `SUDO_PASSWORD_HASH`." }
