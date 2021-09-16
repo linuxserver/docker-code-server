@@ -19,19 +19,19 @@ fi
 
 # permissions
 if [ -f "/usr/bin/find" ] && [ -f "/usr/bin/xargs" ]; then
+    CORES=$(nproc --all)
+
     # Split workload between config and workspace
     echo "setting permissions::configuration"
-    CORES=$(nproc --all)
-    find /config -maxdepth 4 -mindepth 1 -path /config/workspace -prune -false -o -type d -print0 | \
-        xargs -r --max-args=1 --max-procs=$((CORES*2*8)) \
+    find /config -path /config/workspace -prune -false -o -type d -print0 | \
+        xargs --null -r --max-args=1 --max-procs=$((CORES*2*8)) \
         chown -R abc:abc
 
     echo "setting permissions::workspace"
     chown abc:abc /config/workspace
-    find /config/workspace -maxdepth 4 -mindepth 1 -type d -print0 | \
-        xargs -r --max-args=1 --max-procs=$((CORES*2*16)) \
-        chown -R abc:abc
 else
-    chown -R abc:abc \
-        /config
+    # Set permissions on data mount
+    # do not decend into the workspace
+    chown -R abc:abc "$(ls /config -I workspace)"
+    chown abc:abc /config/workspace
 fi
