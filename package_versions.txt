@@ -8,7 +8,7 @@ bsdutils1:2.31.1-0.4ubuntu3.7
 bzip21.0.6-8.1ubuntu0.2
 ca-certificates20210119~18.04.1
 coreutils8.28-1ubuntu1
-curl7.58.0-2ubuntu3.14
+curl7.58.0-2ubuntu3.15
 dash0.5.8-2.10
 debconf1.5.66ubuntu1
 debianutils4.8.4
@@ -54,8 +54,8 @@ libc62.27-3ubuntu1.4
 libcap-ng00.7.7-3.1
 libc-bin2.27-3ubuntu1.4
 libcom-err21.44.1-1ubuntu1.3
-libcurl3-gnutls7.58.0-2ubuntu3.15
-libcurl47.58.0-2ubuntu3.14
+libcurl3-gnutls7.58.0-2ubuntu3.16
+libcurl47.58.0-2ubuntu3.15
 libdb5.35.3.28-13.1ubuntu1.1
 libdebconfclient00.213ubuntu1
 libedit23.1-20170329-1
@@ -65,11 +65,11 @@ libext2fs21.44.1-1ubuntu1.3
 libfdisk12.31.1-0.4ubuntu3.7
 libffi63.2.1-8
 libgcc11:8.4.0-1ubuntu1~18.04
-libgcrypt201.8.1-4ubuntu1.2
+libgcrypt201.8.1-4ubuntu1.3
 libgdbm51.14.1-6
 libgdbm-compat41.14.1-6
 libgmp102:6.1.2+dfsg-2
-libgnutls303.5.18-1ubuntu1.4
+libgnutls303.5.18-1ubuntu1.5
 libgpg-error01.27-6
 libgssapi3-heimdal7.5.0+dfsg-1
 libgssapi-krb5-21.16-2ubuntu0.2
@@ -128,10 +128,10 @@ libss21.44.1-1ubuntu1.3
 libssl1.0.01.0.2n-1ubuntu5.7
 libssl1.11.1.1-1ubuntu2.1~18.04.13
 libstdc++68.4.0-1ubuntu1~18.04
-libsystemd0237-3ubuntu10.51
+libsystemd0237-3ubuntu10.52
 libtasn1-64.13-2
 libtinfo56.1-1ubuntu1.18.04
-libudev1237-3ubuntu10.51
+libudev1237-3ubuntu10.52
 libunistring20.9.9-0ubuntu2
 libuuid12.31.1-0.4ubuntu3.7
 libwind0-heimdal7.5.0+dfsg-1
