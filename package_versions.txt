@@ -6,9 +6,9 @@ base-passwd3.5.44
 bash4.4.18-2ubuntu1.2
 bsdutils1:2.31.1-0.4ubuntu3.7
 bzip21.0.6-8.1ubuntu0.2
-ca-certificates20210119~18.04.1
+ca-certificates20210119~18.04.2
 coreutils8.28-1ubuntu1
-curl7.58.0-2ubuntu3.15
+curl7.58.0-2ubuntu3.16
 dash0.5.8-2.10
 debconf1.5.66ubuntu1
 debianutils4.8.4
@@ -55,7 +55,7 @@ libcap-ng00.7.7-3.1
 libc-bin2.27-3ubuntu1.4
 libcom-err21.44.1-1ubuntu1.3
 libcurl3-gnutls7.58.0-2ubuntu3.16
-libcurl47.58.0-2ubuntu3.15
+libcurl47.58.0-2ubuntu3.16
 libdb5.35.3.28-13.1ubuntu1.1
 libdebconfclient00.213ubuntu1
 libedit23.1-20170329-1
@@ -155,7 +155,7 @@ ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
 netbase5.4
 net-tools1.60+git20161116.90da8a0-1ubuntu1
-nodejs14.17.6-1nodesource1
+nodejs14.18.0-1nodesource1
 openssh-client1:7.6p1-4ubuntu0.5
 openssl1.1.1-1ubuntu2.1~18.04.13
 passwd1:4.5-1ubuntu2
@@ -181,5 +181,5 @@ ubuntu-keyring2018.09.18.1~18.04.2
 util-linux2.31.1-0.4ubuntu3.7
 xauth1:1.0.10-1
 xz-utils5.2.2-1.3
-yarn1.22.5-1
+yarn1.22.15-1
 zlib1g1:1.2.11.dfsg-0ubuntu2
