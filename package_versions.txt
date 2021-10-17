@@ -155,7 +155,7 @@ ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
 netbase5.4
 net-tools1.60+git20161116.90da8a0-1ubuntu1
-nodejs14.18.0-1nodesource1
+nodejs14.18.1-1nodesource1
 openssh-client1:7.6p1-4ubuntu0.5
 openssl1.1.1-1ubuntu2.1~18.04.13
 passwd1:4.5-1ubuntu2
@@ -176,7 +176,7 @@ sensible-utils0.0.12
 sudo1.8.21p2-3ubuntu1.4
 sysvinit-utils2.88dsf-59.10ubuntu1
 tar1.29b-2ubuntu0.2
-tzdata2021a-0ubuntu0.18.04
+tzdata2021a-2ubuntu0.18.04
 ubuntu-keyring2018.09.18.1~18.04.2
 util-linux2.31.1-0.4ubuntu3.7
 xauth1:1.0.10-1
