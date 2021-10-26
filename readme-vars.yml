@@ -29,6 +29,7 @@ available_architectures:
 development_versions: true
 development_versions_items:
   - { tag: "latest", desc: "Stable releases" }
+  - { tag: "focal", desc: "Stable releases, based on Ubuntu Focal" }
   - { tag: "development", desc: "DEPRECATED (no longer updated) - Prereleases from their GitHub" }
 
 # container parameters
