@@ -53,6 +53,7 @@ opt_param_env_vars:
   - { env_var: "SUDO_PASSWORD", env_value: "password", desc: "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password." }
   - { env_var: "SUDO_PASSWORD_HASH", env_value: "", desc: "Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`." }
   - { env_var: "PROXY_DOMAIN", env_value: "code-server.my.domain", desc: "If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#sub-domains)" }
+  - { env_var: "DEFAULT_WORKSPACE", env_value: "/config/workspace", desc: "If this optional variable is set, code-server will open this directory by default" }
 
 optional_block_1: false
 optional_block_1_items: ""
@@ -76,6 +77,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "04.11.21:", desc: "Add `DEFAULT_WORKSPACE` env var." }
   - { date: "16.09.21:", desc: "Fix slow `chown` on large workspace (contents of workspace folder no longer chowned)." }
   - { date: "11.07.21:", desc: "Bump node to 14 to fix builds" }
   - { date: "08.05.21:", desc: "Fix doc link" }
