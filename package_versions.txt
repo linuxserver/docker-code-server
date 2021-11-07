@@ -176,7 +176,7 @@ sensible-utils0.0.12
 sudo1.8.21p2-3ubuntu1.4
 sysvinit-utils2.88dsf-59.10ubuntu1
 tar1.29b-2ubuntu0.2
-tzdata2021a-2ubuntu0.18.04
+tzdata2021e-0ubuntu0.18.04
 ubuntu-keyring2018.09.18.1~18.04.2
 util-linux2.31.1-0.4ubuntu3.7
 xauth1:1.0.10-1
