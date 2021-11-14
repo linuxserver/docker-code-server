@@ -104,10 +104,10 @@ libnghttp2-141.40.0-1build1
 libnpth01.6-1
 libonig56.9.4-1
 libp11-kit00.23.20-1ubuntu0.1
-libpam0g1.3.1-5ubuntu4.2
-libpam-modules1.3.1-5ubuntu4.2
-libpam-modules-bin1.3.1-5ubuntu4.2
-libpam-runtime1.3.1-5ubuntu4.2
+libpam0g1.3.1-5ubuntu4.3
+libpam-modules1.3.1-5ubuntu4.3
+libpam-modules-bin1.3.1-5ubuntu4.3
+libpam-runtime1.3.1-5ubuntu4.3
 libpcre2-8-010.34-7
 libpcre32:8.39-12build1
 libperl5.305.30.0-9ubuntu0.2
