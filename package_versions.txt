@@ -131,7 +131,7 @@ libsmartcols12.34-0.1ubuntu9.1
 libsqlite3-03.31.1-4ubuntu0.2
 libss21.45.5-2ubuntu1
 libssh-40.9.3-2ubuntu2.2
-libssl1.11.1.1f-1ubuntu2.8
+libssl1.11.1.1f-1ubuntu2.9
 libstdc++610.3.0-1ubuntu1~20.04
 libsystemd0245.4-4ubuntu3.13
 libtasn1-64.16.0-2
@@ -162,7 +162,7 @@ netbase6.1
 net-tools1.60+git20180626.aebd88e-1ubuntu1
 nodejs14.18.1-deb-1nodesource1
 openssh-client1:8.2p1-4ubuntu0.3
-openssl1.1.1f-1ubuntu2.8
+openssl1.1.1f-1ubuntu2.9
 passwd1:4.8.1-1ubuntu5.20.04.1
 patch2.7.6-6
 perl5.30.0-9ubuntu0.2
