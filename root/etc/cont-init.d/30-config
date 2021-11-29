@@ -17,6 +17,11 @@ if [ -n "${SUDO_PASSWORD}" ] || [ -n "${SUDO_PASSWORD_HASH}" ]; then
     fi
 fi
 
+[[ ! -f /config/.bashrc ]] && \
+    cp /root/.bashrc /config/.bashrc
+[[ ! -f /config/.profile ]] && \
+    cp /root/.profile /config/.profile
+
 # permissions
 if [ -f "/usr/bin/find" ] && [ -f "/usr/bin/xargs" ]; then
     CORES=$(nproc --all)
