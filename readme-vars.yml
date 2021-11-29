@@ -29,7 +29,7 @@ available_architectures:
 development_versions: true
 development_versions_items:
   - { tag: "latest", desc: "Stable releases" }
-  - { tag: "focal", desc: "Stable releases, based on Ubuntu Focal" }
+  - { tag: "focal", desc: "DEPRECATED (no longer updated, `latest` is rebased on focal) - Stable releases, based on Ubuntu Focal" }
   - { tag: "development", desc: "DEPRECATED (no longer updated) - Prereleases from their GitHub" }
 
 # container parameters
@@ -76,6 +76,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "29.11.21:", desc: "Rebase to Ubuntu focal." }
   - { date: "16.09.21:", desc: "Fix slow `chown` on large workspace (contents of workspace folder no longer chowned)." }
   - { date: "11.07.21:", desc: "Bump node to 14 to fix builds" }
   - { date: "08.05.21:", desc: "Fix doc link" }
