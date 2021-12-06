@@ -22,4 +22,4 @@ exec \
             --disable-telemetry \
             --auth "${AUTH}" \
             "${PROXY_DOMAIN_ARG}" \
-            /config/workspace
+            "${DEFAULT_WORKSPACE:-/config/workspace}"
