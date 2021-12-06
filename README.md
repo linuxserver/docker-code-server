@@ -110,6 +110,7 @@ services:
       - SUDO_PASSWORD=password #optional
       - SUDO_PASSWORD_HASH= #optional
       - PROXY_DOMAIN=code-server.my.domain #optional
+      - DEFAULT_WORKSPACE=/config/workspace #optional
     volumes:
       - /path/to/appdata/config:/config
     ports:
@@ -130,6 +131,7 @@ docker run -d \
   -e SUDO_PASSWORD=password `#optional` \
   -e SUDO_PASSWORD_HASH= `#optional` \
   -e PROXY_DOMAIN=code-server.my.domain `#optional` \
+  -e DEFAULT_WORKSPACE=/config/workspace `#optional` \
   -p 8443:8443 \
   -v /path/to/appdata/config:/config \
   --restart unless-stopped \
@@ -151,6 +153,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e SUDO_PASSWORD=password` | If this optional variable is set, user will have sudo access in the code-server terminal with the specified password. |
 | `-e SUDO_PASSWORD_HASH=` | Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`. |
 | `-e PROXY_DOMAIN=code-server.my.domain` | If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#sub-domains) |
+| `-e DEFAULT_WORKSPACE=/config/workspace` | If this optional variable is set, code-server will open this directory by default |
 | `-v /config` | Contains all relevant configuration files. |
 
 ## Environment variables from files (Docker secrets)
@@ -262,6 +265,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **06.12.21:** - Add `DEFAULT_WORKSPACE` env var.
 * **29.11.21:** - Rebase to Ubuntu focal.
 * **16.09.21:** - Fix slow `chown` on large workspace (contents of workspace folder no longer chowned).
 * **11.07.21:** - Bump node to 14 to fix builds
