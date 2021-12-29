@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+_install=(/usr/local/bin/code-server "--extensions-dir" "/config/extensions" "--install-extension")
+
+if [ "$(whoami)" == "abc" ]; then
+    "${_install[@]}" "$@"
+else
+    s6-setuidgid abc "${_install[@]}" "$@"
+fi
