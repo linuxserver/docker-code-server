@@ -19,10 +19,6 @@ project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is VS Code ru
 - You're no longer running excess instances of Chrome."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 
-project_deprecation_status: true
-project_deprecation_message: |
-  latest tag is now based on Ubuntu Focal
-
 # supported architectures
 available_architectures:
   - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
@@ -33,7 +29,7 @@ available_architectures:
 development_versions: true
 development_versions_items:
   - { tag: "latest", desc: "Stable releases" }
-  - { tag: "focal", desc: "Stable releases, on a focal baseiamge" }
+  - { tag: "focal", desc: "DEPRECATED - Stable releases, on a focal baseiamge" }
 
 # container parameters
 common_param_env_vars_enabled: true
