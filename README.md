@@ -71,7 +71,7 @@ This image provides various versions that are available via tags. `latest` tag u
 | Tag | Description |
 | :----: | --- |
 | latest | Stable releases |
-| focal | Stable releases, on a focal baseiamge |
+| focal | DEPRECATED - Stable releases, on a focal baseiamge |
 
 ## Application Setup
 
@@ -262,6 +262,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **19.01.21:** - Deprecate the focal tag.
 * **12.07.21:** - Rebase to focal
 * **11.07.21:** - Bump node to 14 to fix builds
 * **08.05.21:** - Fix doc link
