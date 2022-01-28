@@ -28,7 +28,7 @@ if [ -f "/usr/bin/find" ] && [ -f "/usr/bin/xargs" ]; then
 
     # Split workload between config and workspace
     echo "setting permissions::configuration"
-    find /config -path /config/workspace -prune -false -o -type d -print0 | \
+    find /config -mindepth 1 -prune -false -o -type d -not -path /config/workspace -print0 | \
         xargs --null -r --max-args=1 --max-procs=$((CORES*2*8)) \
         chown -R abc:abc
 
