@@ -104,7 +104,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' curl -sX GET https://registry.yarnpkg.com/code-server | jq -r '."dist-tags".latest' | sed 's|^|v|' ''',
+            script: ''' curl -sX GET https://api.github.com/repos/coder/code-server/releases/latest | jq -r '.tag_name' | sed 's|^v||' ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }

@@ -266,6 +266,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **20.02.22:** - Install using the official debs.
 * **29.12.21:** - Add `install-extension` as a helper for mods to install extensions.
 * **06.12.21:** - Add `DEFAULT_WORKSPACE` env var.
 * **29.11.21:** - Rebase to Ubuntu focal.
