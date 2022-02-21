@@ -17,7 +17,6 @@ dirmngr2.2.19-3ubuntu2.1
 dpkg1.19.7ubuntu3
 e2fsprogs1.45.5-2ubuntu1
 fdisk2.34-0.1ubuntu9.3
-file1:5.38-4
 findutils4.7.0-1ubuntu1
 gcc-10-base10.3.0-1ubuntu1~20.04
 git1:2.25.1-1ubuntu3.2
@@ -43,6 +42,7 @@ libacl12.2.53-6
 libapt-pkg6.02.0.6
 libasn1-8-heimdal7.7.0+dfsg-1ubuntu1
 libassuan02.5.3-7ubuntu2
+libatomic110.3.0-1ubuntu1~20.04
 libattr11:2.4.48-5
 libaudit11:2.8.5-2ubuntu6
 libaudit-common1:2.8.5-2ubuntu6
@@ -93,10 +93,7 @@ libldap-2.4-22.4.49+dfsg-2ubuntu1.8
 libldap-common2.4.49+dfsg-2ubuntu1.8
 liblz4-11.9.2-2ubuntu0.20.04.1
 liblzma55.2.4-1ubuntu1
-libmagic11:5.38-4
-libmagic-mgc1:5.38-4
 libmount12.34-0.1ubuntu9.3
-libmpdec22.4.2-3
 libncurses66.2-0ubuntu2
 libncursesw66.2-0ubuntu2
 libnettle73.5.1+really3.5.1-2ubuntu0.2
@@ -113,9 +110,6 @@ libpcre32:8.39-12build1
 libperl5.305.30.0-9ubuntu0.2
 libprocps82:3.3.16-1ubuntu2.3
 libpsl50.21.0-1ubuntu1
-libpython3.8-minimal3.8.10-0ubuntu1~20.04.2
-libpython3.8-stdlib3.8.10-0ubuntu1~20.04.2
-libpython3-stdlib3.8.2-0ubuntu2
 libreadline88.0-4
 libroken18-heimdal7.7.0+dfsg-1ubuntu1
 librtmp12.4+20151223.gitfa8646d.1-2build1
@@ -153,14 +147,12 @@ login1:4.8.1-1ubuntu5.20.04.1
 logsave1.45.5-2ubuntu1
 lsb-base11.1.0ubuntu2
 mawk1.3.4.20200120-2
-mime-support3.64ubuntu1
 mount2.34-0.1ubuntu9.3
 nano4.8-1ubuntu1
 ncurses-base6.2-0ubuntu2
 ncurses-bin6.2-0ubuntu2
 netbase6.1
 net-tools1.60+git20180626.aebd88e-1ubuntu1
-nodejs14.19.0-deb-1nodesource1
 openssh-client1:8.2p1-4ubuntu0.4
 openssl1.1.1f-1ubuntu2.10
 passwd1:4.8.1-1ubuntu5.20.04.1
@@ -171,10 +163,6 @@ perl-modules-5.305.30.0-9ubuntu0.2
 pinentry-curses1.1.0-3build1
 procps2:3.3.16-1ubuntu2.3
 publicsuffix20200303.0012-1
-python33.8.2-0ubuntu2
-python3.83.8.10-0ubuntu1~20.04.2
-python3.8-minimal3.8.10-0ubuntu1~20.04.2
-python3-minimal3.8.2-0ubuntu2
 readline-common8.0-4
 sed4.7-1
 sensible-utils0.0.12+nmu1
@@ -185,6 +173,4 @@ tzdata2021e-0ubuntu0.20.04
 ubuntu-keyring2020.02.11.4
 util-linux2.34-0.1ubuntu9.3
 xauth1:1.1-0ubuntu1
-xz-utils5.2.4-1ubuntu1
-yarn1.22.17-1
 zlib1g1:1.2.11.dfsg-2ubuntu1.2
