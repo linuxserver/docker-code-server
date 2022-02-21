@@ -77,7 +77,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
-  - { date: "20.02.22:", desc: "Install using the official debs." }
+  - { date: "20.02.22:", desc: "Install using the official tarballs." }
   - { date: "29.12.21:", desc: "Add `install-extension` as a helper for mods to install extensions." }
   - { date: "06.12.21:", desc: "Add `DEFAULT_WORKSPACE` env var." }
   - { date: "29.11.21:", desc: "Rebase to Ubuntu focal." }
