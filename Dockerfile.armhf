@@ -11,6 +11,9 @@ LABEL maintainer="aptalca"
 ENV HOME="/config"
 
 RUN \
+  apt-get update && \
+  apt-get install -y \
+    libatomic1 && \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
     CODE_RELEASE=$(curl -sX GET https://api.github.com/repos/coder/code-server/releases/latest \
@@ -21,6 +24,7 @@ RUN \
     "https://github.com/coder/code-server/releases/download/v${CODE_RELEASE}/code-server_${CODE_RELEASE}_armhf.deb" && \
   dpkg -i /tmp/code-server.deb && \
   echo "**** clean up ****" && \
+  apt-get clean && \
   rm -rf \
     /config/* \
     /tmp/* \
