@@ -62,7 +62,7 @@ libdb5.35.3.28+dfsg1-0.6ubuntu2
 libdebconfclient00.251ubuntu1
 libedit23.1-20191231-1
 liberror-perl0.17029-1
-libexpat12.2.9-1build1
+libexpat12.2.9-1ubuntu0.2
 libext2fs21.45.5-2ubuntu1
 libfdisk12.34-0.1ubuntu9.3
 libffi73.3-4
