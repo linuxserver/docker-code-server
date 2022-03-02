@@ -50,7 +50,7 @@ libblkid12.34-0.1ubuntu9.3
 libbrotli11.0.7-6ubuntu0.1
 libbsd00.10.0-1
 libbz2-1.01.0.8-2
-libc62.31-0ubuntu9.2
+libc62.31-0ubuntu9.7
 libcap-ng00.7.9-2.1build1
 libc-bin2.31-0ubuntu9.2
 libcbor0.60.6.0-0ubuntu1
@@ -113,9 +113,9 @@ libpsl50.21.0-1ubuntu1
 libreadline88.0-4
 libroken18-heimdal7.7.0+dfsg-1ubuntu1
 librtmp12.4+20151223.gitfa8646d.1-2build1
-libsasl2-22.1.27+dfsg-2
-libsasl2-modules2.1.27+dfsg-2
-libsasl2-modules-db2.1.27+dfsg-2
+libsasl2-22.1.27+dfsg-2ubuntu0.1
+libsasl2-modules2.1.27+dfsg-2ubuntu0.1
+libsasl2-modules-db2.1.27+dfsg-2ubuntu0.1
 libseccomp22.5.1-1ubuntu1~20.04.2
 libselinux13.0-1build2
 libsemanage13.0-1build2
