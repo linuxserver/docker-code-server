@@ -125,7 +125,7 @@ libsmartcols12.34-0.1ubuntu9.3
 libsqlite3-03.31.1-4ubuntu0.2
 libss21.45.5-2ubuntu1
 libssh-40.9.3-2ubuntu2.2
-libssl1.11.1.1f-1ubuntu2.11
+libssl1.11.1.1f-1ubuntu2.12
 libstdc++610.3.0-1ubuntu1~20.04
 libsystemd0245.4-4ubuntu3.15
 libtasn1-64.16.0-2
@@ -154,7 +154,7 @@ ncurses-bin6.2-0ubuntu2
 netbase6.1
 net-tools1.60+git20180626.aebd88e-1ubuntu1
 openssh-client1:8.2p1-4ubuntu0.4
-openssl1.1.1f-1ubuntu2.11
+openssl1.1.1f-1ubuntu2.12
 passwd1:4.8.1-1ubuntu5.20.04.1
 patch2.7.6-6
 perl5.30.0-9ubuntu0.2
@@ -168,7 +168,7 @@ sed4.7-1
 sensible-utils0.0.12+nmu1
 sudo1.8.31-1ubuntu1.2
 sysvinit-utils2.96-2.1ubuntu1
-tar1.30+dfsg-7ubuntu0.20.04.1
+tar1.30+dfsg-7ubuntu0.20.04.2
 tzdata2021e-0ubuntu0.20.04
 ubuntu-keyring2020.02.11.4
 util-linux2.34-0.1ubuntu9.3
