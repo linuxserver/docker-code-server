@@ -169,7 +169,7 @@ sensible-utils0.0.12+nmu1
 sudo1.8.31-1ubuntu1.2
 sysvinit-utils2.96-2.1ubuntu1
 tar1.30+dfsg-7ubuntu0.20.04.2
-tzdata2021e-0ubuntu0.20.04
+tzdata2022a-0ubuntu0.20.04
 ubuntu-keyring2020.02.11.4
 util-linux2.34-0.1ubuntu9.3
 xauth1:1.1-0ubuntu1
