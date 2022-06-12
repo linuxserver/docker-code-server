@@ -16,7 +16,7 @@ fi
 exec \
     s6-setuidgid abc \
         /app/code-server/bin/code-server \
-            --bind-addr 0.0.0.0:8443 \
+            --bind-addr 0.0.0.0:32773 \
             --user-data-dir /config/data \
             --extensions-dir /config/extensions \
             --disable-telemetry \

@@ -25,8 +25,11 @@ RUN \
     git \
     jq \
     libatomic1 \
-    nano \
+    vim \
+    wget \
+    curl \
     net-tools \
+    unzip \
     sudo && \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
@@ -56,8 +59,22 @@ RUN \
     /var/tmp/* \
     /etc/apt/sources.list.d/nodesource.list
 
+ENV TERRAFORM_VERSION=1.2.2
+
+RUN wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
+    unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/bin
+
+RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl" && \
+    chmod +x kubectl && \
+    mv kubectl /usr/bin/kubectl
+
+RUN wget https://get.helm.sh/helm-v3.9.0-linux-amd64.tar.gz && \
+    tar -zxvf helm-v3.9.0-linux-amd64.tar.gz && \
+    mv linux-amd64/helm /usr/bin/helm
+
+
 # add local files
 COPY /root /
 
 # ports and volumes
-EXPOSE 8443
+EXPOSE 32773
