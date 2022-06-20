@@ -3,7 +3,7 @@
 # jenkins variables
 project_name: docker-code-server
 external_type: na
-custom_version_command: "curl -sX GET https://registry.yarnpkg.com/code-server | jq -r '.\"dist-tags\".latest' | sed 's|^|v|'"
+custom_version_command: "curl -sX GET https://api.github.com/repos/coder/code-server/releases/latest | jq -r '.tag_name' | sed 's|^v||'"
 release_type: stable
 release_tag: latest
 ls_branch: master
