@@ -8,7 +8,7 @@ bsdutils1:2.34-0.1ubuntu9.3
 bzip21.0.8-2
 ca-certificates20211016~20.04.1
 coreutils8.30-3ubuntu2
-curl7.68.0-1ubuntu2.11
+curl7.68.0-1ubuntu2.12
 dash0.5.10.2-6
 debconf1.5.73
 debianutils4.9.1
@@ -56,8 +56,8 @@ libc-bin2.31-0ubuntu9.7
 libcbor0.60.6.0-0ubuntu1
 libcom-err21.45.5-2ubuntu1
 libcrypt11:4.4.10-10ubuntu4
-libcurl3-gnutls7.68.0-1ubuntu2.11
-libcurl47.68.0-1ubuntu2.11
+libcurl3-gnutls7.68.0-1ubuntu2.12
+libcurl47.68.0-1ubuntu2.12
 libdb5.35.3.28+dfsg1-0.6ubuntu2
 libdebconfclient00.251ubuntu1
 libedit23.1-20191231-1
@@ -125,7 +125,7 @@ libsmartcols12.34-0.1ubuntu9.3
 libsqlite3-03.31.1-4ubuntu0.3
 libss21.45.5-2ubuntu1
 libssh-40.9.3-2ubuntu2.2
-libssl1.11.1.1f-1ubuntu2.13
+libssl1.11.1.1f-1ubuntu2.15
 libstdc++610.3.0-1ubuntu1~20.04
 libsystemd0245.4-4ubuntu3.15
 libtasn1-64.16.0-2
@@ -154,7 +154,7 @@ ncurses-bin6.2-0ubuntu2
 netbase6.1
 net-tools1.60+git20180626.aebd88e-1ubuntu1
 openssh-client1:8.2p1-4ubuntu0.5
-openssl1.1.1f-1ubuntu2.13
+openssl1.1.1f-1ubuntu2.15
 passwd1:4.8.1-1ubuntu5.20.04.1
 patch2.7.6-6
 perl5.30.0-9ubuntu0.2
