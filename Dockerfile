@@ -20,6 +20,8 @@ RUN apt install -y \
 
 RUN apt install nano wget htop curl git zip unzip -y
 
+RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+
 RUN \
   echo "**** install node repo ****" && \
   curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
