@@ -10,6 +10,16 @@ LABEL maintainer="aptalca"
 # environment settings
 ENV HOME="/config"
 
+RUN apt clean && apt update && apt upgrade -y
+RUN apt install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+RUN apt install nano wget htop curl git zip unzip -y
+
 RUN \
   echo "**** install node repo ****" && \
   curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
