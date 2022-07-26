@@ -21,7 +21,6 @@ RUN apt install -y \
 RUN apt install nano wget htop curl git zip unzip -y
 
 RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-RUN source ~/.bashrc
 
 RUN \
   echo "**** install node repo ****" && \
