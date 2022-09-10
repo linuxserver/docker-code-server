@@ -89,6 +89,8 @@ git config --global user.email "email address"
 
 How to create the [hashed password](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#can-i-store-my-password-hashed).
 
+Note that when the hashed password is specified within `docker-compose`, all `$` characters in it should be escaped as `$$` to prevent `docker-compose` from interpreting them as variable notation. 
+
 ## Usage
 
 Here are some example snippets to help you get started creating a container.
