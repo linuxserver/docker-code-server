@@ -74,6 +74,7 @@ app_setup_block: |
 
   How to create the [hashed password](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#can-i-store-my-password-hashed).
 
+  Note that when the hashed password is specified within `docker-compose`, all `$` characters in it should be escaped as `$$` to prevent `docker-compose` from interpreting them as variable notation.
 
 # changelog
 changelogs:
