@@ -122,7 +122,7 @@ libsemanage13.0-1build2
 libsemanage-common3.0-1build2
 libsepol13.0-1
 libsmartcols12.34-0.1ubuntu9.3
-libsqlite3-03.31.1-4ubuntu0.3
+libsqlite3-03.31.1-4ubuntu0.4
 libss21.45.5-2ubuntu1
 libssh-40.9.3-2ubuntu2.2
 libssl1.11.1.1f-1ubuntu2.16
