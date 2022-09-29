@@ -20,6 +20,7 @@ RUN \
     libatomic1 \
     nano \
     net-tools \
+    netcat \
     sudo && \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
