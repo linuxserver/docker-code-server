@@ -75,6 +75,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "05.10.22:", desc: "Install recommended deps to maintain parity with the older images." }
   - { date: "29.09.22:", desc: "Rebase to jammy, switch to s6v3. Fix chown logic to skip `/config/workspace` contents." }
   - { date: "20.02.22:", desc: "Install using the official tarballs." }
   - { date: "29.12.21:", desc: "Add `install-extension` as a helper for mods to install extensions." }

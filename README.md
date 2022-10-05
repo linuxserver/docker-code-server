@@ -256,6 +256,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.10.22:** - Install recommended deps to maintain parity with the older images.
 * **29.09.22:** - Rebase to jammy, switch to s6v3. Fix chown logic to skip `/config/workspace` contents.
 * **20.02.22:** - Install using the official tarballs.
 * **29.12.21:** - Add `install-extension` as a helper for mods to install extensions.
