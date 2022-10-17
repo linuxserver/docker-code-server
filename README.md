@@ -64,16 +64,6 @@ The architectures supported by this image are:
 | arm64 | ✅ | arm64v8-\<version tag\> |
 | armhf| ✅ | arm32v7-\<version tag\> |
 
-## Version Tags
-
-This image provides various versions that are available via tags. Please read the descriptions carefully and exercise caution when using unstable or development tags.
-
-| Tag | Available | Description |
-| :----: | :----: |--- |
-| latest | ✅ | Stable releases |
-| focal | ✅ | DEPRECATED (no longer updated, `latest` is rebased on focal) - Stable releases, based on Ubuntu Focal |
-| development | ✅ | DEPRECATED (no longer updated) - Prereleases from their GitHub |
-
 ## Application Setup
 
 Access the webui at `http://<your-ip>:8443`.
@@ -266,6 +256,8 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.10.22:** - Install recommended deps to maintain parity with the older images.
+* **29.09.22:** - Rebase to jammy, switch to s6v3. Fix chown logic to skip `/config/workspace` contents.
 * **20.02.22:** - Install using the official tarballs.
 * **29.12.21:** - Add `install-extension` as a helper for mods to install extensions.
 * **06.12.21:** - Add `DEFAULT_WORKSPACE` env var.

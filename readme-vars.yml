@@ -26,11 +26,9 @@ available_architectures:
   - { arch: "{{ arch_armhf }}", tag: "arm32v7-latest"}
 
 # development version
-development_versions: true
+development_versions: false
 development_versions_items:
   - { tag: "latest", desc: "Stable releases" }
-  - { tag: "focal", desc: "DEPRECATED (no longer updated, `latest` is rebased on focal) - Stable releases, based on Ubuntu Focal" }
-  - { tag: "development", desc: "DEPRECATED (no longer updated) - Prereleases from their GitHub" }
 
 # container parameters
 common_param_env_vars_enabled: true
@@ -77,6 +75,8 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "05.10.22:", desc: "Install recommended deps to maintain parity with the older images." }
+  - { date: "29.09.22:", desc: "Rebase to jammy, switch to s6v3. Fix chown logic to skip `/config/workspace` contents." }
   - { date: "20.02.22:", desc: "Install using the official tarballs." }
   - { date: "29.12.21:", desc: "Add `install-extension` as a helper for mods to install extensions." }
   - { date: "06.12.21:", desc: "Add `DEFAULT_WORKSPACE` env var." }
