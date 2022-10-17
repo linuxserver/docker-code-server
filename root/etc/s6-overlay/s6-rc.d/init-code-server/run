@@ -22,21 +22,10 @@ fi
 [[ ! -f /config/.profile ]] && \
     cp /root/.profile /config/.profile
 
-# permissions
-if [ -f "/usr/bin/find" ] && [ -f "/usr/bin/xargs" ]; then
-    CORES=$(nproc --all)
-
-    # Split workload between config and workspace
-    echo "setting permissions::configuration"
-    find /config -path /config/workspace -prune -false -o -type d -print0 | \
-        xargs --null -r --max-args=1 --max-procs=$((CORES*2*8)) \
-        chown -R abc:abc
-
-    echo "setting permissions::workspace"
-    chown abc:abc /config/workspace
-else
-    # Set permissions on data mount
-    # do not decend into the workspace
-    chown -R abc:abc "$(ls /config -I workspace)"
-    chown abc:abc /config/workspace
+# fix permissions (ignore contents of /config/workspace)
+find /config -path /config/workspace -prune -o -exec chown abc:abc {} +
+chown abc:abc /config/workspace
+chmod 700 /config/.ssh
+if [ -n "$(ls -A /config/.ssh)" ]; then
+    chmod 600 /config/.ssh/*
 fi
