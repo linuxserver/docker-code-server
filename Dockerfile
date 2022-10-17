@@ -30,6 +30,7 @@ RUN \
     curl \
     net-tools \
     unzip \
+    make \
     sudo && \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
@@ -68,9 +69,12 @@ RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -
     chmod +x kubectl && \
     mv kubectl /usr/bin/kubectl
 
-RUN wget https://get.helm.sh/helm-v3.9.0-linux-amd64.tar.gz && \
+RUN curl -LO https://get.helm.sh/helm-v3.9.0-linux-amd64.tar.gz && \
     tar -zxvf helm-v3.9.0-linux-amd64.tar.gz && \
     mv linux-amd64/helm /usr/bin/helm
+
+RUN curl -LO https://go.dev/dl/go1.19.2.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf go1.19.2.linux-amd64.tar.gz
 
 
 # add local files
