@@ -10,7 +10,7 @@ if [ -n "${SUDO_PASSWORD}" ] || [ -n "${SUDO_PASSWORD_HASH}" ]; then
     fi
     if [ -n "${SUDO_PASSWORD_HASH}" ]; then
         echo "setting sudo password using sudo password hash"
-        sed -i "s|^abc:\!:|abc:${SUDO_PASSWORD_HASH}:|" /etc/shadow
+        echo -e "abc:${SUDO_PASSWORD_HASH}" | chpasswd -e
     else
         echo "setting sudo password using SUDO_PASSWORD env var"
         echo -e "${SUDO_PASSWORD}\n${SUDO_PASSWORD}" | passwd abc
