@@ -78,7 +78,7 @@ libk5crypto31.19.2-2
 libkeyutils11.6.1-2ubuntu3
 libkrb5-31.19.2-2
 libkrb5support01.19.2-2
-libksba81.6.0-2build1
+libksba81.6.0-2ubuntu0.1
 libldap-2.5-02.5.13+dfsg-0ubuntu0.22.04.1
 libldap-common2.5.13+dfsg-0ubuntu0.22.04.1
 liblz4-11.9.3-2build2
@@ -169,4 +169,4 @@ ubuntu-keyring2021.03.26
 usrmerge25ubuntu2
 util-linux2.37.2-4ubuntu3
 xauth1:1.1-1build2
-zlib1g1:1.2.11.dfsg-2ubuntu9.1
+zlib1g1:1.2.11.dfsg-2ubuntu9.2
