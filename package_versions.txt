@@ -53,7 +53,7 @@ libc-bin2.35-0ubuntu3.1
 libcbor0.80.8.0-2ubuntu1
 libcom-err21.46.5-2ubuntu1.1
 libcrypt11:4.4.27-1
-libcurl3-gnutls7.81.0-1ubuntu1.4
+libcurl3-gnutls7.81.0-1ubuntu1.6
 libcurl47.81.0-1ubuntu1.4
 libdb5.35.3.28+dfsg1-0.8ubuntu3
 libdebconfclient00.261ubuntu1
