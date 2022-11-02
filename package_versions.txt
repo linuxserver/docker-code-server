@@ -7,7 +7,7 @@ bash5.1-6ubuntu1
 bsdutils1:2.37.2-4ubuntu3
 ca-certificates20211016
 coreutils8.32-4.1ubuntu1
-curl7.81.0-1ubuntu1.4
+curl7.81.0-1ubuntu1.6
 dash0.5.11+git20210903+057cd650a4ed-3build1
 debconf1.5.79ubuntu1
 debianutils5.5-1ubuntu2
@@ -54,7 +54,7 @@ libcbor0.80.8.0-2ubuntu1
 libcom-err21.46.5-2ubuntu1.1
 libcrypt11:4.4.27-1
 libcurl3-gnutls7.81.0-1ubuntu1.6
-libcurl47.81.0-1ubuntu1.4
+libcurl47.81.0-1ubuntu1.6
 libdb5.35.3.28+dfsg1-0.8ubuntu3
 libdebconfclient00.261ubuntu1
 libedit23.1-20210910-1build1
@@ -149,7 +149,7 @@ netcat1.218-4ubuntu1
 netcat-openbsd1.218-4ubuntu1
 net-tools1.60+git20181103.0eebece-1ubuntu5
 openssh-client1:8.9p1-3
-openssl3.0.2-0ubuntu1.6
+openssl3.0.2-0ubuntu1.7
 passwd1:4.8.1-2ubuntu2
 patch2.7.6-7build2
 perl5.34.0-3ubuntu1.1
@@ -164,7 +164,7 @@ sensible-utils0.0.17
 sudo1.9.9-1ubuntu2.1
 sysvinit-utils3.01-1ubuntu1
 tar1.34+dfsg-1build3
-tzdata2022c-0ubuntu0.22.04.0
+tzdata2022e-0ubuntu0.22.04.0
 ubuntu-keyring2021.03.26
 usrmerge25ubuntu2
 util-linux2.37.2-4ubuntu3
