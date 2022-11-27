@@ -59,7 +59,7 @@ libdb5.35.3.28+dfsg1-0.8ubuntu3
 libdebconfclient00.261ubuntu1
 libedit23.1-20210910-1build1
 liberror-perl0.17029-1
-libexpat12.4.7-1ubuntu0.1
+libexpat12.4.7-1ubuntu0.2
 libext2fs21.46.5-2ubuntu1.1
 libffi83.4.2-4
 libfido2-11.10.0-1
@@ -164,7 +164,7 @@ sensible-utils0.0.17
 sudo1.9.9-1ubuntu2.1
 sysvinit-utils3.01-1ubuntu1
 tar1.34+dfsg-1build3
-tzdata2022f-0ubuntu0.22.04.0
+tzdata2022f-0ubuntu0.22.04.1
 ubuntu-keyring2021.03.26
 usrmerge25ubuntu2
 util-linux2.37.2-4ubuntu3
