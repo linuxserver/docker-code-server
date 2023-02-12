@@ -34,7 +34,7 @@ gzip1.10-4ubuntu4.1
 hostname3.23ubuntu2
 init-system-helpers1.62
 jq1.6-2.1ubuntu3
-less590-1build1
+less590-1ubuntu0.22.04.1
 libacl12.3.1-1
 libapt-pkg6.02.4.8
 libassuan02.5.5-1build1
