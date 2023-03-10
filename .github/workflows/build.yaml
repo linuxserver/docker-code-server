@@ -62,4 +62,4 @@ jobs:
           tags: ${{ steps.dockertags.outputs.tags }}
           labels: ${{ steps.dockertags.outputs.labels }}
           build-args: |
-            CODE_RELEASE=v4.10.1
+            CODE_RELEASE=4.10.1
