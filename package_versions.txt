@@ -318,7 +318,7 @@ libgcrypt20                             1.9.4-3ubuntu3                          
 libgdbm-compat4                         1.23-1                                   deb     
 libgdbm6                                1.23-1                                   deb     
 libgmp10                                2:6.2.1+dfsg-3ubuntu1                    deb     
-libgnutls30                             3.7.3-4ubuntu1.1                         deb     
+libgnutls30                             3.7.3-4ubuntu1.2                         deb     
 libgpg-error0                           1.43-3                                   deb     
 libgssapi-krb5-2                        1.19.2-2ubuntu0.1                        deb     
 libhogweed6                             3.7.3-1build2                            deb     
@@ -573,7 +573,7 @@ stubs                                   3.0.0                                   
 sudo                                    1.9.9-1ubuntu2.3                         deb     
 swift                                   1.0.0                                    npm     
 sysvinit-utils                          3.01-1ubuntu1                            deb     
-tar                                     1.34+dfsg-1build3                        deb     
+tar                                     1.34+dfsg-1ubuntu0.1.22.04.1             deb     
 tar                                     6.1.11                                   npm     
 tar-fs                                  2.1.1                                    npm     
 tar-stream                              2.2.0                                    npm     
