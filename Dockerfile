@@ -27,6 +27,8 @@ RUN \
     python3  \
     python3-pip \
     python3-venv \
+    nodejs \
+    npm \
     unzip \
     vim \
     sudo && \
@@ -77,6 +79,8 @@ RUN \
   wget https://releases.hashicorp.com/terraform-ls/0.30.3/terraform-ls_0.30.3_linux_amd64.zip && \
   unzip terraform-ls_0.30.3_linux_amd64.zip && \
   install -o root -g root -m 0755 terraform-ls /usr/local/bin/terraform-ls && \
+  echo "### Npm ###" && \
+  npm install -g npx prettier && \
   echo "**** clean up ****" && \
   apt-get clean && \
   rm -rf \
