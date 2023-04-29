@@ -49,8 +49,8 @@ ansi-regex                              5.0.1                                   
 ansi-styles                             4.3.0                                    npm     
 aproba                                  1.2.0                                    npm     
 aproba                                  2.0.0                                    npm     
-apt                                     2.4.8                                    deb     
-apt-utils                               2.4.8                                    deb     
+apt                                     2.4.9                                    deb     
+apt-utils                               2.4.9                                    deb     
 are-we-there-yet                        1.1.7                                    npm     
 are-we-there-yet                        2.0.0                                    npm     
 argon2                                  0.30.3                                   npm     
@@ -286,7 +286,7 @@ less                                    1.0.0                                   
 less                                    590-1ubuntu0.22.04.1                     deb     
 levn                                    0.3.0                                    npm     
 libacl1                                 2.3.1-1                                  deb     
-libapt-pkg6.0                           2.4.8                                    deb     
+libapt-pkg6.0                           2.4.9                                    deb     
 libassuan0                              2.5.5-1build1                            deb     
 libatomic1                              12.1.0-2ubuntu1~22.04                    deb     
 libattr1                                1:2.5.1-1build1                          deb     
@@ -463,7 +463,7 @@ on-finished                             2.3.0                                   
 on-headers                              1.0.2                                    npm     
 once                                    1.4.0                                    npm     
 openssh-client                          1:8.9p1-3ubuntu0.1                       deb     
-openssl                                 3.0.2-0ubuntu1.8                         deb     
+openssl                                 3.0.2-0ubuntu1.9                         deb     
 optionator                              0.8.3                                    npm     
 os-tmpdir                               1.0.2                                    npm     
 pac-proxy-agent                         5.0.0                                    npm     
