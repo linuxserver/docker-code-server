@@ -84,7 +84,7 @@ builtin-notebook-renderers              1.0.0                                   
 bytes                                   3.0.0                                    npm     
 bytes                                   3.1.0                                    npm     
 bytes                                   3.1.1                                    npm     
-ca-certificates                         20211016ubuntu0.22.04.1                  deb     
+ca-certificates                         20230311ubuntu0.22.04.1                  deb     
 call-bind                               1.0.2                                    npm     
 charenc                                 0.0.2                                    npm     
 chownr                                  1.1.4                                    npm     
@@ -465,7 +465,7 @@ on-finished                             2.3.0                                   
 on-headers                              1.0.2                                    npm     
 once                                    1.4.0                                    npm     
 openssh-client                          1:8.9p1-3ubuntu0.1                       deb     
-openssl                                 3.0.2-0ubuntu1.9                         deb     
+openssl                                 3.0.2-0ubuntu1.10                        deb     
 optionator                              0.8.3                                    npm     
 os-tmpdir                               1.0.2                                    npm     
 pac-proxy-agent                         5.0.0                                    npm     
