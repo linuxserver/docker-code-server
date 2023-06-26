@@ -94,7 +94,7 @@ cliui                                   7.0.4                                   
 cliui                                   8.0.1                                    npm     
 clojure                                 1.0.0                                    npm     
 code-point-at                           1.1.0                                    npm     
-code-server                             4.14.0                                   npm     
+code-server                             4.14.1                                   npm     
 coffeescript                            1.0.0                                    npm     
 color-convert                           2.0.1                                    npm     
 color-name                              1.1.4                                    npm     
