@@ -4,58 +4,39 @@
 project_name: code-server
 project_url: "https://coder.com"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/code-server-banner.png"
-project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is VS Code running on a remote server, accessible through the browser.
-
-- Code on your Chromebook, tablet, and laptop with a consistent dev environment.
-
-- If you have a Windows or Mac workstation, more easily develop for Linux.
-
-- Take advantage of large cloud servers to speed up tests, compilations, downloads, and more.
-
-- Preserve battery life when you're on the go.
-
-- All intensive computation runs on your server.
-
-- You're no longer running excess instances of Chrome."
+project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is VS Code running on a remote server, accessible through the browser.\n- Code on your Chromebook, tablet, and laptop with a consistent dev environment.\n- If you have a Windows or Mac workstation, more easily develop for Linux.\n- Take advantage of large cloud servers to speed up tests, compilations, downloads, and more.\n- Preserve battery life when you're on the go.\n- All intensive computation runs on your server.\n- You're no longer running excess instances of Chrome."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
-  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-  - { arch: "{{ arch_armhf }}", tag: "arm32v7-latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # development version
 development_versions: false
 development_versions_items:
-  - { tag: "latest", desc: "Stable releases" }
-
+  - {tag: "latest", desc: "Stable releases"}
 # container parameters
 common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Contains all relevant configuration files." }
+  - {vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Contains all relevant configuration files."}
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "8443", internal_port: "8443", port_desc: "web gui" }
+  - {external_port: "8443", internal_port: "8443", port_desc: "web gui"}
 param_usage_include_env: true
 param_env_vars:
-  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London" }
-
+  - {env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
 # optional container parameters
 opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "PASSWORD", env_value: "password", desc: "Optional web gui password, if `PASSWORD` or `HASHED_PASSWORD` is not provided, there will be no auth." }
-  - { env_var: "HASHED_PASSWORD", env_value: "", desc: "Optional web gui password, overrides `PASSWORD`, instructions on how to create it is below." }
-  - { env_var: "SUDO_PASSWORD", env_value: "password", desc: "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password." }
-  - { env_var: "SUDO_PASSWORD_HASH", env_value: "", desc: "Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`." }
-  - { env_var: "PROXY_DOMAIN", env_value: "code-server.my.domain", desc: "If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#sub-domains)" }
-  - { env_var: "DEFAULT_WORKSPACE", env_value: "/config/workspace", desc: "If this optional variable is set, code-server will open this directory by default" }
-
+  - {env_var: "PASSWORD", env_value: "password", desc: "Optional web gui password, if `PASSWORD` or `HASHED_PASSWORD` is not provided, there will be no auth."}
+  - {env_var: "HASHED_PASSWORD", env_value: "", desc: "Optional web gui password, overrides `PASSWORD`, instructions on how to create it is below."}
+  - {env_var: "SUDO_PASSWORD", env_value: "password", desc: "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password."}
+  - {env_var: "SUDO_PASSWORD_HASH", env_value: "", desc: "Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`."}
+  - {env_var: "PROXY_DOMAIN", env_value: "code-server.my.domain", desc: "If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#sub-domains)"}
+  - {env_var: "DEFAULT_WORKSPACE", env_value: "/config/workspace", desc: "If this optional variable is set, code-server will open this directory by default"}
 optional_block_1: false
 optional_block_1_items: ""
-
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -71,30 +52,29 @@ app_setup_block: |
   ### Hashed code-server password
 
   How to create the [hashed password](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#can-i-store-my-password-hashed).
-
-
 # changelog
 changelogs:
-  - { date: "05.10.22:", desc: "Install recommended deps to maintain parity with the older images." }
-  - { date: "29.09.22:", desc: "Rebase to jammy, switch to s6v3. Fix chown logic to skip `/config/workspace` contents." }
-  - { date: "20.02.22:", desc: "Install using the official tarballs." }
-  - { date: "29.12.21:", desc: "Add `install-extension` as a helper for mods to install extensions." }
-  - { date: "06.12.21:", desc: "Add `DEFAULT_WORKSPACE` env var." }
-  - { date: "29.11.21:", desc: "Rebase to Ubuntu focal." }
-  - { date: "16.09.21:", desc: "Fix slow `chown` on large workspace (contents of workspace folder no longer chowned)." }
-  - { date: "11.07.21:", desc: "Bump node to 14 to fix builds" }
-  - { date: "08.05.21:", desc: "Fix doc link" }
-  - { date: "04.02.20:", desc: "Allow setting gui password via hash using env var `HASHED_PASSWORD`." }
-  - { date: "23.12.20:", desc: "Allow setting sudo password via hash using env var `SUDO_PASSWORD_HASH`." }
-  - { date: "29.05.20:", desc: "Add --domain-proxy support." }
-  - { date: "21.05.20:", desc: "Shrink images, install via yarn, fix arm32v7 build." }
-  - { date: "18.05.20:", desc: "Switch to multi-arch images, install via npm." }
-  - { date: "29.04.20:", desc: "Update start arguments." }
-  - { date: "01.04.20:", desc: "Structural changes required for v3." }
-  - { date: "17.01.20:", desc: "Fix artifact url retrieval from github." }
-  - { date: "24.10.19:", desc: "Upgrade to v2 builds." }
-  - { date: "28.09.19:", desc: "Update project logo." }
-  - { date: "21.09.19:", desc: "Add development builds/tag." }
-  - { date: "09.07.19:", desc: "Add optional sudo access." }
-  - { date: "01.07.19:", desc: "Add nano." }
-  - { date: "24.06.19:", desc: "Initial Release." }
+  - {date: "01.07.23:", desc: "Deprecate armhf. As announced [here](https://www.linuxserver.io/blog/a-farewell-to-arm-hf)"}
+  - {date: "05.10.22:", desc: "Install recommended deps to maintain parity with the older images."}
+  - {date: "29.09.22:", desc: "Rebase to jammy, switch to s6v3. Fix chown logic to skip `/config/workspace` contents."}
+  - {date: "20.02.22:", desc: "Install using the official tarballs."}
+  - {date: "29.12.21:", desc: "Add `install-extension` as a helper for mods to install extensions."}
+  - {date: "06.12.21:", desc: "Add `DEFAULT_WORKSPACE` env var."}
+  - {date: "29.11.21:", desc: "Rebase to Ubuntu focal."}
+  - {date: "16.09.21:", desc: "Fix slow `chown` on large workspace (contents of workspace folder no longer chowned)."}
+  - {date: "11.07.21:", desc: "Bump node to 14 to fix builds"}
+  - {date: "08.05.21:", desc: "Fix doc link"}
+  - {date: "04.02.20:", desc: "Allow setting gui password via hash using env var `HASHED_PASSWORD`."}
+  - {date: "23.12.20:", desc: "Allow setting sudo password via hash using env var `SUDO_PASSWORD_HASH`."}
+  - {date: "29.05.20:", desc: "Add --domain-proxy support."}
+  - {date: "21.05.20:", desc: "Shrink images, install via yarn, fix arm32v7 build."}
+  - {date: "18.05.20:", desc: "Switch to multi-arch images, install via npm."}
+  - {date: "29.04.20:", desc: "Update start arguments."}
+  - {date: "01.04.20:", desc: "Structural changes required for v3."}
+  - {date: "17.01.20:", desc: "Fix artifact url retrieval from github."}
+  - {date: "24.10.19:", desc: "Upgrade to v2 builds."}
+  - {date: "28.09.19:", desc: "Update project logo."}
+  - {date: "21.09.19:", desc: "Add development builds/tag."}
+  - {date: "09.07.19:", desc: "Add optional sudo access."}
+  - {date: "01.07.19:", desc: "Add nano."}
+  - {date: "24.06.19:", desc: "Initial Release."}
