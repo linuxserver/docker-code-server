@@ -96,7 +96,7 @@ cliui                                   7.0.4                                   
 cliui                                   8.0.1                                    npm     
 clojure                                 1.0.0                                    npm     
 code-point-at                           1.1.0                                    npm     
-code-server                             4.15.0                                   npm     
+code-server                             4.16.0                                   npm     
 coffeescript                            1.0.0                                    npm     
 color-convert                           2.0.1                                    npm     
 color-name                              1.1.4                                    npm     
@@ -118,7 +118,7 @@ crypt                                   0.0.2                                   
 csharp                                  1.0.0                                    npm     
 css                                     1.0.0                                    npm     
 css-language-features                   1.0.0                                    npm     
-curl                                    7.81.0-1ubuntu1.10                       deb     
+curl                                    7.81.0-1ubuntu1.13                       deb     
 dart                                    1.0.0                                    npm     
 dash                                    0.5.11+git20210903+057cd650a4ed-3build1  deb     
 data-uri-to-buffer                      5.0.1                                    npm     
@@ -309,7 +309,7 @@ libcbor0.8                              0.8.0-2ubuntu1                          
 libcom-err2                             1.46.5-2ubuntu1.1                        deb     
 libcrypt1                               1:4.4.27-1                               deb     
 libcurl3-gnutls                         7.81.0-1ubuntu1.13                       deb     
-libcurl4                                7.81.0-1ubuntu1.10                       deb     
+libcurl4                                7.81.0-1ubuntu1.13                       deb     
 libdb5.3                                5.3.28+dfsg1-0.8ubuntu3                  deb     
 libdebconfclient0                       0.261ubuntu1                             deb     
 libedit2                                3.1-20210910-1build1                     deb     
@@ -466,7 +466,7 @@ objective-c                             1.0.0                                   
 on-finished                             2.3.0                                    npm     
 on-headers                              1.0.2                                    npm     
 once                                    1.4.0                                    npm     
-openssh-client                          1:8.9p1-3ubuntu0.1                       deb     
+openssh-client                          1:8.9p1-3ubuntu0.3                       deb     
 openssl                                 3.0.2-0ubuntu1.10                        deb     
 optionator                              0.8.3                                    npm     
 os-tmpdir                               1.0.2                                    npm     
