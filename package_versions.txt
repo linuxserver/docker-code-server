@@ -54,8 +54,8 @@ ansi-regex                              5.0.1                                   
 ansi-styles                             4.3.0                                    npm     
 aproba                                  1.2.0                                    npm     
 aproba                                  2.0.0                                    npm     
-apt                                     2.4.9                                    deb     
-apt-utils                               2.4.9                                    deb     
+apt                                     2.4.10                                   deb     
+apt-utils                               2.4.10                                   deb     
 are-we-there-yet                        1.1.7                                    npm     
 are-we-there-yet                        2.0.0                                    npm     
 argon2                                  0.30.3                                   npm     
@@ -197,9 +197,9 @@ get-caller-file                         2.0.5                                   
 get-intrinsic                           1.1.1                                    npm     
 get-uri                                 6.0.1                                    npm     
 git                                     1.0.0                                    npm     
-git                                     1:2.34.1-1ubuntu1.9                      deb     
+git                                     1:2.34.1-1ubuntu1.10                     deb     
 git-base                                1.0.0                                    npm     
-git-man                                 1:2.34.1-1ubuntu1.9                      deb     
+git-man                                 1:2.34.1-1ubuntu1.10                     deb     
 github                                  0.0.1                                    npm     
 github-authentication                   0.0.2                                    npm     
 github-from-package                     0.0.0                                    npm     
@@ -291,7 +291,7 @@ less                                    1.0.0                                   
 less                                    590-1ubuntu0.22.04.1                     deb     
 levn                                    0.3.0                                    npm     
 libacl1                                 2.3.1-1                                  deb     
-libapt-pkg6.0                           2.4.9                                    deb     
+libapt-pkg6.0                           2.4.10                                   deb     
 libassuan0                              2.5.5-1build1                            deb     
 libatomic1                              12.3.0-1ubuntu1~22.04                    deb     
 libattr1                                1:2.5.1-1build1                          deb     
@@ -334,8 +334,8 @@ libkeyutils1                            1.6.1-2ubuntu3                          
 libkrb5-3                               1.19.2-2ubuntu0.2                        deb     
 libkrb5support0                         1.19.2-2ubuntu0.2                        deb     
 libksba8                                1.6.0-2ubuntu0.2                         deb     
-libldap-2.5-0                           2.5.15+dfsg-0ubuntu0.22.04.1             deb     
-libldap-common                          2.5.15+dfsg-0ubuntu0.22.04.1             deb     
+libldap-2.5-0                           2.5.16+dfsg-0ubuntu0.22.04.1             deb     
+libldap-common                          2.5.16+dfsg-0ubuntu0.22.04.1             deb     
 liblz4-1                                1.9.3-2build2                            deb     
 liblzma5                                5.2.5-2ubuntu1                           deb     
 libmd0                                  1.0.4-1build1                            deb     
