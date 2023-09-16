@@ -392,7 +392,7 @@ libxmuu1                                2:1.1.3-3                               
 libxxhash0                              0.8.1-1                                  deb     
 libzstd1                                1.4.8+dfsg-3build1                       deb     
 limiter                                 2.1.0                                    npm     
-locales                                 2.35-0ubuntu3.1                          deb     
+locales                                 2.35-0ubuntu3.3                          deb     
 lodash.camelcase                        4.3.0                                    npm     
 log                                     1.0.0                                    npm     
 login                                   1:4.8.1-2ubuntu2.1                       deb     
@@ -467,7 +467,7 @@ objective-c                             1.0.0                                   
 on-finished                             2.3.0                                    npm     
 on-headers                              1.0.2                                    npm     
 once                                    1.4.0                                    npm     
-openssh-client                          1:8.9p1-3ubuntu0.3                       deb     
+openssh-client                          1:8.9p1-3ubuntu0.4                       deb     
 openssl                                 3.0.2-0ubuntu1.10                        deb     
 optionator                              0.8.3                                    npm     
 os-tmpdir                               1.0.2                                    npm     
