@@ -26,8 +26,8 @@ agent-base                              6.0.2                                   
 agent-base                              7.1.0                                    npm     
 ansi-regex                              5.0.1                                    npm     
 aproba                                  2.0.0                                    npm     
-apt                                     2.4.10                                   deb     
-apt-utils                               2.4.10                                   deb     
+apt                                     2.4.11                                   deb     
+apt-utils                               2.4.11                                   deb     
 are-we-there-yet                        2.0.0                                    npm     
 argon2                                  0.31.1                                   npm     
 argparse                                2.0.1                                    npm     
@@ -215,7 +215,7 @@ latex                                   1.0.0                                   
 less                                    1.0.0                                    npm     
 less                                    590-1ubuntu0.22.04.1                     deb     
 libacl1                                 2.3.1-1                                  deb     
-libapt-pkg6.0                           2.4.10                                   deb     
+libapt-pkg6.0                           2.4.11                                   deb     
 libassuan0                              2.5.5-1build1                            deb     
 libatomic1                              12.3.0-1ubuntu1~22.04                    deb     
 libattr1                                1:2.5.1-1build1                          deb     
