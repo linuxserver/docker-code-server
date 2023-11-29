@@ -61,7 +61,7 @@ charenc                                 0.0.2                                   
 chownr                                  1.1.4                                    npm     
 chownr                                  2.0.0                                    npm     
 clojure                                 1.0.0                                    npm     
-code-server                             4.19.0                                   npm     
+code-server                             4.19.1                                   npm     
 coffeescript                            1.0.0                                    npm     
 color-support                           1.1.3                                    npm     
 compressible                            2.0.18                                   npm     
@@ -267,7 +267,7 @@ libmount1                               2.37.2-4ubuntu3                         
 libncurses6                             6.3-2ubuntu0.1                           deb     
 libncursesw6                            6.3-2ubuntu0.1                           deb     
 libnettle8                              3.7.3-1build2                            deb     
-libnghttp2-14                           1.43.0-1build3                           deb     
+libnghttp2-14                           1.43.0-1ubuntu0.1                        deb     
 libnpth0                                1.6-3build2                              deb     
 libnsl2                                 1.3.0-2build2                            deb     
 libonig5                                6.9.7.1-2build1                          deb     
@@ -278,7 +278,7 @@ libpam-runtime                          1.4.0-11ubuntu2.3                       
 libpam0g                                1.4.0-11ubuntu2.3                        deb     
 libpcre2-8-0                            10.39-3ubuntu0.1                         deb     
 libpcre3                                2:8.39-13ubuntu0.22.04.1                 deb     
-libperl5.34                             5.34.0-3ubuntu1.2                        deb     
+libperl5.34                             5.34.0-3ubuntu1.3                        deb     
 libprocps8                              2:3.3.17-6ubuntu2                        deb     
 libpsl5                                 0.21.0-1.2build2                         deb     
 libreadline8                            8.1.2-1                                  deb     
@@ -394,9 +394,9 @@ path-to-regexp                          0.1.7                                   
 pem                                     1.14.8                                   npm     
 pend                                    1.2.0                                    npm     
 perl                                    1.0.0                                    npm     
-perl                                    5.34.0-3ubuntu1.2                        deb     
-perl-base                               5.34.0-3ubuntu1.2                        deb     
-perl-modules-5.34                       5.34.0-3ubuntu1.2                        deb     
+perl                                    5.34.0-3ubuntu1.3                        deb     
+perl-base                               5.34.0-3ubuntu1.3                        deb     
+perl-modules-5.34                       5.34.0-3ubuntu1.3                        deb     
 php                                     1.0.0                                    npm     
 php-language-features                   1.0.0                                    npm     
 picomatch                               2.3.1                                    npm     
