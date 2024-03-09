@@ -496,7 +496,7 @@ type-is                                 1.6.18                                  
 typescript                              1.0.0                                    npm                      
 typescript                              5.3.2                                    npm                      
 typescript-language-features            1.0.0                                    npm                      
-tzdata                                  2023d-0ubuntu0.22.04                     deb                      
+tzdata                                  2024a-0ubuntu0.22.04                     deb                      
 ubuntu-keyring                          2021.03.26                               deb                      
 universalify                            0.1.2                                    npm                      
 unpipe                                  1.0.0                                    npm                      
