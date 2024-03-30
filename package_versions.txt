@@ -241,7 +241,7 @@ libcap2                                 1:2.44-1ubuntu0.22.04.1                 
 libcbor0.8                              0.8.0-2ubuntu1                           deb                      
 libcom-err2                             1.46.5-2ubuntu1.1                        deb                      
 libcrypt1                               1:4.4.27-1                               deb                      
-libcurl3-gnutls                         7.81.0-1ubuntu1.15                       deb                      
+libcurl3-gnutls                         7.81.0-1ubuntu1.16                       deb                      
 libcurl4                                7.81.0-1ubuntu1.15                       deb                      
 libdb5.3                                5.3.28+dfsg1-0.8ubuntu3                  deb                      
 libdebconfclient0                       0.261ubuntu1                             deb                      
