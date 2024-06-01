@@ -16,6 +16,7 @@ RUN \
   apt-get update && \
   apt-get install -y \
     git \
+    git-lfs \
     jq \
     libatomic1 \
     nano \
