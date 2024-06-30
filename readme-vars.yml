@@ -54,6 +54,7 @@ app_setup_block: |
   How to create the [hashed password](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#can-i-store-my-password-hashed).
 # changelog
 changelogs:
+  - {date: "21.04.23:", desc: "Let server listen on both ipv4 and ipv6."}
   - {date: "01.07.23:", desc: "Deprecate armhf. As announced [here](https://www.linuxserver.io/blog/a-farewell-to-arm-hf)"}
   - {date: "05.10.22:", desc: "Install recommended deps to maintain parity with the older images."}
   - {date: "29.09.22:", desc: "Rebase to jammy, switch to s6v3. Fix chown logic to skip `/config/workspace` contents."}
