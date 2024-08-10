@@ -93,7 +93,7 @@ crypt                                   0.0.2                                   
 csharp                                  1.0.0                                    npm                      
 css                                     1.0.0                                    npm                      
 css-language-features                   1.0.0                                    npm                      
-curl                                    7.81.0-1ubuntu1.16                       deb                      
+curl                                    7.81.0-1ubuntu1.17                       deb                      
 dart                                    1.0.0                                    npm                      
 dash                                    0.5.11+git20210903+057cd650a4ed-3build1  deb                      
 data-uri-to-buffer                      5.0.1                                    npm                      
@@ -260,8 +260,8 @@ libcap2                                 1:2.44-1ubuntu0.22.04.1                 
 libcbor0.8                              0.8.0-2ubuntu1                           deb                      
 libcom-err2                             1.46.5-2ubuntu1.1                        deb                      
 libcrypt1                               1:4.4.27-1                               deb                      
-libcurl3-gnutls                         7.81.0-1ubuntu1.16                       deb                      
-libcurl4                                7.81.0-1ubuntu1.16                       deb                      
+libcurl3-gnutls                         7.81.0-1ubuntu1.17                       deb                      
+libcurl4                                7.81.0-1ubuntu1.17                       deb                      
 libdb5.3                                5.3.28+dfsg1-0.8ubuntu3                  deb                      
 libdebconfclient0                       0.261ubuntu1                             deb                      
 libedit2                                3.1-20210910-1build1                     deb                      
@@ -323,7 +323,7 @@ libsmartcols1                           2.37.2-4ubuntu3.4                       
 libsqlite3-0                            3.37.2-2ubuntu0.3                        deb                      
 libss2                                  1.46.5-2ubuntu1.1                        deb                      
 libssh-4                                0.9.6-2ubuntu0.22.04.3                   deb                      
-libssl3                                 3.0.2-0ubuntu1.16                        deb                      
+libssl3                                 3.0.2-0ubuntu1.17                        deb                      
 libstdc++6                              12.3.0-1ubuntu1~22.04                    deb                      
 libsystemd0                             249.11-0ubuntu3.12                       deb                      
 libtasn1-6                              4.18.0-4build1                           deb                      
@@ -411,7 +411,7 @@ on-finished                             2.4.1                                   
 on-headers                              1.0.2                                    npm                      
 once                                    1.4.0                                    npm     (+1 duplicate)   
 openssh-client                          1:8.9p1-3ubuntu0.10                      deb                      
-openssl                                 3.0.2-0ubuntu1.16                        deb                      
+openssl                                 3.0.2-0ubuntu1.17                        deb                      
 os-tmpdir                               1.0.2                                    npm                      
 pac-proxy-agent                         7.0.1                                    npm                      
 pac-resolver                            7.0.0                                    npm                      
