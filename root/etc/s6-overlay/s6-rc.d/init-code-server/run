@@ -23,7 +23,7 @@ fi
     cp /root/.profile /config/.profile
 
 # fix permissions (ignore contents of /config/workspace)
-find /config -path /config/workspace -prune -o -exec chown abc:abc {} +
+find /config -path /config/workspace -prune -o -print0 | xargs -0 -n 1000 -P $(nproc) chown abc:abc
 chown abc:abc /config/workspace
 chmod 700 /config/.ssh
 if [ -n "$(ls -A /config/.ssh)" ]; then
