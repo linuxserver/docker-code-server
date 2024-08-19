@@ -1,14 +1,15 @@
 #!/usr/bin/with-contenv bash
+# shellcheck shell=bash
 
 mkdir -p /config/{extensions,data,workspace,.ssh}
 
-if [ -n "${SUDO_PASSWORD}" ] || [ -n "${SUDO_PASSWORD_HASH}" ]; then
+if [[ -n "${SUDO_PASSWORD}" ]] || [[ -n "${SUDO_PASSWORD_HASH}" ]]; then
     echo "setting up sudo access"
     if ! grep -q 'abc' /etc/sudoers; then
         echo "adding abc to sudoers"
         echo "abc ALL=(ALL:ALL) ALL" >> /etc/sudoers
     fi
-    if [ -n "${SUDO_PASSWORD_HASH}" ]; then
+    if [[ -n "${SUDO_PASSWORD_HASH}" ]]; then
         echo "setting sudo password using sudo password hash"
         sed -i "s|^abc:\!:|abc:${SUDO_PASSWORD_HASH}:|" /etc/shadow
     else
@@ -17,15 +18,18 @@ if [ -n "${SUDO_PASSWORD}" ] || [ -n "${SUDO_PASSWORD_HASH}" ]; then
     fi
 fi
 
-[[ ! -f /config/.bashrc ]] && \
+if [[ ! -f /config/.bashrc ]]; then
     cp /root/.bashrc /config/.bashrc
-[[ ! -f /config/.profile ]] && \
+fi
+
+if [[ ! -f /config/.profile ]]; then
     cp /root/.profile /config/.profile
+fi
 
 # fix permissions (ignore contents of /config/workspace)
 find /config -path /config/workspace -prune -o -exec chown abc:abc {} +
 chown abc:abc /config/workspace
 chmod 700 /config/.ssh
-if [ -n "$(ls -A /config/.ssh)" ]; then
+if [[ -n "$(ls -A /config/.ssh)" ]]; then
     chmod 600 /config/.ssh/*
 fi

@@ -1,13 +1,14 @@
 #!/usr/bin/with-contenv bash
+# shellcheck shell=bash
 
-if [ -n "${PASSWORD}" ] || [ -n "${HASHED_PASSWORD}" ]; then
+if [[ -n "${PASSWORD}" ]] || [[ -n "${HASHED_PASSWORD}" ]]; then
     AUTH="password"
 else
     AUTH="none"
     echo "starting with no password"
 fi
 
-if [ -z ${PROXY_DOMAIN+x} ]; then
+if [[ -z ${PROXY_DOMAIN+x} ]]; then
     PROXY_DOMAIN_ARG=""
 else
     PROXY_DOMAIN_ARG="--proxy-domain=${PROXY_DOMAIN}"

@@ -101,7 +101,7 @@ services:
       - PROXY_DOMAIN=code-server.my.domain #optional
       - DEFAULT_WORKSPACE=/config/workspace #optional
     volumes:
-      - /path/to/appdata/config:/config
+      - /path/to/code-server/config:/config
     ports:
       - 8443:8443
     restart: unless-stopped
@@ -122,7 +122,7 @@ docker run -d \
   -e PROXY_DOMAIN=code-server.my.domain `#optional` \
   -e DEFAULT_WORKSPACE=/config/workspace `#optional` \
   -p 8443:8443 \
-  -v /path/to/appdata/config:/config \
+  -v /path/to/code-server/config:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/code-server:latest
 ```
@@ -306,6 +306,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **19.08.24:** - Rebase to Ubuntu Noble.
 * **01.07.23:** - Deprecate armhf. As announced [here](https://www.linuxserver.io/blog/a-farewell-to-arm-hf)
 * **05.10.22:** - Install recommended deps to maintain parity with the older images.
 * **29.09.22:** - Rebase to jammy, switch to s6v3. Fix chown logic to skip `/config/workspace` contents.

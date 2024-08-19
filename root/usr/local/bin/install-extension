@@ -3,7 +3,7 @@
 
 _install=(/app/code-server/bin/code-server "--extensions-dir" "/config/extensions" "--install-extension")
 
-if [ "$(whoami)" == "abc" ]; then
+if [[ "$(whoami)" == "abc" ]]; then
     "${_install[@]}" "$@"
 else
     s6-setuidgid abc "${_install[@]}" "$@"
