@@ -95,7 +95,7 @@ crypt                                   0.0.2                              npm
 csharp                                  1.0.0                              npm                      
 css                                     1.0.0                              npm                      
 css-language-features                   1.0.0                              npm                      
-curl                                    8.5.0-2ubuntu10.2                  deb                      
+curl                                    8.5.0-2ubuntu10.3                  deb                      
 dart                                    1.0.0                              npm                      
 dash                                    0.5.12-6ubuntu5                    deb                      
 data-uri-to-buffer                      5.0.1                              npm                      
@@ -119,7 +119,7 @@ diff                                    1.0.0                              npm
 diffutils                               1:3.10-1build1                     deb                      
 dirmngr                                 2.4.4-2ubuntu17                    deb                      
 docker                                  1.0.0                              npm                      
-dpkg                                    1.22.6ubuntu6                      deb                      
+dpkg                                    1.22.6ubuntu6.1                    deb                      
 e2fsprogs                               1.47.0-2.4~exp1ubuntu4             deb                      
 ee-first                                1.1.1                              npm                      
 emmet                                   1.0.0                              npm                      
@@ -266,8 +266,8 @@ libcap2                                 1:2.66-5ubuntu2                    deb
 libcbor0.10                             0.10.2-1.2ubuntu2                  deb                      
 libcom-err2                             1.47.0-2.4~exp1ubuntu4             deb                      
 libcrypt1                               1:4.4.36-4build1                   deb                      
-libcurl3t64-gnutls                      8.5.0-2ubuntu10.2                  deb                      
-libcurl4t64                             8.5.0-2ubuntu10.2                  deb                      
+libcurl3t64-gnutls                      8.5.0-2ubuntu10.3                  deb                      
+libcurl4t64                             8.5.0-2ubuntu10.3                  deb                      
 libdb5.3t64                             5.3.28+dfsg2-7                     deb                      
 libdebconfclient0                       0.271ubuntu3                       deb                      
 libedit2                                3.1-20230828-1build1               deb                      
@@ -409,7 +409,7 @@ objective-c                             1.0.0                              npm
 on-finished                             2.4.1                              npm                      
 on-headers                              1.0.2                              npm                      
 once                                    1.4.0                              npm     (+1 duplicate)   
-openssh-client                          1:9.6p1-3ubuntu13.4                deb                      
+openssh-client                          1:9.6p1-3ubuntu13.5                deb                      
 openssl                                 3.0.13-0ubuntu3.2                  deb                      
 os-tmpdir                               1.0.2                              npm                      
 pac-proxy-agent                         7.0.1                              npm                      
