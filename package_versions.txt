@@ -326,7 +326,7 @@ libsmartcols1                           2.39.3-9ubuntu6.1                  deb
 libsqlite3-0                            3.45.1-1ubuntu2                    deb                      
 libss2                                  1.47.0-2.4~exp1ubuntu4.1           deb                      
 libssh-4                                0.10.6-2build2                     deb                      
-libssl3t64                              3.0.13-0ubuntu3.3                  deb                      
+libssl3t64                              3.0.13-0ubuntu3.4                  deb                      
 libstdc++6                              14-20240412-0ubuntu1               deb                      
 libsystemd0                             255.4-1ubuntu8.4                   deb                      
 libtasn1-6                              4.19.0-3build1                     deb                      
@@ -410,7 +410,7 @@ on-finished                             2.4.1                              npm
 on-headers                              1.0.2                              npm                      
 once                                    1.4.0                              npm     (+1 duplicate)   
 openssh-client                          1:9.6p1-3ubuntu13.5                deb                      
-openssl                                 3.0.13-0ubuntu3.3                  deb                      
+openssl                                 3.0.13-0ubuntu3.4                  deb                      
 os-tmpdir                               1.0.2                              npm                      
 pac-proxy-agent                         7.0.1                              npm                      
 pac-resolver                            7.0.0                              npm                      
