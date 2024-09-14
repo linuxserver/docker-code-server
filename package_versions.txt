@@ -272,7 +272,7 @@ libdb5.3t64                             5.3.28+dfsg2-7                     deb
 libdebconfclient0                       0.271ubuntu3                       deb                      
 libedit2                                3.1-20230828-1build1               deb                      
 liberror-perl                           0.17029-2                          deb                      
-libexpat1                               2.6.1-2build1                      deb                      
+libexpat1                               2.6.1-2ubuntu0.1                   deb                      
 libext2fs2t64                           1.47.0-2.4~exp1ubuntu4.1           deb                      
 libffi8                                 3.4.6-1build1                      deb                      
 libfido2-1                              1.14.0-1build3                     deb                      
