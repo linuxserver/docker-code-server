@@ -312,7 +312,7 @@ libpam-runtime                          1.5.3-5ubuntu5.1                   deb
 libpam0g                                1.5.3-5ubuntu5.1                   deb                      
 libpcre2-8-0                            10.42-4ubuntu2                     deb                      
 libperl5.38t64                          5.38.2-3.2build2                   deb                      
-libproc2-0                              2:4.0.4-4ubuntu3                   deb                      
+libproc2-0                              2:4.0.4-4ubuntu3.1                 deb                      
 libpsl5t64                              0.21.2-1.1build1                   deb                      
 libreadline8t64                         8.2-4build1                        deb                      
 librtmp1                                2.4+20151223.gitfa8646d.1-2build7  deb                      
@@ -432,7 +432,7 @@ picomatch                               2.3.1                              npm
 pinentry-curses                         1.2.1-3ubuntu5                     deb                      
 powershell                              1.0.0                              npm                      
 prebuild-install                        7.1.2                              npm                      
-procps                                  2:4.0.4-4ubuntu3                   deb                      
+procps                                  2:4.0.4-4ubuntu3.1                 deb                      
 proxy-addr                              2.0.7                              npm                      
 proxy-agent                             6.4.0                              npm                      
 proxy-from-env                          1.1.0                              npm     (+1 duplicate)   
