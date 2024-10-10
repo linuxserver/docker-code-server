@@ -31,5 +31,7 @@ find /config -path /config/workspace -prune -o -exec chown abc:abc {} +
 chown abc:abc /config/workspace
 chmod 700 /config/.ssh
 if [[ -n "$(ls -A /config/.ssh)" ]]; then
-    chmod 600 /config/.ssh/*
+    find /config/.ssh/ -type d -exec chmod 700 '{}' \;
+    find /config/.ssh/ -type f -exec chmod 600 '{}' \;
+    find /config/.ssh/ -type f -iname '*.pub' -exec chmod 644 '{}' \;
 fi

@@ -47,6 +47,7 @@ app_setup_block: |
   How to create the [hashed password](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#can-i-store-my-password-hashed).
 # changelog
 changelogs:
+  - {date: "09.10.24:", desc: "Manage permissions in /config/.ssh according to file type"}
   - {date: "19.08.24:", desc: "Rebase to Ubuntu Noble."}
   - {date: "01.07.23:", desc: "Deprecate armhf. As announced [here](https://www.linuxserver.io/blog/a-farewell-to-arm-hf)"}
   - {date: "05.10.22:", desc: "Install recommended deps to maintain parity with the older images."}
