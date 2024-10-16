@@ -26,9 +26,14 @@ if [[ ! -f /config/.profile ]]; then
     cp /root/.profile /config/.profile
 fi
 
-# fix permissions (ignore contents of /config/workspace)
-find /config -path /config/workspace -prune -o -exec chown abc:abc {} +
-chown abc:abc /config/workspace
+# fix permissions (ignore contents of workspace)
+PUID=${PUID:-911}
+if [[ ! "$(stat -c %u /config/.profile)" == "${PUID}" ]]; then
+    echo "Change in ownership or new install detected, please be patient while we chown existing files"
+    echo "This could take some time"
+    find /config -path "/config/workspace" -prune -o -exec lsiown abc:abc {} +
+    lsiown abc:abc /config/workspace
+fi
 chmod 700 /config/.ssh
 if [[ -n "$(ls -A /config/.ssh)" ]]; then
     find /config/.ssh/ -type d -exec chmod 700 '{}' \;

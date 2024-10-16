@@ -27,7 +27,7 @@ opt_param_env_vars:
   - {env_var: "HASHED_PASSWORD", env_value: "", desc: "Optional web gui password, overrides `PASSWORD`, instructions on how to create it is below."}
   - {env_var: "SUDO_PASSWORD", env_value: "password", desc: "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password."}
   - {env_var: "SUDO_PASSWORD_HASH", env_value: "", desc: "Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`."}
-  - {env_var: "PROXY_DOMAIN", env_value: "code-server.my.domain", desc: "If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#sub-domains)"}
+  - {env_var: "PROXY_DOMAIN", env_value: "code-server.my.domain", desc: "If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/coder/code-server/blob/main/docs/guide.md#using-a-subdomain)"}
   - {env_var: "DEFAULT_WORKSPACE", env_value: "/config/workspace", desc: "If this optional variable is set, code-server will open this directory by default"}
 
 # application setup block
@@ -47,6 +47,7 @@ app_setup_block: |
   How to create the [hashed password](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#can-i-store-my-password-hashed).
 # changelog
 changelogs:
+  - {date: "13.10.24:", desc: "Only chown config folder when change to ownership or new install is detected."}
   - {date: "09.10.24:", desc: "Manage permissions in /config/.ssh according to file type"}
   - {date: "19.08.24:", desc: "Rebase to Ubuntu Noble."}
   - {date: "01.07.23:", desc: "Deprecate armhf. As announced [here](https://www.linuxserver.io/blog/a-farewell-to-arm-hf)"}
