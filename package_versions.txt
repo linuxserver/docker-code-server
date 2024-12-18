@@ -13,21 +13,22 @@ NAME                                    VERSION                            TYPE
 @tootallnate/quickjs-emscripten         0.23.0                             npm                      
 @vscode/deviceid                        0.1.1                              npm                      
 @vscode/iconv-lite-umd                  0.7.0                              npm                      
-@vscode/proxy-agent                     0.22.0                             npm                      
+@vscode/proxy-agent                     0.27.0                             npm                      
 @vscode/ripgrep                         1.15.9                             npm                      
-@vscode/spdlog                          0.15.0                             npm                      
+@vscode/spdlog                          0.15.1                             npm                      
 @vscode/tree-sitter-wasm                0.0.4                              npm                      
 @vscode/vscode-languagedetection        1.0.21                             npm                      
 @vscode/windows-process-tree            0.6.0                              npm                      
 @vscode/windows-registry                1.1.0                              npm                      
-@xterm/addon-clipboard                  0.2.0-beta.48                      npm                      
-@xterm/addon-image                      0.9.0-beta.65                      npm                      
-@xterm/addon-search                     0.16.0-beta.65                     npm                      
-@xterm/addon-serialize                  0.14.0-beta.65                     npm                      
-@xterm/addon-unicode11                  0.9.0-beta.65                      npm                      
-@xterm/addon-webgl                      0.19.0-beta.65                     npm                      
-@xterm/headless                         5.6.0-beta.65                      npm                      
-@xterm/xterm                            5.6.0-beta.65                      npm                      
+@xterm/addon-clipboard                  0.2.0-beta.53                      npm                      
+@xterm/addon-image                      0.9.0-beta.70                      npm                      
+@xterm/addon-ligatures                  0.10.0-beta.70                     npm                      
+@xterm/addon-search                     0.16.0-beta.70                     npm                      
+@xterm/addon-serialize                  0.14.0-beta.70                     npm                      
+@xterm/addon-unicode11                  0.9.0-beta.70                      npm                      
+@xterm/addon-webgl                      0.19.0-beta.70                     npm                      
+@xterm/headless                         5.6.0-beta.70                      npm                      
+@xterm/xterm                            5.6.0-beta.70                      npm                      
 OpenConsole.exe                         1.20.240626001                     dotnet  (+1 duplicate)   
 abbrev                                  1.1.1                              npm                      
 accepts                                 1.3.8                              npm                      
@@ -72,8 +73,8 @@ charenc                                 0.0.2                              npm
 chownr                                  1.1.4                              npm                      
 chownr                                  2.0.0                              npm                      
 clojure                                 1.0.0                              npm                      
-code-server                             1.95.3                             npm                      
-code-server                             4.95.3                             npm                      
+code-server                             1.96.1                             npm                      
+code-server                             4.96.1                             npm                      
 coffeescript                            1.0.0                              npm                      
 color-support                           1.1.3                              npm                      
 compressible                            2.0.18                             npm                      
@@ -97,7 +98,7 @@ crypt                                   0.0.2                              npm
 csharp                                  1.0.0                              npm                      
 css                                     1.0.0                              npm                      
 css-language-features                   1.0.0                              npm                      
-curl                                    8.5.0-2ubuntu10.5                  deb                      
+curl                                    8.5.0-2ubuntu10.6                  deb                      
 dart                                    1.0.0                              npm                      
 dash                                    0.5.12-6ubuntu5                    deb                      
 data-uri-to-buffer                      6.0.2                              npm                      
@@ -149,6 +150,8 @@ fill-range                              7.1.1                              npm
 finalhandler                            1.2.0                              npm                      
 findutils                               4.9.0-5build1                      deb                      
 follow-redirects                        1.15.9                             npm                      
+font-finder                             1.1.0                              npm                      
+font-ligatures                          1.4.1                              npm                      
 forwarded                               0.2.0                              npm                      
 fresh                                   0.5.2                              npm                      
 fs-constants                            1.0.0                              npm                      
@@ -160,6 +163,7 @@ function-bind                           1.1.2                              npm
 gauge                                   3.0.2                              npm                      
 gcc-14-base                             14.2.0-4ubuntu2~24.04              deb                      
 get-intrinsic                           1.2.4                              npm                      
+get-system-fonts                        2.0.2                              npm                      
 get-uri                                 6.0.3                              npm                      
 git                                     1.0.0                              npm                      
 git                                     1:2.43.0-1ubuntu7.1                deb                      
@@ -227,7 +231,7 @@ java                                    1.0.0                              npm
 javascript                              1.0.0                              npm                      
 jq                                      1.7.1-3build1                      deb                      
 js-base64                               3.7.7                              npm                      
-js-debug                                1.95.3                             npm                      
+js-debug                                1.96.0                             npm                      
 js-debug-companion                      1.1.3                              npm                      
 js-yaml                                 4.1.0                              npm                      
 jsbn                                    1.1.0                              npm     (+1 duplicate)   
@@ -262,8 +266,8 @@ libcap2                                 1:2.66-5ubuntu2                    deb
 libcbor0.10                             0.10.2-1.2ubuntu2                  deb                      
 libcom-err2                             1.47.0-2.4~exp1ubuntu4.1           deb                      
 libcrypt1                               1:4.4.36-4build1                   deb                      
-libcurl3t64-gnutls                      8.5.0-2ubuntu10.5                  deb                      
-libcurl4t64                             8.5.0-2ubuntu10.5                  deb                      
+libcurl3t64-gnutls                      8.5.0-2ubuntu10.6                  deb                      
+libcurl4t64                             8.5.0-2ubuntu10.6                  deb                      
 libdb5.3t64                             5.3.28+dfsg2-7                     deb                      
 libdebconfclient0                       0.271ubuntu3                       deb                      
 libedit2                                3.1-20230828-1build1               deb                      
@@ -386,7 +390,7 @@ net-tools                               2.10-0.1ubuntu4                    deb
 netbase                                 6.4                                deb                      
 netcat-openbsd                          1.226-1ubuntu2                     deb                      
 netmask                                 2.0.2                              npm                      
-node                                    20.18.0                            binary                   
+node                                    20.18.1                            binary                   
 node-abi                                3.8.0                              npm                      
 node-addon-api                          7.1.0                              npm                      
 node-addon-api                          7.1.1                              npm                      
@@ -405,6 +409,7 @@ on-headers                              1.0.2                              npm
 once                                    1.4.0                              npm     (+1 duplicate)   
 openssh-client                          1:9.6p1-3ubuntu13.5                deb                      
 openssl                                 3.0.13-0ubuntu3.4                  deb                      
+opentype.js                             0.8.0                              npm                      
 os-tmpdir                               1.0.2                              npm                      
 pac-proxy-agent                         7.0.2                              npm                      
 pac-resolver                            7.0.1                              npm                      
@@ -426,6 +431,7 @@ pinentry-curses                         1.2.1-3ubuntu5                     deb
 powershell                              1.0.0                              npm                      
 prebuild-install                        7.1.2                              npm                      
 procps                                  2:4.0.4-4ubuntu3.2                 deb                      
+promise-stream-reader                   1.0.1                              npm                      
 proxy-addr                              2.0.7                              npm                      
 proxy-agent                             6.4.0                              npm                      
 proxy-from-env                          1.1.0                              npm     (+1 duplicate)   
@@ -495,6 +501,7 @@ tar                                     6.2.1                              npm
 tar-fs                                  2.1.1                              npm                      
 tar-stream                              2.2.0                              npm                      
 tas-client-umd                          0.2.0                              npm                      
+terminal-suggest                        1.0.1                              npm                      
 theme-abyss                             1.0.0                              npm                      
 theme-defaults                          1.0.0                              npm                      
 theme-kimbie-dark                       1.0.0                              npm                      
@@ -505,6 +512,7 @@ theme-red                               1.0.0                              npm
 theme-solarized-dark                    1.0.0                              npm                      
 theme-solarized-light                   1.0.0                              npm                      
 theme-tomorrow-night-blue               1.0.0                              npm                      
+tiny-inflate                            1.0.3                              npm                      
 to-regex-range                          5.0.1                              npm                      
 toidentifier                            1.0.1                              npm                      
 tr46                                    0.0.3                              npm                      
@@ -514,10 +522,11 @@ tunnel-agent                            0.6.0                              npm
 tunnel-forwarding                       1.0.0                              npm                      
 type-is                                 1.6.18                             npm                      
 typescript                              1.0.0                              npm                      
-typescript                              5.6.3                              npm                      
+typescript                              5.7.2                              npm                      
 typescript-language-features            1.0.0                              npm                      
 tzdata                                  2024a-3ubuntu1.1                   deb                      
 ubuntu-keyring                          2023.11.28.1                       deb                      
+undici                                  6.20.1                             npm                      
 universalify                            2.0.1                              npm     (+1 duplicate)   
 unpipe                                  1.0.0                              npm                      
 util-deprecate                          1.0.2                              npm     (+1 duplicate)   
