@@ -13,6 +13,7 @@ project_blurb: |
   - All intensive computation runs on your server.
   - You're no longer running excess instances of Chrome.
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+project_categories: "Programming"
 # supported architectures
 available_architectures:
   - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
