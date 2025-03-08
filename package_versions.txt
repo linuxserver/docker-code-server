@@ -247,7 +247,7 @@ julia                                   1.0.0                              npm
 just-performance                        4.3.0                              npm                      
 kerberos                                2.1.1                              npm                      
 keyboxd                                 2.4.4-2ubuntu17                    deb                      
-krb5-locales                            1.20.1-6ubuntu2.4                  deb                      
+krb5-locales                            1.20.1-6ubuntu2.5                  deb                      
 latex                                   1.0.0                              npm                      
 less                                    1.0.0                              npm                      
 less                                    590-2ubuntu2.1                     deb                      
@@ -287,14 +287,14 @@ libgdbm6t64                             1.23-5.1build1                     deb
 libgmp10                                2:6.3.0+dfsg-2ubuntu6.1            deb                      
 libgnutls30t64                          3.8.3-1.1ubuntu3.3                 deb                      
 libgpg-error0                           1.47-3build2.1                     deb                      
-libgssapi-krb5-2                        1.20.1-6ubuntu2.4                  deb                      
+libgssapi-krb5-2                        1.20.1-6ubuntu2.5                  deb                      
 libhogweed6t64                          3.9.1-2.2build1.1                  deb                      
 libidn2-0                               2.3.7-2build1.1                    deb                      
 libjq1                                  1.7.1-3build1                      deb                      
-libk5crypto3                            1.20.1-6ubuntu2.4                  deb                      
+libk5crypto3                            1.20.1-6ubuntu2.5                  deb                      
 libkeyutils1                            1.6.3-3build1                      deb                      
-libkrb5-3                               1.20.1-6ubuntu2.4                  deb                      
-libkrb5support0                         1.20.1-6ubuntu2.4                  deb                      
+libkrb5-3                               1.20.1-6ubuntu2.5                  deb                      
+libkrb5support0                         1.20.1-6ubuntu2.5                  deb                      
 libksba8                                1.6.6-1build1                      deb                      
 libldap-common                          2.6.7+dfsg-1~exp1ubuntu8.2         deb                      
 libldap2                                2.6.7+dfsg-1~exp1ubuntu8.2         deb                      
