@@ -32,7 +32,6 @@ NAME                                    VERSION                            TYPE
 @xterm/addon-webgl                      0.19.0-beta.98                     npm                      
 @xterm/headless                         5.6.0-beta.98                      npm                      
 @xterm/xterm                            5.6.0-beta.98                      npm                      
-OpenConsole.exe                         1.22.250204002                     dotnet  (+1 duplicate)   
 abbrev                                  1.1.1                              npm                      
 accepts                                 2.0.0                              npm                      
 adduser                                 3.137ubuntu1                       deb                      
@@ -83,7 +82,6 @@ compressible                            2.0.18                             npm
 compression                             1.8.0                              npm                      
 concat-map                              0.0.1                              npm                      
 configuration-editing                   1.0.0                              npm                      
-conpty.dll                              1.22.250204002                     dotnet  (+1 duplicate)   
 console-control-strings                 1.1.0                              npm                      
 content-disposition                     1.0.0                              npm                      
 content-type                            1.0.5                              npm                      
@@ -532,7 +530,7 @@ type-is                                 2.0.0                              npm
 typescript                              1.0.0                              npm                      
 typescript                              5.8.2                              npm                      
 typescript-language-features            1.0.0                              npm                      
-tzdata                                  2024b-0ubuntu0.24.04.1             deb                      
+tzdata                                  2025a-0ubuntu0.24.04               deb                      
 ubuntu-keyring                          2023.11.28.1                       deb                      
 undici                                  7.3.0                              npm                      
 universalify                            2.0.1                              npm     (+1 duplicate)   
