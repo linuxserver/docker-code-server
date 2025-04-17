@@ -1,5 +1,5 @@
 NAME                                    VERSION                            TYPE                    
-@babel/runtime                          7.25.7                             npm                      
+@babel/runtime                          7.27.0                             npm                      
 @c4312/eventsource-umd                  3.0.5                              npm                      
 @coder/logger                           3.0.1                              npm                      
 @mapbox/node-pre-gyp                    1.0.11                             npm                      
@@ -37,7 +37,8 @@ abbrev                                  1.1.1                              npm
 accepts                                 2.0.0                              npm                      
 adduser                                 3.137ubuntu1                       deb                      
 agent-base                              6.0.2                              npm                      
-agent-base                              7.1.1                              npm     (+4 duplicates)  
+agent-base                              7.1.1                              npm                      
+agent-base                              7.1.3                              npm     (+3 duplicates)  
 ansi-regex                              5.0.1                              npm                      
 aproba                                  2.0.0                              npm                      
 apt                                     2.7.14build2                       deb                      
@@ -75,8 +76,8 @@ charenc                                 0.0.2                              npm
 chownr                                  1.1.4                              npm                      
 chownr                                  2.0.0                              npm                      
 clojure                                 1.0.0                              npm                      
-code-server                             1.99.2                             npm                      
-code-server                             4.99.2                             npm                      
+code-server                             1.99.3                             npm                      
+code-server                             4.99.3                             npm                      
 coffeescript                            1.0.0                              npm                      
 color-support                           1.1.3                              npm                      
 compressible                            2.0.18                             npm                      
@@ -160,7 +161,7 @@ forwarded                               0.2.0                              npm
 fresh                                   0.5.2                              npm                      
 fresh                                   2.0.0                              npm                      
 fs-constants                            1.0.0                              npm                      
-fs-extra                                11.2.0                             npm     (+1 duplicate)   
+fs-extra                                11.2.0                             npm                      
 fs-minipass                             2.1.0                              npm                      
 fs.realpath                             1.0.0                              npm                      
 fsharp                                  1.0.0                              npm                      
@@ -170,7 +171,7 @@ gcc-14-base                             14.2.0-4ubuntu2~24.04              deb
 get-intrinsic                           1.3.0                              npm                      
 get-proto                               1.0.1                              npm                      
 get-system-fonts                        2.0.2                              npm                      
-get-uri                                 6.0.3                              npm                      
+get-uri                                 6.0.4                              npm                      
 git                                     1.0.0                              npm                      
 git                                     1:2.43.0-1ubuntu7.2                deb                      
 git-base                                1.0.0                              npm                      
@@ -190,7 +191,7 @@ gpg-wks-client                          2.4.4-2ubuntu17.2                  deb
 gpgconf                                 2.4.4-2ubuntu17.2                  deb                      
 gpgsm                                   2.4.4-2ubuntu17.2                  deb                      
 gpgv                                    2.4.4-2ubuntu17.2                  deb                      
-graceful-fs                             4.2.11                             npm     (+1 duplicate)   
+graceful-fs                             4.2.11                             npm                      
 grep                                    3.11-4build1                       deb                      
 groovy                                  1.0.0                              npm                      
 grunt                                   1.0.0                              npm                      
@@ -211,7 +212,7 @@ http-proxy-agent                        7.0.2                              npm
 httpolyglot                             0.1.2                              npm                      
 https-proxy-agent                       5.0.1                              npm                      
 https-proxy-agent                       7.0.2                              npm                      
-https-proxy-agent                       7.0.5                              npm     (+1 duplicate)   
+https-proxy-agent                       7.0.6                              npm     (+1 duplicate)   
 i18next                                 23.16.4                            npm                      
 iconv-lite                              0.5.2                              npm                      
 iconv-lite                              0.6.3                              npm                      
@@ -243,7 +244,7 @@ jsbn                                    1.1.0                              npm  
 jschardet                               3.1.4                              npm                      
 json                                    1.0.0                              npm                      
 json-language-features                  1.0.0                              npm                      
-jsonfile                                6.1.0                              npm     (+1 duplicate)   
+jsonfile                                6.1.0                              npm                      
 julia                                   1.0.0                              npm                      
 just-performance                        4.3.0                              npm                      
 kerberos                                2.1.1                              npm                      
@@ -314,7 +315,7 @@ libpam-modules-bin                      1.5.3-5ubuntu5.1                   deb
 libpam-runtime                          1.5.3-5ubuntu5.1                   deb                      
 libpam0g                                1.5.3-5ubuntu5.1                   deb                      
 libpcre2-8-0                            10.42-4ubuntu2.1                   deb                      
-libperl5.38t64                          5.38.2-3.2build2.1                 deb                      
+libperl5.38t64                          5.38.2-3.2ubuntu0.1                deb                      
 libproc2-0                              2:4.0.4-4ubuntu3.2                 deb                      
 libpsl5t64                              0.21.2-1.1build1                   deb                      
 libreadline8t64                         8.2-4build1                        deb                      
@@ -418,7 +419,7 @@ openssh-client                          1:9.6p1-3ubuntu13.9                deb
 openssl                                 3.0.13-0ubuntu3.5                  deb                      
 opentype.js                             0.8.0                              npm                      
 os-tmpdir                               1.0.2                              npm                      
-pac-proxy-agent                         7.0.2                              npm                      
+pac-proxy-agent                         7.2.0                              npm                      
 pac-resolver                            7.0.1                              npm                      
 parseurl                                1.3.3                              npm                      
 passwd                                  1:4.13+dfsg1-4ubuntu3.2            deb                      
@@ -428,9 +429,9 @@ path-to-regexp                          8.2.0                              npm
 pem                                     1.14.8                             npm                      
 pend                                    1.2.0                              npm                      
 perl                                    1.0.0                              npm                      
-perl                                    5.38.2-3.2build2.1                 deb                      
-perl-base                               5.38.2-3.2build2.1                 deb                      
-perl-modules-5.38                       5.38.2-3.2build2.1                 deb                      
+perl                                    5.38.2-3.2ubuntu0.1                deb                      
+perl-base                               5.38.2-3.2ubuntu0.1                deb                      
+perl-modules-5.38                       5.38.2-3.2ubuntu0.1                deb                      
 php                                     1.0.0                              npm                      
 php-language-features                   1.0.0                              npm                      
 picomatch                               2.3.1                              npm                      
@@ -440,7 +441,7 @@ prebuild-install                        7.1.2                              npm
 procps                                  2:4.0.4-4ubuntu3.2                 deb                      
 promise-stream-reader                   1.0.1                              npm                      
 proxy-addr                              2.0.7                              npm                      
-proxy-agent                             6.4.0                              npm                      
+proxy-agent                             6.5.0                              npm                      
 proxy-from-env                          1.1.0                              npm     (+1 duplicate)   
 publicsuffix                            20231001.0357-0.1                  deb                      
 pug                                     1.0.0                              npm                      
@@ -490,8 +491,10 @@ simple-browser                          1.0.0                              npm
 simple-concat                           1.0.1                              npm                      
 simple-get                              4.0.1                              npm                      
 smart-buffer                            4.2.0                              npm     (+1 duplicate)   
-socks                                   2.8.3                              npm     (+1 duplicate)   
-socks-proxy-agent                       8.0.4                              npm     (+1 duplicate)   
+socks                                   2.8.3                              npm                      
+socks                                   2.8.4                              npm                      
+socks-proxy-agent                       8.0.4                              npm                      
+socks-proxy-agent                       8.0.5                              npm                      
 source-map                              0.6.1                              npm                      
 sprintf-js                              1.1.3                              npm     (+1 duplicate)   
 sql                                     1.0.0                              npm                      
@@ -535,7 +538,7 @@ typescript-language-features            1.0.0                              npm
 tzdata                                  2025b-0ubuntu0.24.04               deb                      
 ubuntu-keyring                          2023.11.28.1                       deb                      
 undici                                  7.3.0                              npm                      
-universalify                            2.0.1                              npm     (+1 duplicate)   
+universalify                            2.0.1                              npm                      
 unminimize                              0.2.1                              deb                      
 unpipe                                  1.0.0                              npm                      
 util-deprecate                          1.0.2                              npm     (+1 duplicate)   
