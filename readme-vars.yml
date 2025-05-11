@@ -39,10 +39,10 @@ opt_param_env_vars:
 readonly_supported: true
 readonly_message: |
   * `/tmp` must be mounted to tmpfs
-  * sudo will not be available
+  * `sudo` will not be available
 nonroot_supported: true
 nonroot_message: |
-  * sudo will not be available
+  * `sudo` will not be available
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |

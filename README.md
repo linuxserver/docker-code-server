@@ -85,7 +85,7 @@ This image can be run with a read-only container filesystem. For details please 
 ### Caveats
 
 * `/tmp` must be mounted to tmpfs
-* sudo will not be available
+* `sudo` will not be available
 
 ## Non-Root Operation
 
@@ -93,7 +93,7 @@ This image can be run with a non-root user. For details please [read the docs](h
 
 ### Caveats
 
-* sudo will not be available
+* `sudo` will not be available
 
 ## Usage
 
