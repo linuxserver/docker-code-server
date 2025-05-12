@@ -36,6 +36,13 @@ opt_param_env_vars:
   - {env_var: "SUDO_PASSWORD_HASH", env_value: "", desc: "Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`."}
   - {env_var: "PROXY_DOMAIN", env_value: "code-server.my.domain", desc: "If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/coder/code-server/blob/main/docs/guide.md#using-a-subdomain)"}
   - {env_var: "DEFAULT_WORKSPACE", env_value: "/config/workspace", desc: "If this optional variable is set, code-server will open this directory by default"}
+readonly_supported: true
+readonly_message: |
+  * `/tmp` must be mounted to tmpfs
+  * `sudo` will not be available
+nonroot_supported: true
+nonroot_message: |
+  * `sudo` will not be available
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
