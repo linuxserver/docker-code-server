@@ -504,7 +504,7 @@ string-width                            4.2.3                              npm
 string_decoder                          1.3.0                              npm     (+1 duplicate)   
 strip-ansi                              6.0.1                              npm                      
 strip-json-comments                     2.0.1                              npm                      
-sudo                                    1.9.15p5-3ubuntu5                  deb                      
+sudo                                    1.9.15p5-3ubuntu5.24.04.1          deb                      
 swift                                   1.0.0                              npm                      
 systemd-standalone-sysusers             255.4-1ubuntu8.8                   deb                      
 sysvinit-utils                          3.08-6ubuntu3                      deb                      
