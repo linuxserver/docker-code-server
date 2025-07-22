@@ -1,7 +1,7 @@
 ---
 services:
   docker-code-server:
-    image: gabemendoza1/codecloud-code-server:jammy22.04-python3.10-codeserver-v${CODE_RELEASE:-4.102.1}
+    image: gabemendoza1/docker-code-server:jammy22.04-python3.10-codeserver-v${CODE_RELEASE:-4.102.1}
     build:
       context: .
       dockerfile: Dockerfile
