@@ -15,10 +15,11 @@ ENV HOME="/workspace"
 RUN echo "**** install runtime dependencies ****" && \
   apt-get update && \
   apt-get install -y \
+    git \
     libatomic1 \
     nano \
     net-tools \
-    netcat-openbsd \
+    netcat-traditional \
     sudo && \
   \
   echo "**** install code-server ****" && \
@@ -27,9 +28,10 @@ RUN echo "**** install runtime dependencies ****" && \
       | awk '/tag_name/{print $4;exit}' FS='[""]' | sed 's|^v||'); \
   fi && \
   mkdir -p /app/code-server && \
-  curl -o /tmp/code-server.tar.gz -L \
-    "https://github.com/coder/code-server/releases/download/v${CODE_RELEASE}/code-server-${CODE_RELEASE}-linux-amd64.tar.gz" && \
+  DOWNLOAD_URL="https://github.com/coder/code-server/releases/download/v${CODE_RELEASE}/code-server-${CODE_RELEASE}-linux-amd64.tar.gz" && \
+  curl -fsSL -o /tmp/code-server.tar.gz "${DOWNLOAD_URL}" && \
   tar xf /tmp/code-server.tar.gz -C /app/code-server --strip-components=1 && \
+  /app/code-server/bin/code-server --version && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   \
   echo "**** clean up ****" && \
