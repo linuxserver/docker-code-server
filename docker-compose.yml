@@ -1,13 +1,15 @@
 ---
 services:
-  code-server:
+  docker-code-server:
+    image: gabemendoza1/codecloud-code-server:jammy22.04-python3.10-codeserver-v${CODE_RELEASE:-4.102.1}
     build:
       context: .
       dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
       args:
         - VERSION=${VERSION:-4.102.1}
         - CODE_RELEASE=${CODE_RELEASE:-4.102.1}
-    image: gabemendoza1/codecloud-code-server:jammy-code-server-python-v${CODE_RELEASE:-4.102.1}
     environment:
       - PUID=${PUID:-1000}
       - PGID=${PGID:-1000}
