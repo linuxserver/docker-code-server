@@ -1,43 +1,38 @@
-<!--- Provide a general summary of your changes in the Title above -->
+## Description
 
-[linuxserverurl]: https://linuxserver.io
-[![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
+Required: Please provide a brief description of what this pull request is trying to accomplish.
 
+>
 
-<!--- Before submitting a pull request please check the following -->
+## Context, Consequences, & Considerations
 
-<!---  If this is a fix for a typo (in code, documentation, or the README) please file an issue and let us sort it out. We do not need a PR  -->
-<!---  Ask yourself if this modification is something the whole userbase will benefit from, if this is a specific change for corner case functionality or plugins please look at making a Docker Mod or local script  https://blog.linuxserver.io/2019/09/14/customizing-our-containers/ -->
-<!---  That if the PR is addressing an existing issue include, closes #<issue number> , in the body of the PR commit message   -->
-<!---  You have included links to any files / patches etc your PR may be using in the body of the PR commit message -->
-<!--- We maintain a changelog of major revisions to the container at the end of readme-vars.yml in the root of this repository, please add your changes there if appropriate -->
+Required: Please step through the following list, pausing at each item to consider your change in relation to the item's context.
+Check the box to mark that it applies, and enter your relevant notes under the item.
 
+- [ ] Security: This has security implications. This includes (but not limited to) adding users, modifying user/app permissions, network rules/policies, changing a system interconnection, or changing an authorization strategy.
+  - [ ] This PR does not require security review. These changes are part of a project plan that has already undergone security review. The link is provided below.
+  - [ ] This PR requires security review. Add the `security` label to this PR then request a review from the [Security Code Reviewers Team](https://github.com/orgs/civisanalytics/teams/security-code-reviewers).
 
-<!--- Coding guidelines: -->
-<!--- 1. Installed packages in the Dockerfiles should be in alphabetical order -->
-<!--- 2. Changes to Dockerfile should be replicated in Dockerfile.armhf and Dockerfile.aarch64 if applicable -->
-<!--- 3. Indentation style (tabs vs 4 spaces vs 1 space) should match the rest of the document -->
-<!--- 4. Readme is auto generated from readme-vars.yml, make your changes there -->
+>
 
-------------------------------
+- [ ] Execution: This change requires commands to be run outside of the normal merge.
 
- - [ ] I have read the [contributing](https://github.com/linuxserver/docker-code-server/blob/master/.github/CONTRIBUTING.md) guideline and understand that I have made the correct modifications
+>
 
-------------------------------
+- [ ] Impact: This change may cause service interruptions.
 
-<!--- We welcome all PR’s though this doesn’t guarantee it will be accepted. -->
+>
 
-## Description:
-<!--- Describe your changes in detail -->
+- [ ] Testing: How did you test this change (unit tests, acceptance tests, etc.)? Did you do any manual testing?
 
-## Benefits of this PR and context:
-<!--- Please explain why we should accept this PR. If this fixes an outstanding bug, please reference the issue # -->
+>
 
-## How Has This Been Tested?
-<!--- Please describe in detail how you tested your changes. -->
-<!--- Include details of your testing environment, and the tests you ran to -->
-<!--- see how your change affects other areas of the code, etc. -->
+- [ ] Testing: How will you confirm this change once it's merged?
 
+>
 
-## Source / References:
-<!--- Please include any forum posts/github links relevant to the PR -->
+- [ ] Documentation: Documentation to reflect this change has been added to Confluence or Zendesk.
+
+>
+
+- [ ] **All items of the checklist have been considered and this PR description is complete.**
