@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM gabemendoza1/cloudcode-baseimage-ubuntu-fips:jammy-22.04
+FROM gabemendoza1/docker-linuxserver-ubuntu-fips:jammy-22.04
 
 ARG BUILD_DATE
 ARG VERSION
