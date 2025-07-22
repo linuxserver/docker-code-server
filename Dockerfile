@@ -15,10 +15,10 @@ ENV HOME="/workspace"
 RUN echo "**** install runtime dependencies ****" && \
   apt-get update && \
   apt-get install -y \
-    git \
     libatomic1 \
     nano \
     net-tools \
+    netcat-openbsd \
     sudo && \
   \
   echo "**** install code-server ****" && \
