@@ -11,8 +11,8 @@ services:
         - VERSION=${VERSION:-4.102.1}
         - CODE_RELEASE=${CODE_RELEASE:-4.102.1}
     environment:
-      - PUID=${PUID:-1000}
-      - PGID=${PGID:-1000}
+      - PUID=${PUID:-0}
+      - PGID=${PGID:-0}
       - TZ=${TZ:-America/Chicago}
       - PROXY_DOMAIN=${PROXY_DOMAIN:-}
       - DEFAULT_WORKSPACE=${DEFAULT_WORKSPACE:-/workspace}
