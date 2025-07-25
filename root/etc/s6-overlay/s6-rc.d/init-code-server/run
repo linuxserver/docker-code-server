@@ -35,7 +35,7 @@ if [[ -z ${LSIO_NON_ROOT_USER} ]]; then
         echo "Change in ownership or new install detected, please be patient while we chown existing files"
         echo "This could take some time"
         find /config -path "/config/workspace" -prune -o -exec lsiown abc:abc {} +
-        lsiown abc:abc /config/workspace
+        # lsiown abc:abc /config/workspace
     fi
     chmod 700 /config/.ssh
     if [[ -n "$(ls -A /config/.ssh)" ]]; then
