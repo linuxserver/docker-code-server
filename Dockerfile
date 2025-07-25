@@ -1,13 +1,47 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-ubuntu:noble
+ARG ECR_ACCOUNT_ID
+ARG ECR_REGION=us-east-1
+ARG BASE_IMAGE_NAME=docker-linuxserver-ubuntu-fips
+ARG BASE_IMAGE_TAG=jammy
+ARG ECR_URI=${ECR_ACCOUNT_ID}.dkr.ecr-fips.${ECR_REGION}.amazonaws.com/${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG}
 
-# set version label
+FROM ${ECR_URI} as docker-code-server-python
+
+ARG DEBIAN_FRONTEND="noninteractive"
+
+# Install Python 3.12
+RUN echo "**** install Python 3.12 ****" && \
+  apt-get update && \
+  apt-get install -y \
+    software-properties-common \
+    gpg-agent && \
+  curl -fsSL https://keyserver.ubuntu.com/pks/lookup?op=get\&search=0xF23C5A6CF475977595C89F51BA6932366A755776 | apt-key add - && \
+  echo "deb https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy main" > /etc/apt/sources.list.d/deadsnakes.list && \
+  apt-get update && \
+  apt-get install -y \
+    python3.12 \
+    python3.12-dev \
+    python3.12-venv && \
+  update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1 && \
+  update-alternatives --install /usr/bin/python python /usr/bin/python3.12 1 && \
+  curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12 && \
+  pip3 install --upgrade pip setuptools wheel && \
+  python3 --version && \
+  pip3 --version && \
+  echo "**** clean up ****" && \
+  apt-get clean && \
+  rm -rf \
+    /var/lib/apt/lists/* \
+    /tmp/*
+
+FROM docker-code-server-python
 ARG BUILD_DATE
 ARG VERSION
 ARG CODE_RELEASE
+
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="aptalca"
+LABEL maintainer="civisanalytics"
 
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -21,6 +55,7 @@ RUN \
     libatomic1 \
     nano \
     net-tools \
+    netcat-openbsd \
     sudo && \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \

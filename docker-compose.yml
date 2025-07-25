@@ -1,0 +1,24 @@
+---
+services:
+  docker-code-server:
+    image: "${ECR_ACCOUNT_ID:-0123456789012}.dkr.ecr-fips.${ECR_REGION}.amazonaws.com/docker-code-server:${IMAGE_TAG:-latest}"
+    pull_policy: build
+    build:
+      context: .
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+      args:
+        - ECR_ACCOUNT_ID=${ECR_ACCOUNT_ID:-0123456789012}
+        - BASE_IMAGE_TAG=${BASE_IMAGE_TAG:-latest}
+        - VERSION=${VERSION:-4.102.1}
+        - CODE_RELEASE=${CODE_RELEASE:-4.102.1}
+    environment:
+      - PUID=${PUID:-0}
+      - PGID=${PGID:-0}
+      - TZ=${TZ:-America/Chicago}
+      - PROXY_DOMAIN=${PROXY_DOMAIN:-}
+      - DEFAULT_WORKSPACE=${DEFAULT_WORKSPACE:-/workspace}
+      - PWA_APPNAME=${PWA_APPNAME:-code-server}
+    ports:
+      - "${HOST_PORT:-8443}:8443"

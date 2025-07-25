@@ -1,0 +1,21 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - export ECR_ACCOUNT_ID="$(echo $FIPS_REPOSITORY_URI | cut -d'.' -f1)"
+      - export COMMIT_HASH_SHORT="$(echo $COMMIT_HASH | cut -c 1-7)"
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${FIPS_REPOSITORY_URI}
+  build:
+    commands:
+      - echo Building the Docker image...
+      - >
+        docker build
+        --build-arg ECR_ACCOUNT_ID=${ECR_ACCOUNT_ID}
+        --tag ${FIPS_REPOSITORY_URI}:latest
+        .
+
+      - docker image push --all-tags  ${FIPS_REPOSITORY_URI}
+  post_build:
+    commands:
+      - echo Build completed!
