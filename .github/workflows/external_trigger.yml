@@ -3,6 +3,9 @@ name: External Trigger Main
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   external-trigger-master:
     runs-on: ubuntu-latest
@@ -11,18 +14,31 @@ jobs:
 
       - name: External Trigger
         if: github.ref == 'refs/heads/master'
+        env:
+          SKIP_EXTERNAL_TRIGGER: ${{ vars.SKIP_EXTERNAL_TRIGGER }}
         run: |
-          if [ -n "${{ secrets.PAUSE_EXTERNAL_TRIGGER_CODE_SERVER_MASTER }}" ]; then
-            echo "**** Github secret PAUSE_EXTERNAL_TRIGGER_CODE_SERVER_MASTER is set; skipping trigger. ****"
-            echo "Github secret \`PAUSE_EXTERNAL_TRIGGER_CODE_SERVER_MASTER\` is set; skipping trigger." >> $GITHUB_STEP_SUMMARY
+          printf "# External trigger for docker-code-server\n\n" >> $GITHUB_STEP_SUMMARY
+          if grep -q "^code-server_master_" <<< "${SKIP_EXTERNAL_TRIGGER}"; then
+            echo "> [!NOTE]" >> $GITHUB_STEP_SUMMARY
+            echo "> Github organizational variable \`SKIP_EXTERNAL_TRIGGER\` contains \`code-server_master_\`; will skip trigger if version matches." >> $GITHUB_STEP_SUMMARY
+          elif grep -q "^code-server_master" <<< "${SKIP_EXTERNAL_TRIGGER}"; then
+            echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY
+            echo "> Github organizational variable \`SKIP_EXTERNAL_TRIGGER\` contains \`code-server_master\`; skipping trigger." >> $GITHUB_STEP_SUMMARY
             exit 0
           fi
-          echo "**** External trigger running off of master branch. To disable this trigger, set a Github secret named \"PAUSE_EXTERNAL_TRIGGER_CODE_SERVER_MASTER\". ****"
-          echo "External trigger running off of master branch. To disable this trigger, set a Github secret named \`PAUSE_EXTERNAL_TRIGGER_CODE_SERVER_MASTER\`" >> $GITHUB_STEP_SUMMARY
-          echo "**** Retrieving external version ****"
+          echo "> [!NOTE]" >> $GITHUB_STEP_SUMMARY
+          echo "> External trigger running off of master branch. To disable this trigger, add \`code-server_master\` into the Github organizational variable \`SKIP_EXTERNAL_TRIGGER\`." >> $GITHUB_STEP_SUMMARY
+          printf "\n## Retrieving external version\n\n" >> $GITHUB_STEP_SUMMARY
           EXT_RELEASE=$(curl -u ${{ secrets.CR_USER }}:${{ secrets.CR_PAT }} -sX GET https://api.github.com/repos/coder/code-server/releases/latest | jq -r '.tag_name' | sed 's|^v||')
+          echo "Type is \`custom_version_command\`" >> $GITHUB_STEP_SUMMARY
+          if grep -q "^code-server_master_${EXT_RELEASE}" <<< "${SKIP_EXTERNAL_TRIGGER}"; then
+            echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY
+            echo "> Github organizational variable \`SKIP_EXTERNAL_TRIGGER\` matches current external release; skipping trigger." >> $GITHUB_STEP_SUMMARY
+            exit 0
+          fi
           if [ -z "${EXT_RELEASE}" ] || [ "${EXT_RELEASE}" == "null" ]; then
-            echo "**** Can't retrieve external version, exiting ****"
+            echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY
+            echo "> Can't retrieve external version, exiting" >> $GITHUB_STEP_SUMMARY
             FAILURE_REASON="Can't retrieve external version for code-server branch master"
             GHA_TRIGGER_URL="https://github.com/linuxserver/docker-code-server/actions/runs/${{ github.run_id }}"
             curl -X POST -H "Content-Type: application/json" --data '{"avatar_url": "https://cdn.discordapp.com/avatars/354986384542662657/df91181b3f1cf0ef1592fbe18e0962d7.png","embeds": [{"color": 16711680,
@@ -30,25 +46,43 @@ jobs:
               "username": "Github Actions"}' ${{ secrets.DISCORD_WEBHOOK }}
             exit 1
           fi
-          EXT_RELEASE=$(echo ${EXT_RELEASE} | sed 's/[~,%@+;:/]//g')
-          echo "**** External version: ${EXT_RELEASE} ****"
-          echo "External version: ${EXT_RELEASE}" >> $GITHUB_STEP_SUMMARY
-          echo "**** Retrieving last pushed version ****"
+          EXT_RELEASE_SANITIZED=$(echo ${EXT_RELEASE} | sed 's/[~,%@+;:/]//g')
+          echo "Sanitized external version: \`${EXT_RELEASE_SANITIZED}\`" >> $GITHUB_STEP_SUMMARY
+          echo "Retrieving last pushed version" >> $GITHUB_STEP_SUMMARY
           image="linuxserver/code-server"
           tag="latest"
           token=$(curl -sX GET \
             "https://ghcr.io/token?scope=repository%3Alinuxserver%2Fcode-server%3Apull" \
             | jq -r '.token')
-            multidigest=$(curl -s \
+          multidigest=$(curl -s \
+            --header "Accept: application/vnd.docker.distribution.manifest.v2+json" \
+            --header "Accept: application/vnd.oci.image.index.v1+json" \
+            --header "Authorization: Bearer ${token}" \
+            "https://ghcr.io/v2/${image}/manifests/${tag}")
+          if jq -e '.layers // empty' <<< "${multidigest}" >/dev/null 2>&1; then
+            # If there's a layer element it's a single-arch manifest so just get that digest
+            digest=$(jq -r '.config.digest' <<< "${multidigest}")
+          else
+            # Otherwise it's multi-arch or has manifest annotations
+            if jq -e '.manifests[]?.annotations // empty' <<< "${multidigest}" >/dev/null 2>&1; then
+              # Check for manifest annotations and delete if found
+              multidigest=$(jq 'del(.manifests[] | select(.annotations))' <<< "${multidigest}")
+            fi
+            if [[ $(jq '.manifests | length' <<< "${multidigest}") -gt 1 ]]; then
+              # If there's still more than one digest, it's multi-arch
+              multidigest=$(jq -r ".manifests[] | select(.platform.architecture == \"amd64\").digest?" <<< "${multidigest}")
+            else
+              # Otherwise it's single arch
+              multidigest=$(jq -r ".manifests[].digest?" <<< "${multidigest}")
+            fi
+            if digest=$(curl -s \
               --header "Accept: application/vnd.docker.distribution.manifest.v2+json" \
+              --header "Accept: application/vnd.oci.image.manifest.v1+json" \
               --header "Authorization: Bearer ${token}" \
-              "https://ghcr.io/v2/${image}/manifests/${tag}" \
-              | jq -r 'first(.manifests[].digest)')
-            digest=$(curl -s \
-              --header "Accept: application/vnd.docker.distribution.manifest.v2+json" \
-              --header "Authorization: Bearer ${token}" \
-              "https://ghcr.io/v2/${image}/manifests/${multidigest}" \
-              | jq -r '.config.digest')
+              "https://ghcr.io/v2/${image}/manifests/${multidigest}"); then
+              digest=$(jq -r '.config.digest' <<< "${digest}");
+            fi
+          fi
           image_info=$(curl -sL \
             --header "Authorization: Bearer ${token}" \
             "https://ghcr.io/v2/${image}/blobs/${digest}")
@@ -60,45 +94,54 @@ jobs:
           IMAGE_RELEASE=$(echo ${image_info} | jq -r '.Labels.build_version' | awk '{print $3}')
           IMAGE_VERSION=$(echo ${IMAGE_RELEASE} | awk -F'-ls' '{print $1}')
           if [ -z "${IMAGE_VERSION}" ]; then
-            echo "**** Can't retrieve last pushed version, exiting ****"
+            echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY
+            echo "Can't retrieve last pushed version, exiting" >> $GITHUB_STEP_SUMMARY
             FAILURE_REASON="Can't retrieve last pushed version for code-server tag latest"
             curl -X POST -H "Content-Type: application/json" --data '{"avatar_url": "https://cdn.discordapp.com/avatars/354986384542662657/df91181b3f1cf0ef1592fbe18e0962d7.png","embeds": [{"color": 16711680,
               "description": "**Trigger Failed** \n**Reason:** '"${FAILURE_REASON}"' \n"}],
               "username": "Github Actions"}' ${{ secrets.DISCORD_WEBHOOK }}
             exit 1
           fi
-          echo "**** Last pushed version: ${IMAGE_VERSION} ****"
-          echo "Last pushed version: ${IMAGE_VERSION}" >> $GITHUB_STEP_SUMMARY
-          if [ "${EXT_RELEASE}" == "${IMAGE_VERSION}" ]; then
-            echo "**** Version ${EXT_RELEASE} already pushed, exiting ****"
-            echo "Version ${EXT_RELEASE} already pushed, exiting" >> $GITHUB_STEP_SUMMARY
+          echo "Last pushed version: \`${IMAGE_VERSION}\`" >> $GITHUB_STEP_SUMMARY
+          if [ "${EXT_RELEASE_SANITIZED}" == "${IMAGE_VERSION}" ]; then
+            echo "Sanitized version \`${EXT_RELEASE_SANITIZED}\` already pushed, exiting" >> $GITHUB_STEP_SUMMARY
             exit 0
           elif [ $(curl -s https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-code-server/job/master/lastBuild/api/json | jq -r '.building') == "true" ]; then
-            echo "**** New version ${EXT_RELEASE} found; but there already seems to be an active build on Jenkins; exiting ****"
-            echo "New version ${EXT_RELEASE} found; but there already seems to be an active build on Jenkins; exiting" >> $GITHUB_STEP_SUMMARY
+            echo "New version \`${EXT_RELEASE}\` found; but there already seems to be an active build on Jenkins; exiting" >> $GITHUB_STEP_SUMMARY
             exit 0
           else
-            echo "**** New version ${EXT_RELEASE} found; old version was ${IMAGE_VERSION}. Triggering new build ****"
-            echo "New version ${EXT_RELEASE} found; old version was ${IMAGE_VERSION}. Triggering new build" >> $GITHUB_STEP_SUMMARY
-            response=$(curl -iX POST \
-              https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-code-server/job/master/buildWithParameters?PACKAGE_CHECK=false \
-              --user ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_TOKEN }} | grep -i location | sed "s|^[L|l]ocation: \(.*\)|\1|")
-            echo "**** Jenkins job queue url: ${response%$'\r'} ****"
-            echo "**** Sleeping 10 seconds until job starts ****"
-            sleep 10
-            buildurl=$(curl -s "${response%$'\r'}api/json" | jq -r '.executable.url')
-            buildurl="${buildurl%$'\r'}"
-            echo "**** Jenkins job build url: ${buildurl} ****"
-            echo "Jenkins job build url: ${buildurl}" >> $GITHUB_STEP_SUMMARY
-            echo "**** Attempting to change the Jenkins job description ****"
-            curl -iX POST \
-              "${buildurl}submitDescription" \
-              --user ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_TOKEN }} \
-              --data-urlencode "description=GHA external trigger https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
-              --data-urlencode "Submit=Submit"
-            echo "**** Notifying Discord ****"
-            TRIGGER_REASON="A version change was detected for code-server tag latest. Old version:${IMAGE_VERSION} New version:${EXT_RELEASE}"
-            curl -X POST -H "Content-Type: application/json" --data '{"avatar_url": "https://cdn.discordapp.com/avatars/354986384542662657/df91181b3f1cf0ef1592fbe18e0962d7.png","embeds": [{"color": 9802903,
-              "description": "**Build Triggered** \n**Reason:** '"${TRIGGER_REASON}"' \n**Build URL:** '"${buildurl}display/redirect"' \n"}],
-              "username": "Github Actions"}' ${{ secrets.DISCORD_WEBHOOK }}
+            if [[ "${artifacts_found}" == "false" ]]; then
+              echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY
+              echo "> New version detected, but not all artifacts are published yet; skipping trigger" >> $GITHUB_STEP_SUMMARY
+              FAILURE_REASON="New version ${EXT_RELEASE} for code-server tag latest is detected, however not all artifacts are uploaded to upstream release yet. Will try again later."
+              curl -X POST -H "Content-Type: application/json" --data '{"avatar_url": "https://cdn.discordapp.com/avatars/354986384542662657/df91181b3f1cf0ef1592fbe18e0962d7.png","embeds": [{"color": 9802903,
+                "description": "**Trigger Failed** \n**Reason:** '"${FAILURE_REASON}"' \n"}],
+                "username": "Github Actions"}' ${{ secrets.DISCORD_WEBHOOK }}
+            else
+              printf "\n## Trigger new build\n\n" >> $GITHUB_STEP_SUMMARY
+              echo "New sanitized version \`${EXT_RELEASE_SANITIZED}\` found; old version was \`${IMAGE_VERSION}\`. Triggering new build" >> $GITHUB_STEP_SUMMARY
+              if [[ "${artifacts_found}" == "true" ]]; then
+                echo "All artifacts seem to be uploaded." >> $GITHUB_STEP_SUMMARY
+              fi
+              response=$(curl -iX POST \
+                https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-code-server/job/master/buildWithParameters?PACKAGE_CHECK=false \
+                --user ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_TOKEN }} | grep -i location | sed "s|^[L|l]ocation: \(.*\)|\1|")
+              echo "Jenkins [job queue url](${response%$'\r'})" >> $GITHUB_STEP_SUMMARY
+              echo "Sleeping 10 seconds until job starts" >> $GITHUB_STEP_SUMMARY
+              sleep 10
+              buildurl=$(curl -s "${response%$'\r'}api/json" | jq -r '.executable.url')
+              buildurl="${buildurl%$'\r'}"
+              echo "Jenkins job [build url](${buildurl})" >> $GITHUB_STEP_SUMMARY
+              echo "Attempting to change the Jenkins job description" >> $GITHUB_STEP_SUMMARY
+              curl -iX POST \
+                "${buildurl}submitDescription" \
+                --user ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_TOKEN }} \
+                --data-urlencode "description=GHA external trigger https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+                --data-urlencode "Submit=Submit"
+              echo "**** Notifying Discord ****"
+              TRIGGER_REASON="A version change was detected for code-server tag latest. Old version:${IMAGE_VERSION} New version:${EXT_RELEASE_SANITIZED}"
+              curl -X POST -H "Content-Type: application/json" --data '{"avatar_url": "https://cdn.discordapp.com/avatars/354986384542662657/df91181b3f1cf0ef1592fbe18e0962d7.png","embeds": [{"color": 9802903,
+                "description": "**Build Triggered** \n**Reason:** '"${TRIGGER_REASON}"' \n**Build URL:** '"${buildurl}display/redirect"' \n"}],
+                "username": "Github Actions"}' ${{ secrets.DISCORD_WEBHOOK }}
+            fi
           fi

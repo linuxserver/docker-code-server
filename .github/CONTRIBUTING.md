@@ -6,7 +6,7 @@
 * Read, and fill the Pull Request template
   * If this is a fix for a typo (in code, documentation, or the README) please file an issue and let us sort it out. We do not need a PR
   * If the PR is addressing an existing issue include, closes #\<issue number>, in the body of the PR commit message
-* If you want to discuss changes, you can also bring it up in [#dev-talk](https://discordapp.com/channels/354974912613449730/757585807061155840) in our [Discord server](https://discord.gg/YWrKVTn)
+* If you want to discuss changes, you can also bring it up in [#dev-talk](https://discordapp.com/channels/354974912613449730/757585807061155840) in our [Discord server](https://linuxserver.io/discord)
 
 ## Common files
 
@@ -105,10 +105,10 @@ docker build \
   -t linuxserver/code-server:latest .
 ```
 
-The ARM variants can be built on x86_64 hardware using `multiarch/qemu-user-static`
+The ARM variants can be built on x86_64 hardware and vice versa using `lscr.io/linuxserver/qemu-static`
 
 ```bash
-docker run --rm --privileged multiarch/qemu-user-static:register --reset
+docker run --rm --privileged lscr.io/linuxserver/qemu-static --reset
 ```
 
 Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64`.
