@@ -4,28 +4,29 @@
 project_name: code-server
 project_url: "https://coder.com"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/code-server-banner.png"
-project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is VS Code running on a remote server, accessible through the browser.\n- Code on your Chromebook, tablet, and laptop with a consistent dev environment.\n- If you have a Windows or Mac workstation, more easily develop for Linux.\n- Take advantage of large cloud servers to speed up tests, compilations, downloads, and more.\n- Preserve battery life when you're on the go.\n- All intensive computation runs on your server.\n- You're no longer running excess instances of Chrome."
+project_blurb: |
+  [{{ project_name|capitalize }}]({{ project_url }}) is VS Code running on a remote server, accessible through the browser.
+  - Code on your Chromebook, tablet, and laptop with a consistent dev environment.
+  - If you have a Windows or Mac workstation, more easily develop for Linux.
+  - Take advantage of large cloud servers to speed up tests, compilations, downloads, and more.
+  - Preserve battery life when you're on the go.
+  - All intensive computation runs on your server.
+  - You're no longer running excess instances of Chrome.
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+project_categories: "Programming"
 # supported architectures
 available_architectures:
   - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
   - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-# development version
-development_versions: false
-development_versions_items:
-  - {tag: "latest", desc: "Stable releases"}
 # container parameters
 common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - {vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Contains all relevant configuration files."}
+  - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Contains all relevant configuration files."}
 param_usage_include_ports: true
 param_ports:
   - {external_port: "8443", internal_port: "8443", port_desc: "web gui"}
-param_usage_include_env: true
-param_env_vars:
-  - {env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
 # optional container parameters
 opt_param_usage_include_env: true
 opt_param_env_vars:
@@ -33,10 +34,16 @@ opt_param_env_vars:
   - {env_var: "HASHED_PASSWORD", env_value: "", desc: "Optional web gui password, overrides `PASSWORD`, instructions on how to create it is below."}
   - {env_var: "SUDO_PASSWORD", env_value: "password", desc: "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password."}
   - {env_var: "SUDO_PASSWORD_HASH", env_value: "", desc: "Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`."}
-  - {env_var: "PROXY_DOMAIN", env_value: "code-server.my.domain", desc: "If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#sub-domains)"}
+  - {env_var: "PROXY_DOMAIN", env_value: "code-server.my.domain", desc: "If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/coder/code-server/blob/main/docs/guide.md#using-a-subdomain)"}
   - {env_var: "DEFAULT_WORKSPACE", env_value: "/config/workspace", desc: "If this optional variable is set, code-server will open this directory by default"}
-optional_block_1: false
-optional_block_1_items: ""
+  - {env_var: "PWA_APPNAME", env_value: "code-server", desc: "If this optional variable is set, the PWA app will the specified name."}
+readonly_supported: true
+readonly_message: |
+  * `/tmp` must be mounted to tmpfs
+  * `sudo` will not be available
+nonroot_supported: true
+nonroot_message: |
+  * `sudo` will not be available
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -52,9 +59,54 @@ app_setup_block: |
   ### Hashed code-server password
 
   How to create the [hashed password](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#can-i-store-my-password-hashed).
+# init diagram
+init_diagram: |
+  "code-server:latest": {
+    docker-mods
+    base {
+      fix-attr +\nlegacy cont-init
+    }
+    docker-mods -> base
+    legacy-services
+    custom services
+    init-services -> legacy-services
+    init-services -> custom services
+    custom services -> legacy-services
+    legacy-services -> ci-service-check
+    init-migrations -> init-adduser
+    init-config -> init-code-server
+    init-os-end -> init-config
+    init-code-server -> init-config-end
+    init-config -> init-config-end
+    init-crontab-config -> init-config-end
+    init-config -> init-crontab-config
+    init-mods-end -> init-custom-files
+    init-adduser -> init-device-perms
+    base -> init-envfile
+    base -> init-migrations
+    init-config-end -> init-mods
+    init-mods-package-install -> init-mods-end
+    init-mods -> init-mods-package-install
+    init-adduser -> init-os-end
+    init-device-perms -> init-os-end
+    init-envfile -> init-os-end
+    init-custom-files -> init-services
+    init-services -> svc-code-server
+    svc-code-server -> legacy-services
+    init-services -> svc-cron
+    svc-cron -> legacy-services
+  }
+  Base Images: {
+    "baseimage-ubuntu:noble"
+  }
+  "code-server:latest" <- Base Images
 # changelog
 changelogs:
   - {date: "10.08.25:", desc: "Let server listen on both ipv4 and ipv6."}
+  - {date: "03.06.25:", desc: "Allow setting PWA name using env var `PWA_APPNAME`."}
+  - {date: "13.10.24:", desc: "Only chown config folder when change to ownership or new install is detected."}
+  - {date: "09.10.24:", desc: "Manage permissions in /config/.ssh according to file type"}
+  - {date: "19.08.24:", desc: "Rebase to Ubuntu Noble."}
   - {date: "01.07.23:", desc: "Deprecate armhf. As announced [here](https://www.linuxserver.io/blog/a-farewell-to-arm-hf)"}
   - {date: "05.10.22:", desc: "Install recommended deps to maintain parity with the older images."}
   - {date: "29.09.22:", desc: "Rebase to jammy, switch to s6v3. Fix chown logic to skip `/config/workspace` contents."}

@@ -75,6 +75,23 @@ git config --global user.email "email address"
 
 How to create the [hashed password](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#can-i-store-my-password-hashed).
 
+## Read-Only Operation
+
+This image can be run with a read-only container filesystem. For details please [read the docs](https://docs.linuxserver.io/misc/read-only/).
+
+### Caveats
+
+* `/tmp` must be mounted to tmpfs
+* `sudo` will not be available
+
+## Non-Root Operation
+
+This image can be run with a non-root user. For details please [read the docs](https://docs.linuxserver.io/misc/non-root/).
+
+### Caveats
+
+* `sudo` will not be available
+
 ## Usage
 
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
@@ -100,8 +117,9 @@ services:
       - SUDO_PASSWORD_HASH= #optional
       - PROXY_DOMAIN=code-server.my.domain #optional
       - DEFAULT_WORKSPACE=/config/workspace #optional
+      - PWA_APPNAME=code-server #optional
     volumes:
-      - /path/to/appdata/config:/config
+      - /path/to/code-server/config:/config
     ports:
       - 8443:8443
     restart: unless-stopped
@@ -121,8 +139,9 @@ docker run -d \
   -e SUDO_PASSWORD_HASH= `#optional` \
   -e PROXY_DOMAIN=code-server.my.domain `#optional` \
   -e DEFAULT_WORKSPACE=/config/workspace `#optional` \
+  -e PWA_APPNAME=code-server `#optional` \
   -p 8443:8443 \
-  -v /path/to/appdata/config:/config \
+  -v /path/to/code-server/config:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/code-server:latest
 ```
@@ -141,9 +160,12 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e HASHED_PASSWORD=` | Optional web gui password, overrides `PASSWORD`, instructions on how to create it is below. |
 | `-e SUDO_PASSWORD=password` | If this optional variable is set, user will have sudo access in the code-server terminal with the specified password. |
 | `-e SUDO_PASSWORD_HASH=` | Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`. |
-| `-e PROXY_DOMAIN=code-server.my.domain` | If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/cdr/code-server/blob/master/docs/FAQ.md#sub-domains) |
+| `-e PROXY_DOMAIN=code-server.my.domain` | If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/coder/code-server/blob/main/docs/guide.md#using-a-subdomain) |
 | `-e DEFAULT_WORKSPACE=/config/workspace` | If this optional variable is set, code-server will open this directory by default |
+| `-e PWA_APPNAME=code-server` | If this optional variable is set, the PWA app will the specified name. |
 | `-v /config` | Contains all relevant configuration files. |
+| `--read-only=true` | Run container with a read-only filesystem. Please [read the docs](https://docs.linuxserver.io/misc/read-only/). |
+| `--user=1000:1000` | Run container with a non-root user. Please [read the docs](https://docs.linuxserver.io/misc/non-root/). |
 
 ## Environment variables from files (Docker secrets)
 
@@ -308,6 +330,10 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 ## Versions
 
 * **10.08.25:** - Let server listen on both ipv4 and ipv6.
+* **03.06.25:** - Allow setting PWA name using env var `PWA_APPNAME`.
+* **13.10.24:** - Only chown config folder when change to ownership or new install is detected.
+* **09.10.24:** - Manage permissions in /config/.ssh according to file type
+* **19.08.24:** - Rebase to Ubuntu Noble.
 * **01.07.23:** - Deprecate armhf. As announced [here](https://www.linuxserver.io/blog/a-farewell-to-arm-hf)
 * **05.10.22:** - Install recommended deps to maintain parity with the older images.
 * **29.09.22:** - Rebase to jammy, switch to s6v3. Fix chown logic to skip `/config/workspace` contents.
