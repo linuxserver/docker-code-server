@@ -329,6 +329,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **10.08.25:** - Let server listen on both ipv4 and ipv6.
 * **03.06.25:** - Allow setting PWA name using env var `PWA_APPNAME`.
 * **13.10.24:** - Only chown config folder when change to ownership or new install is detected.
 * **09.10.24:** - Manage permissions in /config/.ssh according to file type

@@ -102,6 +102,7 @@ init_diagram: |
   "code-server:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "10.08.25:", desc: "Let server listen on both ipv4 and ipv6."}
   - {date: "03.06.25:", desc: "Allow setting PWA name using env var `PWA_APPNAME`."}
   - {date: "13.10.24:", desc: "Only chown config folder when change to ownership or new install is detected."}
   - {date: "09.10.24:", desc: "Manage permissions in /config/.ssh according to file type"}

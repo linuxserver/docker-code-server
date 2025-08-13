@@ -35,7 +35,7 @@ else
     exec \
         s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z 127.0.0.1 8443" \
             /app/code-server/bin/code-server \
-                --bind-addr 0.0.0.0:8443 \
+                --bind-addr "[::]:8443" \
                 --user-data-dir /config/data \
                 --extensions-dir /config/extensions \
                 --disable-telemetry \
