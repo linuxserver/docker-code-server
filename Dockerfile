@@ -23,8 +23,10 @@ RUN echo "**** install Python 3.12 ****" && \
     python3.12 \
     python3.12-dev \
     python3.12-venv && \
-  apt update && \
-  apt install yq -y && \
+  echo "**** install yq ****" && \
+  YQ_VERSION="v4.43.1" && \
+  wget -O /usr/local/bin/yq "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" && \
+  chmod +x /usr/local/bin/yq && \
   update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1 && \
   update-alternatives --install /usr/bin/python python /usr/bin/python3.12 1 && \
   curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12 && \
