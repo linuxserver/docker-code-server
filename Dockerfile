@@ -23,6 +23,7 @@ RUN echo "**** install Python 3.12 ****" && \
     python3.12 \
     python3.12-dev \
     python3.12-venv && \
+  apt update && \
   apt install yq -y && \
   update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1 && \
   update-alternatives --install /usr/bin/python python /usr/bin/python3.12 1 && \
