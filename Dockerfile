@@ -22,7 +22,8 @@ RUN echo "**** install Python 3.12 ****" && \
   apt-get install -y \
     python3.12 \
     python3.12-dev \
-    python3.12-venv && \
+    python3.12-venv \
+    wget && \
   echo "**** install yq ****" && \
   YQ_VERSION="v4.43.1" && \
   wget -O /usr/local/bin/yq "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" && \
