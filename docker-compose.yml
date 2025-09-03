@@ -10,7 +10,7 @@ services:
         - linux/amd64
       args:
         - ECR_ACCOUNT_ID=${ECR_ACCOUNT_ID:-0123456789012}
-        - BASE_IMAGE_TAG=${BASE_IMAGE_TAG:-latest}
+        - BASE_IMAGE_TAG=${BASE_IMAGE_TAG:-jammy-latest}
         - VERSION=${VERSION:-4.102.1}
         - CODE_RELEASE=${CODE_RELEASE:-4.102.1}
     environment:
