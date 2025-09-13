@@ -93,7 +93,7 @@ cookie                                  0.7.2                              npm  
 cookie-parser                           1.4.7                              npm                      
 cookie-signature                        1.0.6                              npm                      
 cookie-signature                        1.2.2                              npm                      
-coreutils                               9.4-3ubuntu6                       deb                      
+coreutils                               9.4-3ubuntu6.1                     deb                      
 cpp                                     1.0.0                              npm                      
 cron                                    3.0pl1-184ubuntu2                  deb                      
 cron-daemon-common                      3.0pl1-184ubuntu2                  deb                      
@@ -415,7 +415,7 @@ objective-c                             1.0.0                              npm
 on-finished                             2.4.1                              npm                      
 on-headers                              1.1.0                              npm                      
 once                                    1.4.0                              npm     (+1 duplicate)   
-openssh-client                          1:9.6p1-3ubuntu13.13               deb                      
+openssh-client                          1:9.6p1-3ubuntu13.14               deb                      
 openssl                                 3.0.13-0ubuntu3.5                  deb                      
 opentype.js                             0.8.0                              npm                      
 os-tmpdir                               1.0.2                              npm                      
