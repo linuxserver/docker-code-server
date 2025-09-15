@@ -15,23 +15,23 @@ NAME                                    VERSION                            TYPE
 @tootallnate/quickjs-emscripten         0.23.0                             npm                      
 @vscode/deviceid                        0.1.1                              npm                      
 @vscode/iconv-lite-umd                  0.7.0                              npm                      
-@vscode/proxy-agent                     0.32.0                             npm                      
+@vscode/proxy-agent                     0.33.0                             npm                      
 @vscode/ripgrep                         1.15.14                            npm                      
 @vscode/spdlog                          0.15.2                             npm                      
 @vscode/tree-sitter-wasm                0.1.4                              npm                      
 @vscode/vscode-languagedetection        1.0.21                             npm                      
 @vscode/windows-process-tree            0.6.0                              npm                      
 @vscode/windows-registry                1.1.0                              npm                      
-@xterm/addon-clipboard                  0.2.0-beta.95                      npm                      
-@xterm/addon-image                      0.9.0-beta.112                     npm                      
-@xterm/addon-ligatures                  0.10.0-beta.112                    npm                      
-@xterm/addon-progress                   0.2.0-beta.18                      npm                      
-@xterm/addon-search                     0.16.0-beta.112                    npm                      
-@xterm/addon-serialize                  0.14.0-beta.112                    npm                      
-@xterm/addon-unicode11                  0.9.0-beta.112                     npm                      
-@xterm/addon-webgl                      0.19.0-beta.112                    npm                      
-@xterm/headless                         5.6.0-beta.112                     npm                      
-@xterm/xterm                            5.6.0-beta.112                     npm                      
+@xterm/addon-clipboard                  0.2.0-beta.101                     npm                      
+@xterm/addon-image                      0.9.0-beta.118                     npm                      
+@xterm/addon-ligatures                  0.10.0-beta.118                    npm                      
+@xterm/addon-progress                   0.2.0-beta.24                      npm                      
+@xterm/addon-search                     0.16.0-beta.118                    npm                      
+@xterm/addon-serialize                  0.14.0-beta.118                    npm                      
+@xterm/addon-unicode11                  0.9.0-beta.118                     npm                      
+@xterm/addon-webgl                      0.19.0-beta.118                    npm                      
+@xterm/headless                         5.6.0-beta.118                     npm                      
+@xterm/xterm                            5.6.0-beta.118                     npm                      
 OpenConsole.exe                         1.22.250204002                     binary  (+1 duplicate)   
 abbrev                                  1.1.1                              npm                      
 accepts                                 2.0.0                              npm                      
@@ -76,10 +76,11 @@ charenc                                 0.0.2                              npm
 chownr                                  1.1.4                              npm                      
 chownr                                  2.0.0                              npm                      
 clojure                                 1.0.0                              npm                      
-code-server                             1.103.2                            npm                      
-code-server                             4.103.2                            npm                      
+code-server                             1.104.0                            npm                      
+code-server                             4.104.0                            npm                      
 coffeescript                            1.0.0                              npm                      
 color-support                           1.1.3                              npm                      
+commander                               8.3.0                              npm                      
 compressible                            2.0.18                             npm                      
 compression                             1.8.1                              npm                      
 concat-map                              0.0.1                              npm                      
@@ -237,7 +238,7 @@ java                                    1.0.0                              npm
 javascript                              1.0.0                              npm                      
 jq                                      1.7.1-3ubuntu0.24.04.1             deb                      
 js-base64                               3.7.7                              npm                      
-js-debug                                1.102.0                            npm                      
+js-debug                                1.104.0                            npm                      
 js-debug-companion                      1.1.3                              npm                      
 js-yaml                                 4.1.0                              npm                      
 jsbn                                    1.1.0                              npm     (+1 duplicate)   
@@ -247,6 +248,7 @@ json-language-features                  1.0.0                              npm
 jsonfile                                6.1.0                              npm                      
 julia                                   1.0.0                              npm                      
 just-performance                        4.3.0                              npm                      
+katex                                   0.16.22                            npm                      
 kerberos                                2.1.1                              npm                      
 keyboxd                                 2.4.4-2ubuntu17.3                  deb                      
 krb5-locales                            1.20.1-6ubuntu2.6                  deb                      
@@ -399,7 +401,7 @@ net-tools                               2.10-0.1ubuntu4.4                  deb
 netbase                                 6.4                                deb                      
 netcat-openbsd                          1.226-1ubuntu2                     deb                      
 netmask                                 2.0.2                              npm                      
-node                                    22.17.0                            binary                   
+node                                    22.18.0                            binary                   
 node-abi                                3.8.0                              npm                      
 node-addon-api                          7.1.0                              npm                      
 node-addon-api                          7.1.1                              npm                      
