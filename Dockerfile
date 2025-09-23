@@ -7,6 +7,7 @@ ARG BASE_IMAGE_TAG=jammy-latest
 ARG ECR_URI=${ECR_ACCOUNT_ID}.dkr.ecr-fips.${ECR_REGION}.amazonaws.com/${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG}
 
 FROM ${ECR_URI} as docker-code-server-python
+ENV R_VERSION=3.2.0
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
@@ -28,7 +29,12 @@ RUN echo "**** install Python 3.12 ****" && \
   curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12 && \
   pip3 install --upgrade pip setuptools wheel && \
   python3 --version && \
-  pip3 --version && \
+  pip3 --version
+
+
+RUN echo "**** install R ${R_VERSION} ****" && \
+  curl -O https://cdn.posit.co/r/ubuntu-2204/pkgs/r-${R_VERSION}_1_$(dpkg --print-architecture).deb && \
+  apt-get -y install ./r-${R_VERSION}_1_$(dpkg --print-architecture).deb && \
   echo "**** clean up ****" && \
   apt-get clean && \
   rm -rf \
