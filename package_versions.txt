@@ -330,7 +330,7 @@ libsepol2                               3.5-2build1                        deb
 libsmartcols1                           2.39.3-9ubuntu6.3                  deb                      
 libsqlite3-0                            3.45.1-1ubuntu2.5                  deb                      
 libss2                                  1.47.0-2.4~exp1ubuntu4.1           deb                      
-libssh-4                                0.10.6-2ubuntu0.1                  deb                      
+libssh-4                                0.10.6-2ubuntu0.2                  deb                      
 libssl3t64                              3.0.13-0ubuntu3.6                  deb                      
 libstdc++6                              14.2.0-4ubuntu2~24.04              deb                      
 libsystemd0                             255.4-1ubuntu8.11                  deb                      
