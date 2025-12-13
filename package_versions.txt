@@ -250,7 +250,7 @@ latex                                   1.0.0                              npm
 less                                    1.0.0                              npm                      
 less                                    590-2ubuntu2.1                     deb                      
 libacl1                                 2.3.2-1build1.1                    deb                      
-libapparmor1                            4.0.1really4.0.1-0ubuntu0.24.04.4  deb                      
+libapparmor1                            4.0.1really4.0.1-0ubuntu0.24.04.5  deb                      
 libapt-pkg6.0t64                        2.8.3                              deb                      
 libassuan0                              2.5.6-1build1                      deb                      
 libatomic1                              14.2.0-4ubuntu2~24.04              deb                      
