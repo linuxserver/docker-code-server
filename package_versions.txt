@@ -27,9 +27,9 @@ NAME                                       VERSION                            TY
 @xterm/addon-search                        0.17.0-beta.91                     npm                      
 @xterm/addon-serialize                     0.15.0-beta.91                     npm                      
 @xterm/addon-unicode11                     0.10.0-beta.91                     npm                      
-@xterm/addon-webgl                         0.20.0-beta.90                     npm                      
+@xterm/addon-webgl                         0.20.0-beta.101                    npm                      
 @xterm/headless                            6.1.0-beta.91                      npm                      
-@xterm/xterm                               6.1.0-beta.91                      npm                      
+@xterm/xterm                               6.1.0-beta.104                     npm                      
 ConPTY Interface Library                   1.23.251008001                     binary  (+1 duplicate)   
 Console Window and PTY Host (Open Source)  1.23.251008001                     binary  (+1 duplicate)   
 abbrev                                     1.1.1                              npm                      
@@ -75,8 +75,8 @@ charenc                                    0.0.2                              np
 chownr                                     1.1.4                              npm                      
 chownr                                     2.0.0                              npm                      
 clojure                                    1.0.0                              npm                      
-code-server                                1.108.0                            npm                      
-code-server                                4.108.0                            npm                      
+code-server                                1.108.1                            npm                      
+code-server                                4.108.1                            npm                      
 coffeescript                               1.0.0                              npm                      
 color-support                              1.1.3                              npm                      
 commander                                  8.3.0                              npm                      
@@ -119,7 +119,7 @@ detect-libc                                2.0.3                              np
 detect-libc                                2.0.4                              npm                      
 diff                                       1.0.0                              npm                      
 diffutils                                  1:3.10-1build1                     deb                      
-dirmngr                                    2.4.4-2ubuntu17.3                  deb                      
+dirmngr                                    2.4.4-2ubuntu17.4                  deb                      
 docker                                     1.0.0                              npm                      
 dotenv                                     1.0.0                              npm                      
 dpkg                                       1.22.6ubuntu6.5                    deb                      
@@ -172,17 +172,17 @@ github                                     0.0.1                              np
 github-authentication                      0.0.2                              npm                      
 github-from-package                        0.0.0                              npm                      
 glob                                       7.2.3                              npm                      
-gnupg                                      2.4.4-2ubuntu17.3                  deb                      
-gnupg-l10n                                 2.4.4-2ubuntu17.3                  deb                      
-gnupg-utils                                2.4.4-2ubuntu17.3                  deb                      
+gnupg                                      2.4.4-2ubuntu17.4                  deb                      
+gnupg-l10n                                 2.4.4-2ubuntu17.4                  deb                      
+gnupg-utils                                2.4.4-2ubuntu17.4                  deb                      
 go                                         1.0.0                              npm                      
 gopd                                       1.2.0                              npm                      
-gpg                                        2.4.4-2ubuntu17.3                  deb                      
-gpg-agent                                  2.4.4-2ubuntu17.3                  deb                      
-gpg-wks-client                             2.4.4-2ubuntu17.3                  deb                      
-gpgconf                                    2.4.4-2ubuntu17.3                  deb                      
-gpgsm                                      2.4.4-2ubuntu17.3                  deb                      
-gpgv                                       2.4.4-2ubuntu17.3                  deb                      
+gpg                                        2.4.4-2ubuntu17.4                  deb                      
+gpg-agent                                  2.4.4-2ubuntu17.4                  deb                      
+gpg-wks-client                             2.4.4-2ubuntu17.4                  deb                      
+gpgconf                                    2.4.4-2ubuntu17.4                  deb                      
+gpgsm                                      2.4.4-2ubuntu17.4                  deb                      
+gpgv                                       2.4.4-2ubuntu17.4                  deb                      
 graceful-fs                                4.2.11                             npm                      
 grep                                       3.11-4build1                       deb                      
 groovy                                     1.0.0                              npm                      
@@ -241,7 +241,7 @@ julia                                      1.0.0                              np
 just-performance                           4.3.0                              npm                      
 katex                                      0.16.22                            npm                      
 kerberos                                   2.1.1                              npm                      
-keyboxd                                    2.4.4-2ubuntu17.3                  deb                      
+keyboxd                                    2.4.4-2ubuntu17.4                  deb                      
 krb5-locales                               1.20.1-6ubuntu2.6                  deb                      
 latex                                      1.0.0                              npm                      
 less                                       1.0.0                              npm                      
@@ -328,7 +328,7 @@ libssh-4                                   0.10.6-2ubuntu0.2                  de
 libssl3t64                                 3.0.13-0ubuntu3.6                  deb                      
 libstdc++6                                 14.2.0-4ubuntu2~24.04              deb                      
 libsystemd0                                255.4-1ubuntu8.12                  deb                      
-libtasn1-6                                 4.19.0-3ubuntu0.24.04.1            deb                      
+libtasn1-6                                 4.19.0-3ubuntu0.24.04.2            deb                      
 libtinfo6                                  6.4+20240113-1ubuntu2              deb                      
 libudev1                                   255.4-1ubuntu8.12                  deb                      
 libunistring5                              1.1-2build1.1                      deb                      
