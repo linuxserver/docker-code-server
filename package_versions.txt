@@ -97,7 +97,7 @@ crypt                                      0.0.2                              np
 csharp                                     1.0.0                              npm                      
 css                                        1.0.0                              npm                      
 css-language-features                      1.0.0                              npm                      
-curl                                       8.5.0-2ubuntu10.6                  deb                      
+curl                                       8.5.0-2ubuntu10.7                  deb                      
 dart                                       1.0.0                              npm                      
 dash                                       0.5.12-6ubuntu5                    deb                      
 data-uri-to-buffer                         6.0.2                              npm                      
@@ -249,8 +249,8 @@ libcap2                                    1:2.66-5ubuntu2.2                  de
 libcbor0.10                                0.10.2-1.2ubuntu2                  deb                      
 libcom-err2                                1.47.0-2.4~exp1ubuntu4.1           deb                      
 libcrypt1                                  1:4.4.36-4build1                   deb                      
-libcurl3t64-gnutls                         8.5.0-2ubuntu10.6                  deb                      
-libcurl4t64                                8.5.0-2ubuntu10.6                  deb                      
+libcurl3t64-gnutls                         8.5.0-2ubuntu10.7                  deb                      
+libcurl4t64                                8.5.0-2ubuntu10.7                  deb                      
 libdb5.3t64                                5.3.28+dfsg2-7                     deb                      
 libdebconfclient0                          0.271ubuntu3                       deb                      
 libedit2                                   3.1-20230828-1build1               deb                      
@@ -308,7 +308,7 @@ libsepol2                                  3.5-2build1                        de
 libsmartcols1                              2.39.3-9ubuntu6.4                  deb                      
 libsqlite3-0                               3.45.1-1ubuntu2.5                  deb                      
 libss2                                     1.47.0-2.4~exp1ubuntu4.1           deb                      
-libssh-4                                   0.10.6-2ubuntu0.2                  deb                      
+libssh-4                                   0.10.6-2ubuntu0.3                  deb                      
 libssl3t64                                 3.0.13-0ubuntu3.7                  deb                      
 libstdc++6                                 14.2.0-4ubuntu2~24.04.1            deb                      
 libsystemd0                                255.4-1ubuntu8.12                  deb                      
