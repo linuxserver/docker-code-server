@@ -73,8 +73,8 @@ catatonit                                  0.1.7-1                            de
 charenc                                    0.0.2                              npm                     
 chownr                                     1.1.4                              npm                     
 clojure                                    10.0.0                             npm                     
-code-server                                1.110.0                            npm                     
-code-server                                4.110.0                            npm                     
+code-server                                1.110.1                            npm                     
+code-server                                4.110.1                            npm                     
 coffeescript                               10.0.0                             npm                     
 commander                                  12.1.0                             npm                     
 commander                                  8.3.0                              npm                     
