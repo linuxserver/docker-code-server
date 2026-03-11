@@ -13,7 +13,7 @@ NAME                                       VERSION                            TY
 @parcel/watcher-linux-x64-musl             2.5.6                              npm                     
 @phc/format                                1.0.0                              npm                     
 @pondwader/socks5-server                   1.0.10                             npm                     
-@tootallnate/once                          3.0.0                              npm                     
+@tootallnate/once                          3.0.1                              npm                     
 @tootallnate/quickjs-emscripten            0.23.0                             npm                     
 @types/lodash                              4.17.23                            npm                     
 @types/lodash-es                           4.17.12                            npm                     
@@ -27,16 +27,16 @@ NAME                                       VERSION                            TY
 @vscode/vscode-languagedetection           1.0.23                             npm                     
 @vscode/windows-process-tree               0.6.3                              npm                     
 @vscode/windows-registry                   1.2.0                              npm                     
-@xterm/addon-clipboard                     0.3.0-beta.167                     npm                     
-@xterm/addon-image                         0.10.0-beta.167                    npm                     
-@xterm/addon-ligatures                     0.11.0-beta.167                    npm                     
-@xterm/addon-progress                      0.3.0-beta.167                     npm                     
-@xterm/addon-search                        0.17.0-beta.167                    npm                     
-@xterm/addon-serialize                     0.15.0-beta.167                    npm                     
-@xterm/addon-unicode11                     0.10.0-beta.167                    npm                     
-@xterm/addon-webgl                         0.20.0-beta.166                    npm                     
-@xterm/headless                            6.1.0-beta.167                     npm                     
-@xterm/xterm                               6.1.0-beta.167                     npm                     
+@xterm/addon-clipboard                     0.3.0-beta.168                     npm                     
+@xterm/addon-image                         0.10.0-beta.168                    npm                     
+@xterm/addon-ligatures                     0.11.0-beta.168                    npm                     
+@xterm/addon-progress                      0.3.0-beta.168                     npm                     
+@xterm/addon-search                        0.17.0-beta.168                    npm                     
+@xterm/addon-serialize                     0.15.0-beta.168                    npm                     
+@xterm/addon-unicode11                     0.10.0-beta.168                    npm                     
+@xterm/addon-webgl                         0.20.0-beta.167                    npm                     
+@xterm/headless                            6.1.0-beta.168                     npm                     
+@xterm/xterm                               6.1.0-beta.168                     npm                     
 ConPTY Interface Library                   1.23.251008001                     binary  (+1 duplicate)  
 Console Window and PTY Host (Open Source)  1.23.251008001                     binary  (+1 duplicate)  
 accepts                                    2.0.0                              npm                     
@@ -73,8 +73,8 @@ catatonit                                  0.1.7-1                            de
 charenc                                    0.0.2                              npm                     
 chownr                                     1.1.4                              npm                     
 clojure                                    10.0.0                             npm                     
-code-server                                1.110.1                            npm                     
-code-server                                4.110.1                            npm                     
+code-server                                1.111.0                            npm                     
+code-server                                4.111.0                            npm                     
 coffeescript                               10.0.0                             npm                     
 commander                                  12.1.0                             npm                     
 commander                                  8.3.0                              npm                     
@@ -97,7 +97,7 @@ crypt                                      0.0.2                              np
 csharp                                     10.0.0                             npm                     
 css                                        10.0.0                             npm                     
 css-language-features                      10.0.0                             npm                     
-curl                                       8.5.0-2ubuntu10.7                  deb                     
+curl                                       8.5.0-2ubuntu10.8                  deb                     
 dart                                       10.0.0                             npm                     
 dash                                       0.5.12-6ubuntu5                    deb                     
 data-uri-to-buffer                         6.0.2                              npm                     
@@ -250,8 +250,8 @@ libcap2                                    1:2.66-5ubuntu2.2                  de
 libcbor0.10                                0.10.2-1.2ubuntu2                  deb                     
 libcom-err2                                1.47.0-2.4~exp1ubuntu4.1           deb                     
 libcrypt1                                  1:4.4.36-4build1                   deb                     
-libcurl3t64-gnutls                         8.5.0-2ubuntu10.7                  deb                     
-libcurl4t64                                8.5.0-2ubuntu10.7                  deb                     
+libcurl3t64-gnutls                         8.5.0-2ubuntu10.8                  deb                     
+libcurl4t64                                8.5.0-2ubuntu10.8                  deb                     
 libdb5.3t64                                5.3.28+dfsg2-7                     deb                     
 libdebconfclient0                          0.271ubuntu3                       deb                     
 libedit2                                   3.1-20230828-1build1               deb                     
