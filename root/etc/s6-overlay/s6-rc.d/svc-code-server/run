@@ -14,9 +14,9 @@ else
 fi
 
 if [ -n "${S3_ACCESS_KEY_ID}" ]; then
-    echo '{"folders": [ {"path": "/config/workspace"}, {"path": "/mnt/s3"} ]}' > ${HOME}/default.code-workspace
-    chmod 600 ${HOME}/default.code-workspace
-    DEFAULT_WORKSPACE2=${HOME}/default.code-workspace
+    printf '{"folders": [ {"path": "%s/workspace"}, {"path": "/mnt/s3"} ]}\n' "${HOME}" > "${HOME}/default.code-workspace"
+    chmod 600 "${HOME}/default.code-workspace"
+    DEFAULT_WORKSPACE2="${HOME}/default.code-workspace"
 else
     DEFAULT_WORKSPACE2=${DEFAULT_WORKSPACE}
 fi
@@ -26,9 +26,9 @@ exec \
         s6-setuidgid root \
             /app/code-server/bin/code-server \
                 --bind-addr 0.0.0.0:8443 \
-                --user-data-dir /config/data \
-                --extensions-dir /config/extensions \
+                --user-data-dir "${HOME}/data" \
+                --extensions-dir "${HOME}/extensions" \
                 --disable-telemetry \
                 --auth "${AUTH}" \
                 "${PROXY_DOMAIN_ARG}" \
-                "${DEFAULT_WORKSPACE2:-/config/workspace}"
+                "${DEFAULT_WORKSPACE2:-${HOME}/workspace}"

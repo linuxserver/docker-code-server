@@ -146,6 +146,8 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e DEFAULT_WORKSPACE=/config/workspace` | If this optional variable is set, code-server will open this directory by default |
 | `-v /config` | Contains all relevant configuration files. |
 
+The container uses `HOME=/config` by default for code-server data, extensions, workspace files, and shell configuration. If overriding `HOME` with `-e HOME=/some/path`, use an absolute path inside the container and mount persistent storage at that same path.
+
 ## Environment variables from files (Docker secrets)
 
 You can set any environment variable from a file by using a special prepend `FILE__`.

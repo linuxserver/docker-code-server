@@ -36,15 +36,15 @@ RUN apt-get update && apt-get install -y \
     && tar zxvf /tmp/ngrok.tgz -C /app \
     && curl -LO https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb \
     && dpkg -i cloudflared-linux-amd64.deb \
-    && mkdir -p /temp/config/extensions \
-    && /app/code-server/bin/code-server --extensions-dir /temp/config/extensions --install-extension ms-azuretools.vscode-docker \
-    && /app/code-server/bin/code-server --extensions-dir /temp/config/extensions --install-extension IronGeek.vscode-env \
-    && /app/code-server/bin/code-server --extensions-dir /temp/config/extensions --install-extension esbenp.prettier-vscode \
-    && /app/code-server/bin/code-server --extensions-dir /temp/config/extensions --install-extension redhat.vscode-yaml \
-    && /app/code-server/bin/code-server --extensions-dir /temp/config/extensions --install-extension nick-rudenko.back-n-forth \
-    && /app/code-server/bin/code-server --extensions-dir /temp/config/extensions --install-extension humao.rest-client \
+    && mkdir -p /temp/extensions \
+    && /app/code-server/bin/code-server --extensions-dir /temp/extensions --install-extension ms-azuretools.vscode-docker \
+    && /app/code-server/bin/code-server --extensions-dir /temp/extensions --install-extension IronGeek.vscode-env \
+    && /app/code-server/bin/code-server --extensions-dir /temp/extensions --install-extension esbenp.prettier-vscode \
+    && /app/code-server/bin/code-server --extensions-dir /temp/extensions --install-extension redhat.vscode-yaml \
+    && /app/code-server/bin/code-server --extensions-dir /temp/extensions --install-extension nick-rudenko.back-n-forth \
+    && /app/code-server/bin/code-server --extensions-dir /temp/extensions --install-extension humao.rest-client \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /config/*
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* "${HOME:?}"/*
 
 # Add local files
 COPY /root /

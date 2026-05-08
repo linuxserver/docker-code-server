@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-mkdir -p /config/{extensions,data,workspace,.ssh}
+mkdir -p "${HOME}"/{extensions,data,workspace,.ssh}
 
 if [ -n "${SUDO_PASSWORD}" ] || [ -n "${SUDO_PASSWORD_HASH}" ]; then
     echo "setting up sudo access"
@@ -17,17 +17,17 @@ if [ -n "${SUDO_PASSWORD}" ] || [ -n "${SUDO_PASSWORD_HASH}" ]; then
     fi
 fi
 
-[[ ! -f /config/.bashrc ]] && \
-    cp /root/.bashrc /config/.bashrc
-[[ ! -f /config/.profile ]] && \
-    cp /root/.profile /config/.profile
+[[ ! -f "${HOME}/.bashrc" ]] && \
+    cp /root/.bashrc "${HOME}/.bashrc"
+[[ ! -f "${HOME}/.profile" ]] && \
+    cp /root/.profile "${HOME}/.profile"
 
-# fix permissions (ignore contents of /config/workspace)
-find /config -path /config/workspace -prune -o -exec chown abc:abc {} +
-chown abc:abc /config/workspace
-chmod 700 /config/.ssh
-if [ -n "$(ls -A /config/.ssh)" ]; then
-    chmod 600 /config/.ssh/*
+# fix permissions (ignore contents of ${HOME}/workspace)
+find "${HOME}" -path "${HOME}/workspace" -prune -o -exec chown abc:abc {} +
+chown abc:abc "${HOME}/workspace"
+chmod 700 "${HOME}/.ssh"
+if [ -n "$(ls -A "${HOME}/.ssh")" ]; then
+    chmod 600 "${HOME}"/.ssh/*
 fi
 
 if [ -n "${GIT_USER_NAME}" ]; then
@@ -38,8 +38,8 @@ fi
 # echo $S3_ACCESS_KEY_ID:$S3_SECRET_ACCESS_KEY > /etc/passwd-s3fs
 # chmod 600 /etc/passwd-s3fs
 if [ -n "${S3_ACCESS_KEY_ID}" ]; then
-    echo $S3_ACCESS_KEY_ID:$S3_SECRET_ACCESS_KEY > ${HOME}/.passwd-s3fs
-    chmod 600 ${HOME}/.passwd-s3fs
+    echo $S3_ACCESS_KEY_ID:$S3_SECRET_ACCESS_KEY > "${HOME}/.passwd-s3fs"
+    chmod 600 "${HOME}/.passwd-s3fs"
     mkdir /mnt/s3
     mkdir -p /tmp/s3cache
     chmod 777 /tmp/s3cache
@@ -47,7 +47,7 @@ if [ -n "${S3_ACCESS_KEY_ID}" ]; then
     if [ -n "${S3_REGION}" ]; then
         s3_region_opt=(-o endpoint=${S3_REGION})
     fi
-    s3fs ${S3_BUCKET} /mnt/s3 -o passwd_file=${HOME}/.passwd-s3fs -o url=${S3_ENDPOINT} "${s3_region_opt[@]}" -o use_path_request_style -o uid=1000 -o gid=1000 -o umask=0002 -o allow_other -o mp_umask=0002 -o multireq_max=5 -o use_cache=/tmp/s3cache -o nonempty -o use_xattr -o enable_noobj_cache -o parallel_count=15 -o multipart_size=64 -o max_stat_cache_size=100000 -o enable_noobj_cache #-o dbglevel=info -o curldbg
+    s3fs ${S3_BUCKET} /mnt/s3 -o passwd_file="${HOME}/.passwd-s3fs" -o url=${S3_ENDPOINT} "${s3_region_opt[@]}" -o use_path_request_style -o uid=1000 -o gid=1000 -o umask=0002 -o allow_other -o mp_umask=0002 -o multireq_max=5 -o use_cache=/tmp/s3cache -o nonempty -o use_xattr -o enable_noobj_cache -o parallel_count=15 -o multipart_size=64 -o max_stat_cache_size=100000 -o enable_noobj_cache #-o dbglevel=info -o curldbg
 
     # add SSH file
 
@@ -59,21 +59,21 @@ if [ -n "${S3_ACCESS_KEY_ID}" ]; then
     if [ -f "$ssh_file" ]; then
         echo "ssh file exist ***"
         # eval "$(ssh-agent -s)"
-        cp $ssh_file /config/.ssh/
-        chown abc:abc /config/.ssh
-        chmod 600 /config/.ssh/id_ed25519
+        cp "$ssh_file" "${HOME}/.ssh/"
+        chown abc:abc "${HOME}/.ssh"
+        chmod 600 "${HOME}/.ssh/id_ed25519"
         # ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-        # ssh-add /config/.ssh/id_ed25519
+        # ssh-add "${HOME}/.ssh/id_ed25519"
         # ssh -T git@github.com
 
-        echo 'eval "$(ssh-agent -s)"' >> ~/.bashrc
-        echo 'ssh-add /config/.ssh/id_ed25519' >> ~/.bashrc
-        echo 'export SSH_PRIVATE_KEY="$(cat /mnt/s3/.ssh/id_ed25519)"' >> ~/.bashrc
+        echo 'eval "$(ssh-agent -s)"' >> "${HOME}/.bashrc"
+        echo "ssh-add ${HOME}/.ssh/id_ed25519" >> "${HOME}/.bashrc"
+        echo 'export SSH_PRIVATE_KEY="$(cat /mnt/s3/.ssh/id_ed25519)"' >> "${HOME}/.bashrc"
 
-        # cat /config/.ssh/id_ed25519 | tr -d '\r' | ssh-add - > /dev/null
-        # ssh-keyscan github.com >> /config/.ssh/known_hosts
-        # ssh-add /config/.ssh/id_ed25519
-        # ssh-keyscan -t rsa github.com >> /config/.ssh/known_hosts
+        # cat "${HOME}/.ssh/id_ed25519" | tr -d '\r' | ssh-add - > /dev/null
+        # ssh-keyscan github.com >> "${HOME}/.ssh/known_hosts"
+        # ssh-add "${HOME}/.ssh/id_ed25519"
+        # ssh-keyscan -t rsa github.com >> "${HOME}/.ssh/known_hosts"
         # ssh -T git@github.com
         if [ -f "/mnt/s3/init-code-server.sh" ]; then
             echo "init-code-server.sh exist ***"
@@ -89,11 +89,11 @@ if [ -n "${S3_ACCESS_KEY_ID}" ]; then
 fi
 
 # echo "installing extensions***"
-# /app/code-server/bin/code-server  --extensions-dir /config/extensions  --install-extension IronGeek.vscode-env
-mv  -v /temp/config/extensions/* /config/extensions/
+# /app/code-server/bin/code-server  --extensions-dir "${HOME}/extensions"  --install-extension IronGeek.vscode-env
+mv  -v /temp/extensions/* "${HOME}/extensions/"
 
 CODE_BIN=/app/code-server/bin/code-server
-EXT_DIR=/config/extensions
+EXT_DIR="${HOME}/extensions"
 echo "[init-extensions] Starting runtime extension installation..." >&2
 install_one() {
   i=0; until [ $i -ge 3 ]; do
@@ -118,7 +118,7 @@ if [ -n "${TOKEN_NGROK}" ]; then
     mkdir -p /app/logs
     /app/ngrok http --log=stdout 3000 > /app/logs/ngrok.log & 
     sleep 7 
-    grep "started tunnel" /app/logs/ngrok.log | awk '{print $NF}' > /config/workspace/https_url.txt
+    grep "started tunnel" /app/logs/ngrok.log | awk '{print $NF}' > "${HOME}/workspace/https_url.txt"
 fi
 
 # expose PORTS with cloudflare
@@ -132,9 +132,12 @@ sleep 7
 for port in "${PORTS[@]}"; do
     cf_url=$(grep -oE 'https://[a-zA-Z0-9.-]+\.trycloudflare\.com' /app/logs/cloudflared_$port.log | head -n 1)
     if [ -n "$cf_url" ]; then
-        echo "# PORT $port" >> /config/workspace/https_url.txt
-        echo "$cf_url" >> /config/workspace/https_url.txt
+        echo "# PORT $port" >> "${HOME}/workspace/https_url.txt"
+        echo "$cf_url" >> "${HOME}/workspace/https_url.txt"
     fi
 done
 
-echo 'echo "Welcome to code-server terminal! power by Erik Vargas"' >> ~/.bashrc
+welcome_message='echo "Welcome to code-server terminal! power by Erik Vargas"'
+if ! grep -Fxq "$welcome_message" "${HOME}/.bashrc"; then
+    echo "$welcome_message" >> "${HOME}/.bashrc"
+fi
