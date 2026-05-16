@@ -125,7 +125,7 @@ diffutils                                   1:3.10-1build1                     d
 dirmngr                                     2.4.4-2ubuntu17.4                  deb                     
 docker                                      10.0.0                             npm                     
 dotenv                                      10.0.0                             npm                     
-dpkg                                        1.22.6ubuntu6.5                    deb                     
+dpkg                                        1.22.6ubuntu6.6                    deb                     
 dunder-proto                                1.0.1                              npm                     
 e2fsprogs                                   1.47.0-2.4~exp1ubuntu4.1           deb                     
 ee-first                                    1.1.1                              npm                     
