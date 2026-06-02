@@ -59,7 +59,7 @@ base-files                                  13ubuntu10.4                       d
 base-passwd                                 3.6.3build1                        deb                     
 base64-js                                   1.5.1                              npm                     
 bash                                        5.2.21-2ubuntu4                    deb                     
-basic-ftp                                   5.3.0                              npm                     
+basic-ftp                                   5.3.1                              npm                     
 bat                                         10.0.0                             npm                     
 bcrypt-pbkdf                                1.0.2                              npm                     
 bindings                                    1.5.0                              npm                     
@@ -81,8 +81,8 @@ charenc                                     0.0.2                              n
 chownr                                      1.1.4                              npm                     
 chownr                                      3.0.0                              npm                     
 clojure                                     10.0.0                             npm                     
-code-server                                 1.122.0                            npm                     
-code-server                                 4.122.0                            npm                     
+code-server                                 1.122.1                            npm                     
+code-server                                 4.122.1                            npm                     
 coffeescript                                10.0.0                             npm                     
 commander                                   12.1.0                             npm                     
 commander                                   8.3.0                              npm                     
@@ -95,7 +95,7 @@ cookie                                      0.7.2                              n
 cookie-parser                               1.4.7                              npm                     
 cookie-signature                            1.0.6                              npm                     
 cookie-signature                            1.2.2                              npm                     
-copilot-chat                                0.50.0                             npm                     
+copilot-chat                                0.50.1                             npm                     
 coreutils                                   9.4-3ubuntu6.2                     deb                     
 cpp                                         10.0.0                             npm                     
 cron                                        3.0pl1-184ubuntu2                  deb                     
@@ -238,7 +238,7 @@ latex                                       10.0.0                             n
 less                                        10.0.0                             npm                     
 less                                        590-2ubuntu2.1                     deb                     
 libacl1                                     2.3.2-1build1.1                    deb                     
-libapparmor1                                4.0.1really4.0.1-0ubuntu0.24.04.6  deb                     
+libapparmor1                                4.0.1really4.0.1-0ubuntu0.24.04.7  deb                     
 libapt-pkg6.0t64                            2.8.3                              deb                     
 libassuan0                                  2.5.6-1build1                      deb                     
 libatomic1                                  14.2.0-4ubuntu2~24.04.1            deb                     
