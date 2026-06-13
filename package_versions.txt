@@ -321,12 +321,12 @@ libsmartcols1                                     2.39.3-9ubuntu6.5             
 libsqlite3-0                                      3.45.1-1ubuntu2.5                  deb                     
 libss2                                            1.47.0-2.4~exp1ubuntu4.1           deb                     
 libssh-4                                          0.10.6-2ubuntu0.4                  deb                     
-libssl3t64                                        3.0.13-0ubuntu3.9                  deb                     
+libssl3t64                                        3.0.13-0ubuntu3.11                 deb                     
 libstdc++6                                        14.2.0-4ubuntu2~24.04.1            deb                     
-libsystemd0                                       255.4-1ubuntu8.15                  deb                     
+libsystemd0                                       255.4-1ubuntu8.16                  deb                     
 libtasn1-6                                        4.19.0-3ubuntu0.24.04.2            deb                     
 libtinfo6                                         6.4+20240113-1ubuntu2              deb                     
-libudev1                                          255.4-1ubuntu8.15                  deb                     
+libudev1                                          255.4-1ubuntu8.16                  deb                     
 libunistring5                                     1.1-2build1.1                      deb                     
 libuuid1                                          2.39.3-9ubuntu6.5                  deb                     
 libx11-6                                          2:1.8.7-1build1                    deb                     
@@ -393,7 +393,7 @@ on-finished                                       2.4.1                         
 on-headers                                        1.1.0                              npm                     
 once                                              1.4.0                              npm     (+1 duplicate)  
 openssh-client                                    1:9.6p1-3ubuntu13.16               deb                     
-openssl                                           3.0.13-0ubuntu3.9                  deb                     
+openssl                                           3.0.13-0ubuntu3.11                 deb                     
 opentype.js                                       0.8.0                              npm                     
 os-tmpdir                                         1.0.2                              npm                     
 pac-proxy-agent                                   7.2.0                              npm                     
@@ -475,7 +475,7 @@ string_decoder                                    1.3.0                         
 strip-json-comments                               2.0.1                              npm                     
 sudo                                              1.9.15p5-3ubuntu5.24.04.2          deb                     
 swift                                             10.0.0                             npm                     
-systemd-standalone-sysusers                       255.4-1ubuntu8.15                  deb                     
+systemd-standalone-sysusers                       255.4-1ubuntu8.16                  deb                     
 sysvinit-utils                                    3.08-6ubuntu3                      deb                     
 tar                                               1.35+dfsg-3build1                  deb                     
 tar                                               7.5.13                             npm                     
