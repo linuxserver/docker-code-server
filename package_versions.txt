@@ -1,11 +1,8 @@
 NAME                                              VERSION                            TYPE                    
-@babel/runtime                                    7.28.6                             npm                      
 @coder/logger                                     3.0.1                              npm                      
-@emnapi/runtime                                   1.10.0                             npm                      
 @epic-web/invariant                               1.0.0                              npm                      
-@github/copilot                                   1.0.57                             npm     (+1 duplicate)   
-@github/copilot-sdk                               1.0.0                              npm                      
-@img/sharp-wasm32                                 0.34.5                             npm                      
+@github/copilot                                   1.0.61                             npm     (+1 duplicate)   
+@github/copilot-sdk                               1.0.1                              npm                      
 @isaacs/fs-minipass                               4.0.1                              npm                      
 @microsoft/1ds-core-js                            3.2.13                             npm                      
 @microsoft/1ds-post-js                            3.2.13                             npm                      
@@ -31,16 +28,16 @@ NAME                                              VERSION                       
 @vscode/sqlite3                                   5.1.12-vscode                      npm                      
 @vscode/tree-sitter-wasm                          0.3.1                              npm                      
 @vscode/vscode-languagedetection                  1.0.23                             npm                      
-@xterm/addon-clipboard                            0.3.0-beta.220                     npm                      
-@xterm/addon-image                                0.10.0-beta.220                    npm                      
-@xterm/addon-ligatures                            0.11.0-beta.220                    npm                      
-@xterm/addon-progress                             0.3.0-beta.220                     npm                      
-@xterm/addon-search                               0.17.0-beta.220                    npm                      
-@xterm/addon-serialize                            0.15.0-beta.220                    npm                      
-@xterm/addon-unicode11                            0.10.0-beta.220                    npm                      
-@xterm/addon-webgl                                0.20.0-beta.219                    npm                      
-@xterm/headless                                   6.1.0-beta.220                     npm                      
-@xterm/xterm                                      6.1.0-beta.220                     npm                      
+@xterm/addon-clipboard                            0.3.0-beta.285                     npm                      
+@xterm/addon-image                                0.10.0-beta.285                    npm                      
+@xterm/addon-ligatures                            0.11.0-beta.285                    npm                      
+@xterm/addon-progress                             0.3.0-beta.285                     npm                      
+@xterm/addon-search                               0.17.0-beta.285                    npm                      
+@xterm/addon-serialize                            0.15.0-beta.285                    npm                      
+@xterm/addon-unicode11                            0.10.0-beta.285                    npm                      
+@xterm/addon-webgl                                0.20.0-beta.284                    npm                      
+@xterm/headless                                   6.1.0-beta.285                     npm                      
+@xterm/xterm                                      6.1.0-beta.285                     npm                      
 MXC diagnostic console                            0.6.0+206dd54                      binary  (+1 duplicate)   
 MXC host setup helper                             0.6.0+206dd54                      binary  (+1 duplicate)   
 MXC sandbox executor                              0.6.0+206dd54                      binary  (+1 duplicate)   
@@ -79,7 +76,7 @@ buffer-crc32                                      0.2.13                        
 buffer-fill                                       1.0.0                              npm                      
 builtin-notebook-renderers                        10.0.0                             npm                      
 bytes                                             3.1.2                              npm                      
-ca-certificates                                   20240203                           deb                      
+ca-certificates                                   20260601~24.04.1                   deb                      
 call-bind-apply-helpers                           1.0.2                              npm                      
 call-bound                                        1.0.4                              npm                      
 catatonit                                         0.1.7-1                            deb                      
@@ -87,8 +84,8 @@ charenc                                           0.0.2                         
 chownr                                            1.1.4                              npm                      
 chownr                                            3.0.0                              npm                      
 clojure                                           10.0.0                             npm                      
-code-oss-dev                                      1.124.2                            npm                      
-code-server                                       4.124.2                            npm                      
+code-oss-dev                                      1.125.0                            npm                      
+code-server                                       4.125.0                            npm                      
 coffeescript                                      10.0.0                             npm                      
 commander                                         12.1.0                             npm                      
 commander                                         8.3.0                              npm                      
@@ -102,7 +99,7 @@ cookie                                            1.1.1                         
 cookie-parser                                     1.4.7                              npm                      
 cookie-signature                                  1.0.6                              npm                      
 cookie-signature                                  1.2.2                              npm                      
-copilot-chat                                      0.52.0                             npm                      
+copilot-chat                                      0.53.0                             npm                      
 coreutils                                         9.4-3ubuntu6.2                     deb                      
 cpp                                               10.0.0                             npm                      
 cron                                              3.0pl1-184ubuntu2                  deb                      
@@ -208,7 +205,7 @@ http-proxy-agent                                  7.0.2                         
 httpolyglot                                       0.1.2                              npm                      
 https-proxy-agent                                 7.0.2                              npm                      
 https-proxy-agent                                 7.0.6                              npm                      
-i18next                                           25.8.13                            npm                      
+i18next                                           26.3.1                             npm                      
 iconv-lite                                        0.7.2                              npm                      
 ieee754                                           1.2.1                              npm                      
 inherits                                          2.0.4                              npm     (+1 duplicate)   
@@ -344,7 +341,7 @@ locales                                           2.39-0ubuntu8.7               
 log                                               10.0.0                             npm                      
 login                                             1:4.13+dfsg1-4ubuntu3.2            deb                      
 logsave                                           1.47.0-2.4~exp1ubuntu4.1           deb                      
-lru-cache                                         6.0.0                              npm                      
+lru-cache                                         11.5.1                             npm                      
 lru-cache                                         7.18.3                             npm                      
 lua                                               10.0.0                             npm                      
 make                                              10.0.0                             npm                      
@@ -395,7 +392,7 @@ on-headers                                        1.1.0                         
 once                                              1.4.0                              npm     (+1 duplicate)   
 openssh-client                                    1:9.6p1-3ubuntu13.16               deb                      
 openssl                                           3.0.13-0ubuntu3.11                 deb                      
-opentype.js                                       0.8.0                              npm                      
+opentype.js                                       2.0.0                              npm                      
 os-tmpdir                                         1.0.2                              npm                      
 pac-proxy-agent                                   7.2.0                              npm                      
 pac-resolver                                      7.0.1                              npm                      
@@ -454,7 +451,7 @@ setprototypeof                                    1.2.0                         
 shaderlab                                         10.0.0                             npm                      
 shebang-command                                   2.0.0                              npm                      
 shebang-regex                                     3.0.0                              npm                      
-shell-quote                                       1.8.3                              npm                      
+shell-quote                                       1.8.4                              npm                      
 shellscript                                       10.0.0                             npm                      
 side-channel                                      1.1.0                              npm                      
 side-channel-list                                 1.0.0                              npm                      
@@ -494,7 +491,6 @@ theme-red                                         10.0.0                        
 theme-solarized-dark                              10.0.0                             npm                      
 theme-solarized-light                             10.0.0                             npm                      
 theme-tomorrow-night-blue                         10.0.0                             npm                      
-tiny-inflate                                      1.0.3                              npm                      
 toidentifier                                      1.0.1                              npm                      
 tslib                                             2.8.1                              npm                      
 tunnel-agent                                      0.6.0                              npm                      
@@ -534,11 +530,10 @@ wslcsdk                                           UNKNOWN                       
 xauth                                             1:1.1.2-1build1                    deb                      
 xdg-basedir                                       4.0.0                              npm                      
 xml                                               10.0.0                             npm                      
-yallist                                           4.0.0                              npm                      
 yallist                                           5.0.0                              npm                      
 yaml                                              10.0.0                             npm                      
 yauzl                                             3.3.1                              npm                      
 yazl                                              2.4.3                              npm                      
 zlib1g                                            1:1.3.dfsg-3.1ubuntu2.1            deb                      
 zod                                               3.25.76                            npm                      
-zod                                               4.3.6                              npm                      
+zod                                               4.4.3                              npm                      
