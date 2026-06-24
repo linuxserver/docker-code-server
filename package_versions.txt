@@ -1,8 +1,8 @@
 NAME                                              VERSION                            TYPE                    
 @coder/logger                                     3.0.1                              npm                      
 @epic-web/invariant                               1.0.0                              npm                      
-@github/copilot                                   1.0.61                             npm     (+1 duplicate)   
-@github/copilot-sdk                               1.0.1                              npm                      
+@github/copilot                                   1.0.64-0                           npm     (+1 duplicate)   
+@github/copilot-sdk                               1.0.2                              npm                      
 @isaacs/fs-minipass                               4.0.1                              npm                      
 @microsoft/1ds-core-js                            3.2.13                             npm                      
 @microsoft/1ds-post-js                            3.2.13                             npm                      
@@ -84,8 +84,8 @@ charenc                                           0.0.2                         
 chownr                                            1.1.4                              npm                      
 chownr                                            3.0.0                              npm                      
 clojure                                           10.0.0                             npm                      
-code-oss-dev                                      1.125.0                            npm                      
-code-server                                       4.125.0                            npm                      
+code-oss                                          1.126.0                            npm                      
+code-server                                       4.126.0                            npm                      
 coffeescript                                      10.0.0                             npm                      
 commander                                         12.1.0                             npm                      
 commander                                         8.3.0                              npm                      
@@ -99,7 +99,7 @@ cookie                                            1.1.1                         
 cookie-parser                                     1.4.7                              npm                      
 cookie-signature                                  1.0.6                              npm                      
 cookie-signature                                  1.2.2                              npm                      
-copilot-chat                                      0.53.0                             npm                      
+copilot-chat                                      0.54.0                             npm                      
 coreutils                                         9.4-3ubuntu6.2                     deb                      
 cpp                                               10.0.0                             npm                      
 cron                                              3.0pl1-184ubuntu2                  deb                      
@@ -302,7 +302,7 @@ libpam-modules-bin                                1.5.3-5ubuntu5.5              
 libpam-runtime                                    1.5.3-5ubuntu5.5                   deb                      
 libpam0g                                          1.5.3-5ubuntu5.5                   deb                      
 libpcre2-8-0                                      10.42-4ubuntu2.1                   deb                      
-libperl5.38t64                                    5.38.2-3.2ubuntu0.2                deb                      
+libperl5.38t64                                    5.38.2-3.2ubuntu0.3                deb                      
 libproc2-0                                        2:4.0.4-4ubuntu3.2                 deb                      
 libpsl5t64                                        0.21.2-1.1build1                   deb                      
 libreadline8t64                                   8.2-4build1                        deb                      
@@ -393,6 +393,7 @@ once                                              1.4.0                         
 openssh-client                                    1:9.6p1-3ubuntu13.16               deb                      
 openssl                                           3.0.13-0ubuntu3.11                 deb                      
 opentype.js                                       2.0.0                              npm                      
+os-theme                                          0.0.8                              npm                      
 os-tmpdir                                         1.0.2                              npm                      
 pac-proxy-agent                                   7.2.0                              npm                      
 pac-resolver                                      7.0.1                              npm                      
@@ -404,9 +405,9 @@ path-to-regexp                                    8.4.2                         
 pem                                               1.14.8                             npm                      
 pend                                              1.2.0                              npm                      
 perl                                              10.0.0                             npm                      
-perl                                              5.38.2-3.2ubuntu0.2                deb                      
-perl-base                                         5.38.2-3.2ubuntu0.2                deb                      
-perl-modules-5.38                                 5.38.2-3.2ubuntu0.2                deb                      
+perl                                              5.38.2-3.2ubuntu0.3                deb                      
+perl-base                                         5.38.2-3.2ubuntu0.3                deb                      
+perl-modules-5.38                                 5.38.2-3.2ubuntu0.3                deb                      
 php                                               10.0.0                             npm                      
 php-language-features                             10.0.0                             npm                      
 picomatch                                         4.0.4                              npm                      
