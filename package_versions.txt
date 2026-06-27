@@ -476,7 +476,7 @@ sudo                                              1.9.15p5-3ubuntu5.24.04.2     
 swift                                             10.0.0                             npm                      
 systemd-standalone-sysusers                       255.4-1ubuntu8.16                  deb                      
 sysvinit-utils                                    3.08-6ubuntu3                      deb                      
-tar                                               1.35+dfsg-3build1                  deb                      
+tar                                               1.35+dfsg-3ubuntu0.1               deb                      
 tar                                               7.5.13                             npm                      
 tar-fs                                            2.1.4                              npm                      
 tar-stream                                        2.2.0                              npm                      
