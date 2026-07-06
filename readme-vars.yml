@@ -102,6 +102,7 @@ init_diagram: |
   "code-server:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "06.07.26:", desc: "Fall back to ipv4 bind address when ipv6 is disabled in the kernel."}
   - {date: "17.05.26:", desc: "Let server listen on both ipv4 and ipv6 even when running container as root."}
   - {date: "10.08.25:", desc: "Let server listen on both ipv4 and ipv6."}
   - {date: "03.06.25:", desc: "Allow setting PWA name using env var `PWA_APPNAME`."}
