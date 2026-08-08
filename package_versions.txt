@@ -321,7 +321,7 @@ libsmartcols1                                     2.39.3-9ubuntu6.5             
 libsqlite3-0                                      3.45.1-1ubuntu2.7                  deb                      
 libss2                                            1.47.0-2.4~exp1ubuntu4.1           deb                      
 libssh-4                                          0.10.6-2ubuntu0.4                  deb                      
-libssl3t64                                        3.0.13-0ubuntu3.11                 deb                      
+libssl3t64                                        3.0.13-0ubuntu3.12                 deb                      
 libstdc++6                                        14.2.0-4ubuntu2~24.04.1            deb                      
 libsystemd0                                       255.4-1ubuntu8.16                  deb                      
 libtasn1-6                                        4.19.0-3ubuntu0.24.04.2            deb                      
@@ -394,7 +394,7 @@ on-finished                                       2.4.1                         
 on-headers                                        1.1.0                              npm                      
 once                                              1.4.0                              npm     (+1 duplicate)   
 openssh-client                                    1:9.6p1-3ubuntu13.18               deb                      
-openssl                                           3.0.13-0ubuntu3.11                 deb                      
+openssl                                           3.0.13-0ubuntu3.12                 deb                      
 opentype.js                                       2.0.0                              npm                      
 os-tmpdir                                         1.0.2                              npm                      
 pac-proxy-agent                                   7.2.0                              npm                      
@@ -503,7 +503,7 @@ type-is                                           2.0.1                         
 typescript                                        10.0.0                             npm                      
 typescript                                        6.0.3                              npm                      
 typescript-language-features                      10.0.0                             npm                      
-tzdata                                            2026b-0ubuntu0.24.04.1             deb                      
+tzdata                                            2026c-0ubuntu0.24.04.1             deb                      
 ubuntu-keyring                                    2023.11.28.1                       deb                      
 undici                                            7.28.0                             npm                      
 universalify                                      2.0.1                              npm                      
