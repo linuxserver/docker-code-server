@@ -1,9 +1,10 @@
 NAME                                              VERSION                            TYPE                    
 @coder/logger                                     3.0.1                              npm                      
 @epic-web/invariant                               1.0.0                              npm                      
-@github/copilot                                   1.0.73                             npm     (+1 duplicate)   
-@github/copilot-linux-x64                         1.0.73                             npm                      
-@github/copilot-sdk                               1.0.8                              npm                      
+@github/copilot                                   1.0.73                             npm                      
+@github/copilot                                   1.0.77                             npm                      
+@github/copilot-linux-x64                         1.0.77                             npm                      
+@github/copilot-sdk                               1.0.9-preview.1                    npm                      
 @isaacs/fs-minipass                               4.0.1                              npm                      
 @microsoft/1ds-core-js                            3.2.13                             npm                      
 @microsoft/1ds-post-js                            3.2.13                             npm                      
@@ -68,7 +69,7 @@ bat                                               10.0.0                        
 bcrypt-pbkdf                                      1.0.2                              npm                      
 bindings                                          1.5.0                              npm                      
 bl                                                4.1.0                              npm                      
-body-parser                                       2.2.2                              npm                      
+body-parser                                       2.3.0                              npm                      
 bsdutils                                          1:2.39.3-9ubuntu6.5                deb                      
 buffer                                            5.7.1                              npm                      
 buffer-alloc                                      1.2.0                              npm                      
@@ -86,8 +87,8 @@ charenc                                           0.0.2                         
 chownr                                            1.1.4                              npm                      
 chownr                                            3.0.0                              npm                      
 clojure                                           10.0.0                             npm                      
-code-oss                                          1.131.0                            npm                      
-code-server                                       4.131.0                            npm                      
+code-oss                                          1.132.0                            npm                      
+code-server                                       4.132.0                            npm                      
 coffeescript                                      10.0.0                             npm                      
 commander                                         12.1.0                             npm                      
 commander                                         8.3.0                              npm                      
@@ -96,12 +97,13 @@ compression                                       1.8.1                         
 configuration-editing                             10.0.0                             npm                      
 content-disposition                               1.0.1                              npm                      
 content-type                                      1.0.5                              npm                      
+content-type                                      2.0.0                              npm     (+1 duplicate)   
 cookie                                            0.7.2                              npm     (+2 duplicates)  
 cookie                                            1.1.1                              npm                      
 cookie-parser                                     1.4.7                              npm                      
 cookie-signature                                  1.0.6                              npm                      
 cookie-signature                                  1.2.2                              npm                      
-copilot-chat                                      0.59.0                             npm                      
+copilot-chat                                      0.60.0                             npm                      
 coreutils                                         9.4-3ubuntu6.2                     deb                      
 cpp                                               10.0.0                             npm                      
 cron                                              3.0pl1-184ubuntu2                  deb                      
@@ -214,7 +216,8 @@ inherits                                          2.0.4                         
 ini                                               1.3.8                              npm                      
 ini                                               10.0.0                             npm                      
 init-system-helpers                               1.66ubuntu1                        deb                      
-ip-address                                        10.2.0                             npm     (+1 duplicate)   
+ip-address                                        10.2.0                             npm                      
+ip-address                                        10.4.0                             npm                      
 ipaddr.js                                         1.9.1                              npm                      
 ipynb                                             10.0.0                             npm                      
 is-buffer                                         1.1.6                              npm                      
@@ -228,7 +231,7 @@ javascript                                        10.0.0                        
 jq                                                1.7.1-3ubuntu0.24.04.2             deb                      
 js-debug                                          1.117.0                            npm                      
 js-debug-companion                                1.1.3                              npm                      
-js-yaml                                           4.2.0                              npm                      
+js-yaml                                           4.3.0                              npm                      
 jschardet                                         3.1.4                              npm                      
 json                                              10.0.0                             npm                      
 json-language-features                            10.0.0                             npm                      
@@ -499,7 +502,7 @@ tslib                                             2.8.1                         
 tunnel-agent                                      0.6.0                              npm                      
 tunnel-forwarding                                 10.0.0                             npm                      
 tweetnacl                                         0.14.5                             npm                      
-type-is                                           2.0.1                              npm                      
+type-is                                           2.1.0                              npm                      
 typescript                                        10.0.0                             npm                      
 typescript                                        6.0.3                              npm                      
 typescript-language-features                      10.0.0                             npm                      
@@ -518,7 +521,7 @@ vscode-capi-scripts                               1.0.0                         
 vscode-css-languageserver                         10.0.0                             npm                      
 vscode-extensions                                 0.0.1                              npm                      
 vscode-html-languageserver                        10.0.0                             npm                      
-vscode-js-profile-table                           1.0.10                             npm                      
+vscode-js-profile-table                           1.0.11                             npm                      
 vscode-json-languageserver                        1.3.4                              npm                      
 vscode-jsonrpc                                    8.2.1                              npm                      
 vscode-oniguruma                                  1.7.0                              npm                      
