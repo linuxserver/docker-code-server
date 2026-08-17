@@ -2,9 +2,9 @@ NAME                                              VERSION                       
 @coder/logger                                     3.0.1                              npm                      
 @epic-web/invariant                               1.0.0                              npm                      
 @github/copilot                                   1.0.73                             npm                      
-@github/copilot                                   1.0.77                             npm                      
-@github/copilot-linux-x64                         1.0.77                             npm                      
-@github/copilot-sdk                               1.0.9-preview.1                    npm                      
+@github/copilot                                   1.0.79-6                           npm                      
+@github/copilot-linux-x64                         1.0.79-6                           npm                      
+@github/copilot-sdk                               1.0.9                              npm                      
 @isaacs/fs-minipass                               4.0.1                              npm                      
 @microsoft/1ds-core-js                            3.2.13                             npm                      
 @microsoft/1ds-post-js                            3.2.13                             npm                      
@@ -17,7 +17,7 @@ NAME                                              VERSION                       
 @pondwader/socks5-server                          1.0.10                             npm                      
 @tootallnate/once                                 3.0.1                              npm                      
 @tootallnate/quickjs-emscripten                   0.23.0                             npm                      
-@vscode/copilot-api                               0.4.2                              npm                      
+@vscode/copilot-api                               0.5.2                              npm                      
 @vscode/copilot-typescript-server-plugin          1.0.0                              npm                      
 @vscode/deviceid                                  0.1.5                              npm                      
 @vscode/fs-copyfile                               2.0.0                              npm     (+1 duplicate)   
@@ -30,16 +30,16 @@ NAME                                              VERSION                       
 @vscode/sqlite3                                   5.1.12-vscode                      npm                      
 @vscode/tree-sitter-wasm                          0.3.1                              npm                      
 @vscode/vscode-languagedetection                  1.0.23                             npm                      
-@xterm/addon-clipboard                            0.3.0-beta.291                     npm                      
-@xterm/addon-image                                0.10.0-beta.291                    npm                      
-@xterm/addon-ligatures                            0.11.0-beta.291                    npm                      
-@xterm/addon-progress                             0.3.0-beta.291                     npm                      
-@xterm/addon-search                               0.17.0-beta.291                    npm                      
-@xterm/addon-serialize                            0.15.0-beta.291                    npm                      
-@xterm/addon-unicode11                            0.10.0-beta.291                    npm                      
-@xterm/addon-webgl                                0.20.0-beta.290                    npm                      
-@xterm/headless                                   6.1.0-beta.291                     npm                      
-@xterm/xterm                                      6.1.0-beta.291                     npm                      
+@xterm/addon-clipboard                            0.3.0-beta.292                     npm                      
+@xterm/addon-image                                0.10.0-beta.292                    npm                      
+@xterm/addon-ligatures                            0.11.0-beta.292                    npm                      
+@xterm/addon-progress                             0.3.0-beta.292                     npm                      
+@xterm/addon-search                               0.17.0-beta.292                    npm                      
+@xterm/addon-serialize                            0.15.0-beta.292                    npm                      
+@xterm/addon-unicode11                            0.10.0-beta.292                    npm                      
+@xterm/addon-webgl                                0.20.0-beta.291                    npm                      
+@xterm/headless                                   6.1.0-beta.292                     npm                      
+@xterm/xterm                                      6.1.0-beta.292                     npm                      
 MXC diagnostic console                            0.6.1+161598f                      binary                   
 MXC host setup helper                             0.6.1+161598f                      binary                   
 MXC sandbox executor                              0.6.1+161598f                      binary                   
@@ -87,8 +87,8 @@ charenc                                           0.0.2                         
 chownr                                            1.1.4                              npm                      
 chownr                                            3.0.0                              npm                      
 clojure                                           10.0.0                             npm                      
-code-oss                                          1.132.0                            npm                      
-code-server                                       4.132.0                            npm                      
+code-oss                                          1.133.0                            npm                      
+code-server                                       4.133.0                            npm                      
 coffeescript                                      10.0.0                             npm                      
 commander                                         12.1.0                             npm                      
 commander                                         8.3.0                              npm                      
@@ -103,7 +103,7 @@ cookie                                            1.1.1                         
 cookie-parser                                     1.4.7                              npm                      
 cookie-signature                                  1.0.6                              npm                      
 cookie-signature                                  1.2.2                              npm                      
-copilot-chat                                      0.60.0                             npm                      
+copilot-chat                                      0.61.0                             npm                      
 coreutils                                         9.4-3ubuntu6.2                     deb                      
 cpp                                               10.0.0                             npm                      
 cron                                              3.0pl1-184ubuntu2                  deb                      
@@ -216,8 +216,7 @@ inherits                                          2.0.4                         
 ini                                               1.3.8                              npm                      
 ini                                               10.0.0                             npm                      
 init-system-helpers                               1.66ubuntu1                        deb                      
-ip-address                                        10.2.0                             npm                      
-ip-address                                        10.4.0                             npm                      
+ip-address                                        10.4.0                             npm     (+1 duplicate)   
 ipaddr.js                                         1.9.1                              npm                      
 ipynb                                             10.0.0                             npm                      
 is-buffer                                         1.1.6                              npm                      
@@ -389,7 +388,7 @@ node                                              24.18.0                       
 node-abi                                          3.8.0                              npm                      
 node-addon-api                                    8.6.0                              npm                      
 node-gyp-build                                    4.8.4                              npm                      
-node-pty                                          1.2.0-beta.13                      npm                      
+node-pty                                          1.2.0-beta.15                      npm                      
 npm                                               10.0.0                             npm                      
 object-inspect                                    1.13.4                             npm                      
 objective-c                                       10.0.0                             npm                      
@@ -508,7 +507,7 @@ typescript                                        6.0.3                         
 typescript-language-features                      10.0.0                             npm                      
 tzdata                                            2026c-0ubuntu0.24.04.1             deb                      
 ubuntu-keyring                                    2023.11.28.1                       deb                      
-undici                                            7.28.0                             npm                      
+undici                                            7.29.0                             npm                      
 universalify                                      2.0.1                              npm                      
 unminimize                                        0.2.1                              deb                      
 unpipe                                            1.0.0                              npm                      
@@ -524,6 +523,7 @@ vscode-html-languageserver                        10.0.0                        
 vscode-js-profile-table                           1.0.11                             npm                      
 vscode-json-languageserver                        1.3.4                              npm                      
 vscode-jsonrpc                                    8.2.1                              npm                      
+vscode-modern-icons                               1.0.0                              npm                      
 vscode-oniguruma                                  1.7.0                              npm                      
 vscode-regexpp                                    3.1.0                              npm                      
 vscode-textmate                                   9.3.2                              npm                      
