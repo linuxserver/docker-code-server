@@ -2,16 +2,16 @@ NAME                                              VERSION                       
 @coder/logger                                     3.0.1                              npm                      
 @epic-web/invariant                               1.0.0                              npm                      
 @github/copilot                                   1.0.73                             npm                      
-@github/copilot                                   1.0.79-6                           npm                      
-@github/copilot-linux-x64                         1.0.79-6                           npm                      
-@github/copilot-sdk                               1.0.9                              npm                      
+@github/copilot                                   1.0.81-0                           npm                      
+@github/copilot-linux-x64                         1.0.81-0                           npm                      
+@github/copilot-sdk                               1.0.11                             npm                      
 @isaacs/fs-minipass                               4.0.1                              npm                      
 @microsoft/1ds-core-js                            3.2.13                             npm                      
 @microsoft/1ds-post-js                            3.2.13                             npm                      
 @microsoft/applicationinsights-core-js            2.8.15                             npm                      
 @microsoft/applicationinsights-shims              2.0.2                              npm                      
 @microsoft/dynamicproto-js                        1.1.9                              npm                      
-@microsoft/mxc-sdk                                0.6.1                              npm                      
+@microsoft/mxc-sdk                                0.7.0                              npm                      
 @parcel/watcher                                   2.5.6                              npm                      
 @phc/format                                       1.0.0                              npm                      
 @pondwader/socks5-server                          1.0.10                             npm                      
@@ -40,16 +40,16 @@ NAME                                              VERSION                       
 @xterm/addon-webgl                                0.20.0-beta.291                    npm                      
 @xterm/headless                                   6.1.0-beta.292                     npm                      
 @xterm/xterm                                      6.1.0-beta.292                     npm                      
-MXC diagnostic console                            0.6.1+161598f                      binary                   
-MXC host setup helper                             0.6.1+161598f                      binary                   
-MXC sandbox executor                              0.6.1+161598f                      binary                   
-MXC test HTTP proxy                               0.6.1+161598f                      binary                   
+MXC diagnostic console                            0.7.0+0e02a72                      binary                   
+MXC host setup helper                             0.7.0+0e02a72                      binary                   
+MXC sandbox executor                              0.7.0+0e02a72                      binary                   
+MXC test HTTP proxy                               0.7.0+0e02a72                      binary                   
 Microsoft.PowerShell.PSReadLine                   2.4.3                              dotnet                   
 Microsoft.PowerShell.PSReadLine.Polyfiller        1.0.0.0                            dotnet  (+1 duplicate)   
 Microsoft.PowerShell.Pager                        1.0.0.0                            dotnet                   
-WinHTTP proxy policy shim for sandbox networking  0.6.1+161598f                      binary                   
-Windows Sandbox guest agent                       0.6.1+161598f                      binary                   
-Windows Sandbox integration daemon                0.6.1+161598f                      binary                   
+WinHTTP proxy policy shim for sandbox networking  0.7.0+0e02a72                      binary                   
+Windows Sandbox guest agent                       0.7.0+0e02a72                      binary                   
+Windows Sandbox integration daemon                0.7.0+0e02a72                      binary                   
 accepts                                           2.0.0                              npm                      
 adduser                                           3.137ubuntu1                       deb                      
 agent-base                                        7.1.1                              npm                      
@@ -87,8 +87,8 @@ charenc                                           0.0.2                         
 chownr                                            1.1.4                              npm                      
 chownr                                            3.0.0                              npm                      
 clojure                                           10.0.0                             npm                      
-code-oss                                          1.133.0                            npm                      
-code-server                                       4.133.0                            npm                      
+code-oss                                          1.135.0                            npm                      
+code-server                                       4.134.0                            npm                      
 coffeescript                                      10.0.0                             npm                      
 commander                                         12.1.0                             npm                      
 commander                                         8.3.0                              npm                      
@@ -103,7 +103,7 @@ cookie                                            1.1.1                         
 cookie-parser                                     1.4.7                              npm                      
 cookie-signature                                  1.0.6                              npm                      
 cookie-signature                                  1.2.2                              npm                      
-copilot-chat                                      0.61.0                             npm                      
+copilot-chat                                      0.63.0                             npm                      
 coreutils                                         9.4-3ubuntu6.2                     deb                      
 cpp                                               10.0.0                             npm                      
 cron                                              3.0pl1-184ubuntu2                  deb                      
@@ -114,7 +114,7 @@ crypt                                             0.0.2                         
 csharp                                            10.0.0                             npm                      
 css                                               10.0.0                             npm                      
 css-language-features                             10.0.0                             npm                      
-curl                                              8.5.0-2ubuntu10.12                 deb                      
+curl                                              8.5.0-2ubuntu10.13                 deb                      
 dart                                              10.0.0                             npm                      
 dash                                              0.5.12-6ubuntu5                    deb                      
 data-uri-to-buffer                                6.0.2                              npm                      
@@ -230,7 +230,7 @@ javascript                                        10.0.0                        
 jq                                                1.7.1-3ubuntu0.24.04.2             deb                      
 js-debug                                          1.117.0                            npm                      
 js-debug-companion                                1.1.3                              npm                      
-js-yaml                                           4.3.0                              npm                      
+js-yaml                                           5.2.3                              npm                      
 jschardet                                         3.1.4                              npm                      
 json                                              10.0.0                             npm                      
 json-language-features                            10.0.0                             npm                      
@@ -263,8 +263,8 @@ libcap2                                           1:2.66-5ubuntu2.4             
 libcbor0.10                                       0.10.2-1.2ubuntu2                  deb                      
 libcom-err2                                       1.47.0-2.4~exp1ubuntu4.1           deb                      
 libcrypt1                                         1:4.4.36-4build1                   deb                      
-libcurl3t64-gnutls                                8.5.0-2ubuntu10.12                 deb                      
-libcurl4t64                                       8.5.0-2ubuntu10.12                 deb                      
+libcurl3t64-gnutls                                8.5.0-2ubuntu10.13                 deb                      
+libcurl4t64                                       8.5.0-2ubuntu10.13                 deb                      
 libdb5.3t64                                       5.3.28+dfsg2-7                     deb                      
 libdebconfclient0                                 0.271ubuntu3                       deb                      
 libedit2                                          3.1-20230828-1build1               deb                      
@@ -384,7 +384,7 @@ net-tools                                         2.10-0.1ubuntu4.4             
 netbase                                           6.4                                deb                      
 netcat-openbsd                                    1.226-1ubuntu2                     deb                      
 netmask                                           2.0.2                              npm                      
-node                                              24.18.0                            binary                   
+node                                              24.18.1                            binary                   
 node-abi                                          3.8.0                              npm                      
 node-addon-api                                    8.6.0                              npm                      
 node-gyp-build                                    4.8.4                              npm                      
@@ -484,7 +484,7 @@ tar                                               1.35+dfsg-3ubuntu0.4          
 tar                                               7.5.20                             npm                      
 tar-fs                                            2.1.4                              npm                      
 tar-stream                                        2.2.0                              npm                      
-tas-client                                        0.3.1                              npm                      
+tas-client                                        0.4.3                              npm                      
 terminal-suggest                                  1.0.1                              npm                      
 theme-abyss                                       10.0.0                             npm                      
 theme-defaults                                    10.0.0                             npm                      
@@ -531,7 +531,6 @@ vscode-theme-seti                                 10.0.0                        
 which                                             2.0.2                              npm                      
 wrappy                                            1.0.2                              npm     (+1 duplicate)   
 ws                                                8.21.0                             npm     (+1 duplicate)   
-wslcsdk                                           UNKNOWN                            binary                   
 xauth                                             1:1.1.2-1build1                    deb                      
 xdg-basedir                                       4.0.0                              npm                      
 xml                                               10.0.0                             npm                      
