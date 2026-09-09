@@ -11,7 +11,7 @@ NAME                                              VERSION                       
 @microsoft/applicationinsights-core-js            2.8.15                             npm                      
 @microsoft/applicationinsights-shims              2.0.2                              npm                      
 @microsoft/dynamicproto-js                        1.1.9                              npm                      
-@microsoft/mxc-sdk                                0.7.0                              npm                      
+@microsoft/mxc-sdk                                0.8.0                              npm                      
 @parcel/watcher                                   2.5.6                              npm                      
 @phc/format                                       1.0.0                              npm                      
 @pondwader/socks5-server                          1.0.10                             npm                      
@@ -40,16 +40,18 @@ NAME                                              VERSION                       
 @xterm/addon-webgl                                0.20.0-beta.298                    npm                      
 @xterm/headless                                   6.1.0-beta.301                     npm                      
 @xterm/xterm                                      6.1.0-beta.302                     npm                      
-MXC diagnostic console                            0.7.0+0e02a72                      binary                   
-MXC host setup helper                             0.7.0+0e02a72                      binary                   
-MXC sandbox executor                              0.7.0+0e02a72                      binary                   
-MXC test HTTP proxy                               0.7.0+0e02a72                      binary                   
+MXC diagnostic console                            0.8.0+7dac1a9                      binary                   
+MXC host setup helper                             0.8.0+7dac1a9                      binary                   
+MXC permissive learning mode                      0.1.0+7dac1a9                      binary                   
+MXC sandbox executor                              0.8.0+7dac1a9                      binary                   
+MXC test HTTP proxy                               0.8.0+7dac1a9                      binary                   
 Microsoft.PowerShell.PSReadLine                   2.4.3                              dotnet                   
 Microsoft.PowerShell.PSReadLine.Polyfiller        1.0.0.0                            dotnet  (+1 duplicate)   
 Microsoft.PowerShell.Pager                        1.0.0.0                            dotnet                   
-WinHTTP proxy policy shim for sandbox networking  0.7.0+0e02a72                      binary                   
-Windows Sandbox guest agent                       0.7.0+0e02a72                      binary                   
-Windows Sandbox integration daemon                0.7.0+0e02a72                      binary                   
+WSL Container integration daemon                  0.8.0+7dac1a9                      binary                   
+WinHTTP proxy policy shim for sandbox networking  0.8.0+7dac1a9                      binary                   
+Windows Sandbox guest agent                       0.8.0+7dac1a9                      binary                   
+Windows Sandbox integration daemon                0.8.0+7dac1a9                      binary                   
 accepts                                           2.0.0                              npm                      
 adduser                                           3.137ubuntu1                       deb                      
 agent-base                                        7.1.1                              npm                      
@@ -87,8 +89,8 @@ charenc                                           0.0.2                         
 chownr                                            1.1.4                              npm                      
 chownr                                            3.0.0                              npm                      
 clojure                                           10.0.0                             npm                      
-code-oss                                          1.135.0                            npm                      
-code-server                                       4.135.0                            npm                      
+code-oss                                          1.136.1                            npm                      
+code-server                                       4.136.2                            npm                      
 coffeescript                                      10.0.0                             npm                      
 commander                                         12.1.0                             npm                      
 commander                                         8.3.0                              npm                      
@@ -103,7 +105,7 @@ cookie                                            1.1.1                         
 cookie-parser                                     1.4.7                              npm                      
 cookie-signature                                  1.0.6                              npm                      
 cookie-signature                                  1.2.2                              npm                      
-copilot-chat                                      0.63.0                             npm                      
+copilot-chat                                      0.64.1                             npm                      
 coreutils                                         9.4-3ubuntu6.3                     deb                      
 cpp                                               10.0.0                             npm                      
 cron                                              3.0pl1-184ubuntu2                  deb                      
@@ -481,7 +483,7 @@ swift                                             10.0.0                        
 systemd-standalone-sysusers                       255.4-1ubuntu8.17                  deb                      
 sysvinit-utils                                    3.08-6ubuntu3                      deb                      
 tar                                               1.35+dfsg-3ubuntu0.4               deb                      
-tar                                               7.5.20                             npm                      
+tar                                               7.5.22                             npm                      
 tar-fs                                            2.1.4                              npm                      
 tar-stream                                        2.2.0                              npm                      
 tas-client                                        0.4.3                              npm                      
@@ -531,6 +533,7 @@ vscode-theme-seti                                 10.0.0                        
 which                                             2.0.2                              npm                      
 wrappy                                            1.0.2                              npm     (+1 duplicate)   
 ws                                                8.21.0                             npm     (+1 duplicate)   
+wslcsdk                                           UNKNOWN                            binary                   
 xauth                                             1:1.1.2-1build1                    deb                      
 xdg-basedir                                       4.0.0                              npm                      
 xml                                               10.0.0                             npm                      
