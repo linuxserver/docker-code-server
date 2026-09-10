@@ -18,13 +18,15 @@ if [[ -z ${PWA_APPNAME} ]]; then
     PWA_APPNAME="code-server"
 fi
 
-# Bind to the IPv6 wildcard (dual-stack, also serves IPv4) when IPv6 is
-# available, otherwise fall back to the IPv4 wildcard. Binding to "[::]"
-# fails outright on hosts/containers where IPv6 is disabled.
-if [[ -e /proc/net/if_inet6 ]]; then
-    BIND_ADDR="[::]:8443"
-else
-    BIND_ADDR="0.0.0.0:8443"
+if [[ -z ${BIND_ADDR} ]] ; then
+    # Bind to the IPv6 wildcard (dual-stack, also serves IPv4) when IPv6 is
+    # available, otherwise fall back to the IPv4 wildcard. Binding to "[::]"
+    # fails outright on hosts/containers where IPv6 is disabled.
+    if [[ -e /proc/net/if_inet6 ]]; then
+        BIND_ADDR="[::]:8443"
+    else
+        BIND_ADDR="0.0.0.0:8443"
+    fi
 fi
 
 if [[ -z ${LSIO_NON_ROOT_USER} ]]; then
