@@ -118,6 +118,7 @@ services:
       - PROXY_DOMAIN=code-server.my.domain #optional
       - DEFAULT_WORKSPACE=/config/workspace #optional
       - PWA_APPNAME=code-server #optional
+      - BIND_ADDR="[::]:8443" #optional
     volumes:
       - /path/to/code-server/config:/config
     ports:
@@ -140,6 +141,7 @@ docker run -d \
   -e PROXY_DOMAIN=code-server.my.domain `#optional` \
   -e DEFAULT_WORKSPACE=/config/workspace `#optional` \
   -e PWA_APPNAME=code-server `#optional` \
+  -e BIND_ADDR="[::]:8443" #optional
   -p 8443:8443 \
   -v /path/to/code-server/config:/config \
   --restart unless-stopped \
@@ -163,6 +165,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e PROXY_DOMAIN=code-server.my.domain` | If this optional variable is set, this domain will be proxied for subdomain proxying. See [Documentation](https://github.com/coder/code-server/blob/main/docs/guide.md#using-a-subdomain) |
 | `-e DEFAULT_WORKSPACE=/config/workspace` | If this optional variable is set, code-server will open this directory by default |
 | `-e PWA_APPNAME=code-server` | If this optional variable is set, the PWA app will the specified name. |
+| `-e BIND_ADDR=[::]:8443` | If this optional variable is set, code-server will listen to this address instead of auto-detecting. |
 | `-v /config` | Contains all relevant configuration files. |
 | `--read-only=true` | Run container with a read-only filesystem. Please [read the docs](https://docs.linuxserver.io/misc/read-only/). |
 | `--user=1000:1000` | Run container with a non-root user. Please [read the docs](https://docs.linuxserver.io/misc/non-root/). |
@@ -329,6 +332,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **06.07.26:** - Fall back to ipv4 bind address when ipv6 is disabled in the kernel.
 * **17.05.26:** - Let server listen on both ipv4 and ipv6 even when running container as root.
 * **10.08.25:** - Let server listen on both ipv4 and ipv6.
 * **03.06.25:** - Allow setting PWA name using env var `PWA_APPNAME`.
