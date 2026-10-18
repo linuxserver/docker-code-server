@@ -4,6 +4,8 @@
 project_name: docker-code-server
 external_type: na
 custom_version_command: "curl -sX GET https://api.github.com/repos/coder/code-server/releases/latest | jq -r '.tag_name' | sed 's|^v||'"
+custom_release_notes_command: |-
+  curl -H "Authorization: token ${GITHUB_TOKEN}" -s https://api.github.com/repos/coder/code-server/releases/tags/v${EXT_RELEASE} | jq -r '. |.body' > releasebody.json
 release_type: stable
 release_tag: latest
 ls_branch: master
