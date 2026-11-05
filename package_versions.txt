@@ -3,8 +3,8 @@ NAME                                        VERSION                             
 @devcontainers/cli                          0.88.0                                npm                      
 @epic-web/invariant                         1.0.0                                 npm                      
 @github/copilot                             1.0.73                                npm                      
-@github/copilot-sdk                         1.0.27-unstable.40031404408.gba6c003  npm                      
-@github/copilot-sdk-linux-x64               1.0.27-unstable.40031404408.gba6c003  npm                      
+@github/copilot-sdk                         1.0.27-unstable.41379698026.g3219c66  npm                      
+@github/copilot-sdk-linux-x64               1.0.27-unstable.41379698026.g3219c66  npm                      
 @hpke/common                                1.10.1                                npm                      
 @hpke/core                                  1.9.0                                 npm                      
 @isaacs/fs-minipass                         4.0.1                                 npm                      
@@ -50,8 +50,8 @@ agent-base                                  7.1.1                               
 agent-base                                  7.1.4                                 npm                      
 apt                                         2.8.3                                 deb                      
 apt-utils                                   2.8.3                                 deb                      
-argon2                                      0.44.0                                npm                      
-argparse                                    2.0.1                                 npm                      
+argon2                                      0.45.1                                npm                      
+argparse                                    3.0.4                                 npm                      
 asn1                                        0.2.6                                 npm                      
 ast-types                                   0.13.4                                npm                      
 base-files                                  13ubuntu10.5                          deb                      
@@ -81,8 +81,8 @@ charenc                                     0.0.2                               
 chownr                                      1.1.4                                 npm                      
 chownr                                      3.0.0                                 npm                      
 clojure                                     10.0.0                                npm                      
-code-oss                                    1.144.0                               npm                      
-code-server                                 4.144.0                               npm                      
+code-oss                                    1.145.0                               npm                      
+code-server                                 4.145.0                               npm                      
 coffeescript                                10.0.0                                npm                      
 commander                                   12.1.0                                npm                      
 commander                                   8.3.0                                 npm                      
@@ -98,7 +98,7 @@ cookie                                      1.1.1                               
 cookie-parser                               1.4.7                                 npm                      
 cookie-signature                            1.0.6                                 npm                      
 cookie-signature                            1.2.2                                 npm                      
-copilot-chat                                0.72.0                                npm                      
+copilot-chat                                0.73.0                                npm                      
 coreutils                                   9.4-3ubuntu6.3                        deb                      
 cpp                                         10.0.0                                npm                      
 cron                                        3.0pl1-184ubuntu2                     deb                      
@@ -205,7 +205,7 @@ http-proxy-agent                            7.0.2                               
 httpolyglot                                 0.1.2                                 npm                      
 https-proxy-agent                           7.0.2                                 npm                      
 https-proxy-agent                           7.0.6                                 npm                      
-i18next                                     26.3.1                                npm                      
+i18next                                     26.5.11                               npm                      
 iconv-lite                                  0.7.3                                 npm                      
 ieee754                                     1.2.1                                 npm                      
 inherits                                    2.0.4                                 npm     (+1 duplicate)   
@@ -227,7 +227,7 @@ javascript                                  10.0.0                              
 jq                                          1.7.1-3ubuntu0.24.04.2                deb                      
 js-debug                                    1.140.0                               npm                      
 js-debug-companion                          1.1.3                                 npm                      
-js-yaml                                     5.4.3                                 npm                      
+js-yaml                                     5.5.0                                 npm                      
 jschardet                                   3.1.4                                 npm                      
 json                                        10.0.0                                npm                      
 json-language-features                      10.0.0                                npm                      
@@ -301,7 +301,7 @@ libpam-modules                              1.5.3-5ubuntu5.7                    
 libpam-modules-bin                          1.5.3-5ubuntu5.7                      deb                      
 libpam-runtime                              1.5.3-5ubuntu5.7                      deb                      
 libpam0g                                    1.5.3-5ubuntu5.7                      deb                      
-libpcre2-8-0                                10.42-4ubuntu2.1                      deb                      
+libpcre2-8-0                                10.42-4ubuntu2.2                      deb                      
 libperl5.38t64                              5.38.2-3.2ubuntu0.6                   deb                      
 libproc2-0                                  2:4.0.4-4ubuntu3.3                    deb                      
 libpsl5t64                                  0.21.2-1.1build1                      deb                      
@@ -382,7 +382,7 @@ netcat-openbsd                              1.226-1ubuntu2                      
 netmask                                     2.0.2                                 npm                      
 node                                        24.22.1                               binary                   
 node-abi                                    3.8.0                                 npm                      
-node-addon-api                              8.6.0                                 npm                      
+node-addon-api                              8.9.2                                 npm                      
 node-gyp-build                              4.8.4                                 npm                      
 node-pty                                    1.2.0-beta.18                         npm                      
 npm                                         10.0.0                                npm                      
