@@ -81,8 +81,8 @@ charenc                                     0.0.2                               
 chownr                                      1.1.4                                 npm                      
 chownr                                      3.0.0                                 npm                      
 clojure                                     10.0.0                                npm                      
-code-oss                                    1.145.0                               npm                      
-code-server                                 4.145.0                               npm                      
+code-oss                                    1.145.2                               npm                      
+code-server                                 4.145.2                               npm                      
 coffeescript                                10.0.0                                npm                      
 commander                                   12.1.0                                npm                      
 commander                                   8.3.0                                 npm                      
