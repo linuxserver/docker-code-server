@@ -48,8 +48,8 @@ accepts                                     2.0.0                               
 adduser                                     3.137ubuntu1                          deb                      
 agent-base                                  7.1.1                                 npm                      
 agent-base                                  7.1.4                                 npm                      
-apt                                         2.8.3                                 deb                      
-apt-utils                                   2.8.3                                 deb                      
+apt                                         2.8.4ubuntu0.1                        deb                      
+apt-utils                                   2.8.4ubuntu0.1                        deb                      
 argon2                                      0.45.1                                npm                      
 argparse                                    3.0.4                                 npm                      
 asn1                                        0.2.6                                 npm                      
@@ -73,7 +73,7 @@ buffer-fill                                 1.0.0                               
 buildcheck                                  0.0.7                                 npm                      
 builtin-notebook-renderers                  10.0.0                                npm                      
 bytes                                       3.1.2                                 npm                      
-ca-certificates                             20260816ubuntu0.24.04.1               deb                      
+ca-certificates                             20260816ubuntu0.24.04.2               deb                      
 call-bind-apply-helpers                     1.0.2                                 npm                      
 call-bound                                  1.0.4                                 npm                      
 catatonit                                   0.1.7-1                               deb                      
@@ -242,7 +242,7 @@ less                                        10.0.0                              
 less                                        590-2ubuntu2.1                        deb                      
 libacl1                                     2.3.2-1build1.1                       deb                      
 libapparmor1                                4.0.1really4.0.1-0ubuntu0.24.04.9     deb                      
-libapt-pkg6.0t64                            2.8.3                                 deb                      
+libapt-pkg6.0t64                            2.8.4ubuntu0.1                        deb                      
 libassuan0                                  2.5.6-1build1                         deb                      
 libatomic1                                  14.2.0-4ubuntu2~24.04.1               deb                      
 libattr1                                    1:2.5.2-1ubuntu0.1                    deb                      
@@ -302,7 +302,7 @@ libpam-modules-bin                          1.5.3-5ubuntu5.7                    
 libpam-runtime                              1.5.3-5ubuntu5.7                      deb                      
 libpam0g                                    1.5.3-5ubuntu5.7                      deb                      
 libpcre2-8-0                                10.42-4ubuntu2.2                      deb                      
-libperl5.38t64                              5.38.2-3.2ubuntu0.6                   deb                      
+libperl5.38t64                              5.38.2-3.2ubuntu0.7                   deb                      
 libproc2-0                                  2:4.0.4-4ubuntu3.3                    deb                      
 libpsl5t64                                  0.21.2-1.1build1                      deb                      
 libreadline8t64                             8.2-4build1                           deb                      
@@ -318,7 +318,7 @@ libsepol2                                   3.5-2build1                         
 libsmartcols1                               2.39.3-9ubuntu6.6                     deb                      
 libsodium                                   0.8.4                                 npm                      
 libsodium-wrappers                          0.8.4                                 npm                      
-libsqlite3-0                                3.45.1-1ubuntu2.8                     deb                      
+libsqlite3-0                                3.45.1-1ubuntu2.9                     deb                      
 libss2                                      1.47.0-2.4~exp1ubuntu4.1              deb                      
 libssh-4                                    0.10.6-2ubuntu0.5                     deb                      
 libssl3t64                                  3.0.13-0ubuntu3.16                    deb                      
@@ -405,9 +405,9 @@ path-to-regexp                              8.4.2                               
 pem                                         1.14.8                                npm                      
 pend                                        1.2.0                                 npm                      
 perl                                        10.0.0                                npm                      
-perl                                        5.38.2-3.2ubuntu0.6                   deb                      
-perl-base                                   5.38.2-3.2ubuntu0.6                   deb                      
-perl-modules-5.38                           5.38.2-3.2ubuntu0.6                   deb                      
+perl                                        5.38.2-3.2ubuntu0.7                   deb                      
+perl-base                                   5.38.2-3.2ubuntu0.7                   deb                      
+perl-modules-5.38                           5.38.2-3.2ubuntu0.7                   deb                      
 php                                         10.0.0                                npm                      
 php-language-features                       10.0.0                                npm                      
 picomatch                                   4.0.4                                 npm                      
